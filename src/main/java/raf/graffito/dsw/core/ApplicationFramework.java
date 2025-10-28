@@ -3,6 +3,7 @@ import raf.graffito.dsw.gui.swing.MainFrame;
 
 public class ApplicationFramework {
     // Buduća polja za model celog projekta
+    // hello
     private static ApplicationFramework instance;
 
     private ApplicationFramework(){
