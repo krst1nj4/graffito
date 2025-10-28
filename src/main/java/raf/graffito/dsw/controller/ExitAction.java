@@ -15,7 +15,7 @@ public class ExitAction extends AbstractAction {
     }
 
     // Metoda za učitavanje ikonice iz resursa
-    //hello
+    //hello 2
     private Icon loadIcon(String path) {
         Icon icon = null;
         URL ImageURL = getClass().getResource(path); // URL služi za pronalaženje resursa unutar JAR fajla ili klase
