@@ -15,5 +15,6 @@ public class MyToolBar extends JToolBar {
 
         AboutUsAction aboutUsAction = new AboutUsAction();
         add(aboutUsAction);
+
     }
 }
