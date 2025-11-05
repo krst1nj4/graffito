@@ -1,14 +1,18 @@
 package raf.graffito.dsw.gui.swing;
 
+import raf.graffito.dsw.controller.ActionManager;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class MainFrame extends JFrame {
     private static MainFrame instance;
+    private ActionManager actionManager;
     // Buduća polja za sve komponente view-a na glavnom prozoru
 
     private MainFrame() {
         initialize();
+        actionManager = new ActionManager();
     }
 
     private void initialize() {
