@@ -38,6 +38,7 @@ public class MessageGenerator implements Publisher{
             subscriber.update(notify);
         }
     }
+    //blablabla
 
 
 }
