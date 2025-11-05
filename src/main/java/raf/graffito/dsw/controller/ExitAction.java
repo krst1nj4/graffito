@@ -9,7 +9,7 @@ import java.net.URL;
 public class ExitAction extends AbstractGraffAction {
     public ExitAction() {
         putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_F4, ActionEvent.ALT_MASK)); // Ovo je prečica za izlaz
-        putValue(SMALL_ICON, loadIcon("/images/exit.png")); // Postavljanje ikonice
+        putValue(SMALL_ICON, loadIcon("/images/exiticon2")); // Postavljanje ikonice
         putValue(NAME, "Exit"); // Ime akcije
         putValue(SHORT_DESCRIPTION, "Exit"); // Tooltip
     }
