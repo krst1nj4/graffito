@@ -15,6 +15,7 @@ public class ApplicationFramework {
     public void initialize(){
         MainFrame mainFrame = MainFrame.getInstance();
         mainFrame.setVisible(true);
+
     }
     public static ApplicationFramework getInstance(){
         if(instance == null)

@@ -14,6 +14,7 @@ public class Poruka {
         this.content = content;
         this.type = type.name();
         this.timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd.MM.yyyy. HH:mm"));
+
     }
 
     @Override

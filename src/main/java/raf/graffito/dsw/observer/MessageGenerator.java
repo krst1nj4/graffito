@@ -13,6 +13,7 @@ public class MessageGenerator implements Publisher{
         Poruka message = new Poruka(poruka, messageType);
         notifySubscribers(message);
 
+
     }
 
     public MessageGenerator() {
