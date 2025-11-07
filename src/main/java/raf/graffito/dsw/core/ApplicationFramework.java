@@ -3,7 +3,7 @@ import raf.graffito.dsw.gui.swing.MainFrame;
 
 public class ApplicationFramework {
     // Buduća polja za model celog projekta
-    // hello
+    // PROVERA1
     private static ApplicationFramework instance;
 
     private ApplicationFramework(){
