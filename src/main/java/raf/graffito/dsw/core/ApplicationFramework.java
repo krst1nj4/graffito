@@ -1,10 +1,12 @@
 package raf.graffito.dsw.core;
 import raf.graffito.dsw.gui.swing.MainFrame;
+import raf.graffito.dsw.observer.MessageGenerator;
 
 public class ApplicationFramework {
     // Buduća polja za model celog projekta
     // hello
     private static ApplicationFramework instance;
+    private MessageGenerator messageGenerator = new MessageGenerator();
 
     private ApplicationFramework(){
         initialize();
@@ -15,9 +17,9 @@ public class ApplicationFramework {
         mainFrame.setVisible(true);
     }
     public static ApplicationFramework getInstance(){
-        if(instance == null){
+        if(instance == null)
             instance = new ApplicationFramework();
-        }
+
         return instance;
     }
 }
