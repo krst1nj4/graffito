@@ -1,4 +1,4 @@
-package raf.graffito.dsw.controller;
+package raf.graffito.dsw.gui.swing.controller;
 
 import raf.graffito.dsw.view.AboutUsView;
 

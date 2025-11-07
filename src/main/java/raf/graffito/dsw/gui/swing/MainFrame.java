@@ -1,6 +1,6 @@
 package raf.graffito.dsw.gui.swing;
 
-import raf.graffito.dsw.controller.ActionManager;
+import raf.graffito.dsw.gui.swing.controller.ActionManager;
 
 import javax.swing.*;
 import java.awt.*;
