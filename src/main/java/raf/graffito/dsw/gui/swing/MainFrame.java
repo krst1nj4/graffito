@@ -1,6 +1,7 @@
 package raf.graffito.dsw.gui.swing;
 
 import raf.graffito.dsw.gui.swing.controller.ActionManager;
+import raf.graffito.dsw.gui.swing.tree.GraffTree;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,6 +9,10 @@ import java.awt.*;
 public class MainFrame extends JFrame {
     private static MainFrame instance;
     private ActionManager actionManager;
+    private MyMenuBar menu;
+    private JToolBar toolbar;
+    private GraffTree graffTree;
+
     // Buduća polja za sve komponente view-a na glavnom prozoru
 
     private MainFrame() {
@@ -25,11 +30,13 @@ public class MainFrame extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Zatvaranje aplikacije pri zatvaranju prozora
         setTitle("Graffito"); // Naslov prozora
 
-        MyMenuBar menu = new MyMenuBar(); // Kreiranje menija
+        menu = new MyMenuBar(); // Kreiranje menija
         setJMenuBar(menu); // Postavljanje menija na prozor
 
-        MyToolBar toolBar = new MyToolBar(); // Kreiranje toolbar-a
-        add(toolBar, BorderLayout.NORTH); // Postavljanje toolbar-a na vrh prozora
+        toolbar = new MyToolBar(); // Kreiranje toolbar-a
+        add(toolbar, BorderLayout.NORTH); // Postavljanje toolbar-a na vrh prozora
+
+        JTree workspace = graffTree.
     }
 
     public static MainFrame getInstance() {
