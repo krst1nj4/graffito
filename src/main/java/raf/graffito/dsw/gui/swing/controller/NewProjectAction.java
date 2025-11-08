@@ -12,7 +12,7 @@ public class NewProjectAction extends AbstractGraffAction{
     public NewProjectAction() {
         putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(
                 KeyEvent.VK_N, ActionEvent.CTRL_MASK));
-        putValue(SMALL_ICON, loadIcon("/images/plusicon.png"));
+        putValue(SMALL_ICON, loadIcon("/images/plusicon2.png"));
         putValue(NAME, "Novi projekat");
         putValue(SHORT_DESCRIPTION, "Novi projekat");
     }
