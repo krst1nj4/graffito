@@ -1,33 +1,31 @@
 package raf.graffito.dsw.observer;
 
+import raf.graffito.dsw.model.MessageType;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class MessageGenerator implements Publisher{
 
-    private String content;
-    private String type;
-    private String timestamp;
-    private List<Subscriber> subs;
+    private List<Subscriber> subscribers;
 
+    public void generateMessage(MessageType messageType, String poruka){
+        Poruka message = new Poruka(poruka, messageType);
+        notifySubscribers(message);
+    }
 
+    public MessageGenerator() {
+        subscribers = new ArrayList<>();
+    }
 
     @Override
     public void addSubscriber(Subscriber subscriber) {
-        if(subscriber == null) return;
-
-        if(subs == null) this.subs = new ArrayList<>();
-
-        if(this.subs.contains(subscriber)) return;
-
-        this.subs.add(subscriber);
+            subscribers.add(subscriber);
     }
 
     @Override
     public void removeSubscriber(Subscriber subscriber) {
-        if(subscriber == null || this.subs == null || !this.subs.contains(subscriber)) return;
-
-        this.subs.remove(subscriber);
+        subscribers.remove(subscriber);
     }
 
     @Override
@@ -38,6 +36,4 @@ public class MessageGenerator implements Publisher{
             subscriber.update(notify);
         }
     }
-
-
 }
