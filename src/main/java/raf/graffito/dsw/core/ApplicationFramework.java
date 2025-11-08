@@ -27,9 +27,9 @@ public class ApplicationFramework {
     }
 
     public static ApplicationFramework getInstance(){
-        if(instance == null){
+        if(instance == null)
             instance = new ApplicationFramework();
-        }
+
         return instance;
     }
 }
