@@ -2,9 +2,12 @@ package raf.graffito.dsw.gui.swing.tree;
 
 import raf.graffito.dsw.gui.swing.tree.model.GraffTreeItem;
 import raf.graffito.dsw.gui.swing.tree.view.GraffTreeView;
+import raf.graffito.dsw.model.Project;
 import raf.graffito.dsw.model.Workspace;
+import raf.graffito.dsw.repozitorijum.composite.GraffNode;
 import raf.graffito.dsw.repozitorijum.composite.GraffNodeComposite;
 
+import javax.swing.*;
 import javax.swing.tree.DefaultTreeModel;
 
 public class GraffTreeImplements implements GraffTree {
@@ -31,12 +34,24 @@ public class GraffTreeImplements implements GraffTree {
             return;
         }
 
-
+        GraffNode child = createChild(parent.getGraffNode());
+        parent.add(new GraffTreeItem(child));
+        ((GraffNodeComposite) parent.getGraffNode()).addChild(child);
+        graffTreeView.expandPath(graffTreeView.getSelectionPath());
+        SwingUtilities.updateComponentTreeUI(graffTreeView);
 
     }
 
     @Override
     public GraffTreeItem getSelectenNode() {
+        return (GraffTreeItem) graffTreeView.getLastSelectedPathComponent();
+    }
+
+    private GraffNode createChild(GraffNode parent) {
+        if(parent instanceof Workspace) {
+            return new Project(parent, "Project X");
+        }
+
         return null;
     }
 
