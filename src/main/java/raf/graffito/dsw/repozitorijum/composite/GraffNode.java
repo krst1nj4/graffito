@@ -1,5 +1,11 @@
 package raf.graffito.dsw.repozitorijum.composite;
 
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public abstract class GraffNode {
     private GraffNode parent;
     private String name;
