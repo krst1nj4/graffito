@@ -1,5 +1,5 @@
 package raf.graffito.dsw.observer;
 
 public interface Subscriber {
-    void update(Object notif);
+    void update(Poruka notif);
 }

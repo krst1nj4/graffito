@@ -1,10 +1,8 @@
-package raf.graffito.dsw.controller;
+package raf.graffito.dsw.gui.swing.controller;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
-import java.net.URL;
 
 public class ExitAction extends AbstractGraffAction {
     public ExitAction() {

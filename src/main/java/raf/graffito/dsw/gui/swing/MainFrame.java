@@ -1,21 +1,39 @@
 package raf.graffito.dsw.gui.swing;
 
-import raf.graffito.dsw.controller.ActionManager;
+import lombok.Getter;
+import lombok.Setter;
+import raf.graffito.dsw.core.ApplicationFramework;
+import raf.graffito.dsw.gui.swing.controller.ActionManager;
+import raf.graffito.dsw.gui.swing.tree.GraffTree;
+import raf.graffito.dsw.gui.swing.tree.GraffTreeImplements;
+import raf.graffito.dsw.gui.swing.tree.view.GraffTreeView;
 
 import javax.swing.*;
 import java.awt.*;
 
+@Getter
+@Setter
+
 public class MainFrame extends JFrame {
     private static MainFrame instance;
     private ActionManager actionManager;
+    private MyMenuBar menu;
+    private JToolBar toolbar;
+    private GraffTree graffTree;
+
     // Buduća polja za sve komponente view-a na glavnom prozoru
 
     private MainFrame() {
-        initialize();
-        actionManager = new ActionManager();
+
     }
 
-    private void initialize() {
+    private void initialize(){
+        actionManager = new ActionManager();
+        graffTree = new GraffTreeImplements();
+        initializeGUI();
+    }
+
+    private void initializeGUI() {
         Toolkit kit = Toolkit.getDefaultToolkit(); // Toolkit omogućava interakciju sa platformom
         Dimension screenSize = kit.getScreenSize(); // Veličina ekrana
         int screenHeight = screenSize.height;
@@ -25,17 +43,27 @@ public class MainFrame extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Zatvaranje aplikacije pri zatvaranju prozora
         setTitle("Graffito"); // Naslov prozora
 
-        MyMenuBar menu = new MyMenuBar(); // Kreiranje menija
+        menu = new MyMenuBar(); // Kreiranje menija
         setJMenuBar(menu); // Postavljanje menija na prozor
 
-        MyToolBar toolBar = new MyToolBar(); // Kreiranje toolbar-a
-        add(toolBar, BorderLayout.NORTH); // Postavljanje toolbar-a na vrh prozora
+        toolbar = new MyToolBar(); // Kreiranje toolbar-a
+        add(toolbar, BorderLayout.NORTH); // Postavljanje toolbar-a na vrh prozora
+
+        JTree workspace = graffTree.generateTree(ApplicationFramework.getInstance().getGraffRepository().getWorkspace());
+        JPanel panel = new JPanel();
+
+        JScrollPane scroll = new JScrollPane(workspace);
+        scroll.setMinimumSize(new Dimension(200, 150));
+        JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, scroll, panel);
+        getContentPane().add(splitPane, BorderLayout.CENTER);
+        splitPane.setDividerLocation(250);
+        splitPane.setOneTouchExpandable(true);
     }
 
     public static MainFrame getInstance() {
         if(instance == null) {
             instance = new MainFrame();
-
+            instance.initialize();
         }
         return instance;
     }
