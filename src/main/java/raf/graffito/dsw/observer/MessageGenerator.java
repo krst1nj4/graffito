@@ -30,8 +30,9 @@ public class MessageGenerator implements Publisher{
         subscribers.remove(subscriber);
     }
 
+
     @Override
-    public void notifySubscribers(Object notify) {
+    public void notifySubscribers(Poruka notify) {
         for(Subscriber subscriber : subscribers){
             subscriber.update(notify);
         }
