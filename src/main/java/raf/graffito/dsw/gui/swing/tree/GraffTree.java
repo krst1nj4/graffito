@@ -10,5 +10,5 @@ public interface GraffTree {
     /// dodajemo decu na korenski/roditeljski cvor
     void addChild(GraffTreeItem parent);
     /// getter za selektovani node
-    GraffTreeItem getSelectenNode();
+    GraffTreeItem getSelectedNode();
 }

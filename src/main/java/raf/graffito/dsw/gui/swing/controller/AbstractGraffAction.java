@@ -5,6 +5,7 @@ import java.awt.*;
 import java.net.URL;
 
 public abstract class AbstractGraffAction extends AbstractAction {
+
     public Icon loadIcon(String path) {
         Icon icon = null;
         URL ImageURL = getClass().getResource(path); // URL služi za pronalaženje resursa unutar JAR fajla ili klase

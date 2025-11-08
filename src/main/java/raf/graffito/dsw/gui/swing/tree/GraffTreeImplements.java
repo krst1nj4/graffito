@@ -43,7 +43,7 @@ public class GraffTreeImplements implements GraffTree {
     }
 
     @Override
-    public GraffTreeItem getSelectenNode() {
+    public GraffTreeItem getSelectedNode() {
         return (GraffTreeItem) graffTreeView.getLastSelectedPathComponent();
     }
 

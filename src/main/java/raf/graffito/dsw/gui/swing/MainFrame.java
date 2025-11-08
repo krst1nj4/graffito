@@ -1,5 +1,7 @@
 package raf.graffito.dsw.gui.swing;
 
+import lombok.Getter;
+import lombok.Setter;
 import raf.graffito.dsw.core.ApplicationFramework;
 import raf.graffito.dsw.gui.swing.controller.ActionManager;
 import raf.graffito.dsw.gui.swing.tree.GraffTree;
@@ -8,6 +10,9 @@ import raf.graffito.dsw.gui.swing.tree.view.GraffTreeView;
 
 import javax.swing.*;
 import java.awt.*;
+
+@Getter
+@Setter
 
 public class MainFrame extends JFrame {
     private static MainFrame instance;
