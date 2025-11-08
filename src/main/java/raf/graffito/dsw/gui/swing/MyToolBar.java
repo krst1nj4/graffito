@@ -16,8 +16,6 @@ public class MyToolBar extends JToolBar {
         ExitAction exitAction = new ExitAction();
         add(exitAction);
 
-        AboutUsAction aboutUsAction = new AboutUsAction();
-        add(aboutUsAction);
 
     }
 }

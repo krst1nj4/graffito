@@ -6,57 +6,34 @@ import java.awt.*;
 
 public class AboutUsView extends JFrame{
 
-    private JLabel imageMita;
-    private JLabel imageKrizz;
-    private JLabel ime1;
-    private JLabel ime2;
-    private JLabel indeks1;
-    private JLabel indeks2;
-
     public AboutUsView() {
         setTitle("About us ");
         setSize(800,600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(new BorderLayout());
+        setLayout(new GridLayout(1,2,50,0));
 
-        JPanel southPanel = new JPanel();
-        southPanel.setLayout(new GridLayout(2,1));
+        ImageIcon image = new ImageIcon("src/main/resources/images/IMG_0200.PNG");
+        ImageIcon image2 = new ImageIcon("src/main/resources/images/krstinja.png");
 
 
-        ime1 = new JLabel("Krstinja Kostic :3", SwingConstants.LEFT);
-        ime2 = new JLabel("Dimitrije Stanojevic :3", SwingConstants.RIGHT);
-        indeks1 = new JLabel("RN 29/2024", SwingConstants.LEFT);
-        indeks2 = new JLabel("RN 49/2024", SwingConstants.RIGHT);
-
-        //add(text, BorderLayout.SOUTH);
-        southPanel.add(ime1);
-        southPanel.add(ime2);
-        southPanel.add(indeks1);
-        southPanel.add(indeks2);
-
-        add(southPanel, BorderLayout.SOUTH);
-
-        ImageIcon mitaIcon =  new ImageIcon("src/main/resources/images/IMG_0200.PNG");
-        Image ogMita = mitaIcon.getImage();
-
-        int newWidth = 228;
-        int newHeight = 171;
-
-        Image scaledMita = ogMita.getScaledInstance(newWidth, newHeight, Image.SCALE_SMOOTH);
-        ImageIcon scaledMitaIcon = new ImageIcon(scaledMita);
-
-        JLabel mitaLabel = new JLabel(scaledMitaIcon);
-
-        imageMita = new JLabel(mitaIcon);
-
-        JPanel imagePanel = new JPanel();
-        imagePanel.setLayout(new GridLayout(1,2));
-
-        imagePanel.add(mitaLabel);
-        add(imagePanel, BorderLayout.CENTER);
-
+        add(osoba(image, "Dimitrije Stanojevic 4924 RN"));
+        add(osoba(image2, "Krstinja Kostic 2924 RN"));
     }
 
+    private JPanel osoba(ImageIcon image, String ime) {
+        JPanel panel = new JPanel(new BorderLayout(20, 20));
+
+        Image slika = image.getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH);
+
+        JLabel slikaLabel = new JLabel(new  ImageIcon(slika), JLabel.CENTER);
+
+        JLabel imeLabel = new JLabel(ime,  JLabel.CENTER);
+
+        panel.add(slikaLabel, BorderLayout.CENTER);
+        panel.add(imeLabel,  BorderLayout.SOUTH);
+
+        return panel;
+    }
 //    public void setText(JLabel text) {
 //        this.text = text;
 //    }
