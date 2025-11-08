@@ -1,5 +1,9 @@
 package raf.graffito.dsw.repozitorijum.composite;
 
+import raf.graffito.dsw.observer.Publisher;
+
+import java.io.Serializable;
+
 public abstract class GraffNode {
     private GraffNode parent;
     private String name;

@@ -4,7 +4,7 @@ import raf.graffito.dsw.observer.MessageGenerator;
 
 public class ApplicationFramework {
     // Buduća polja za model celog projekta
-    // PROVERA1
+
     private static ApplicationFramework instance;
     private MessageGenerator messageGenerator = new MessageGenerator();
 
