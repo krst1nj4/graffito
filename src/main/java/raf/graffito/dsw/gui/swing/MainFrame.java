@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 import raf.graffito.dsw.core.ApplicationFramework;
 import raf.graffito.dsw.controller.ActionManager;
+import raf.graffito.dsw.core.messages.Poruka;
+import raf.graffito.dsw.observer.Subscriber;
 import raf.graffito.dsw.tree.model.GraffTree;
 import raf.graffito.dsw.tree.model.GraffTreeImplements;
 
@@ -13,7 +15,7 @@ import java.awt.*;
 @Getter
 @Setter
 
-public class MainFrame extends JFrame {
+public class MainFrame extends JFrame implements Subscriber {
     private static MainFrame instance;
     private ActionManager actionManager;
     private MyMenuBar menu;
@@ -30,6 +32,10 @@ public class MainFrame extends JFrame {
         actionManager = new ActionManager();
         graffTree = new GraffTreeImplements();
         initializeGUI();
+    }
+
+    public void initTree() {
+        graffTree.generateTree(ApplicationFramework.getInstance().getGraffRepository().getWorkspace());
     }
 
     private void initializeGUI() {
@@ -65,5 +71,21 @@ public class MainFrame extends JFrame {
             instance.initialize();
         }
         return instance;
+    }
+
+    @Override
+    public void update(Object notif) {
+        Poruka msg = (Poruka) notif;
+        switch (msg.getType()) {
+            case GRESKA:
+                JOptionPane.showMessageDialog(this, msg.getContent(), "GRESKA", JOptionPane.ERROR_MESSAGE);
+                break;
+            case OBAVESTENJE:
+                JOptionPane.showMessageDialog(this, msg.getContent(), "OBAVESTENJE", JOptionPane.WARNING_MESSAGE);
+                break;
+            default:
+                break;
+
+        }
     }
 }

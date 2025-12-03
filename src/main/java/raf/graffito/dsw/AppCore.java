@@ -11,7 +11,7 @@ public class AppCore {
         ApplicationFramework appCore = ApplicationFramework.getInstance();
         Gui gui = new SwingGui();
         GraffRepository graffRepository = new GraffRepositoryImplements();
-        appCore.initialize(gui, graffRepository);
+        appCore.initialize();
         appCore.run();
     }
 }

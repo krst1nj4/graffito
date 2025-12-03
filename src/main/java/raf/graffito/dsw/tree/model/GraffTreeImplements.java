@@ -47,10 +47,9 @@ public class GraffTreeImplements implements GraffTree {
     }
 
     private GraffNode createChild(GraffNode parent) {
-        if(parent instanceof Workspace) {
-            return new Project(parent, "Project X");
-        }
+        if(parent == null) {
 
+        }
         return null;
     }
 

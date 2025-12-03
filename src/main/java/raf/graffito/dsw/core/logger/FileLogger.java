@@ -2,26 +2,17 @@ package raf.graffito.dsw.core.logger;
 
 import raf.graffito.dsw.core.messages.Poruka;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 
 public class FileLogger implements Logger {
 
-    private static final String LOG_FILE = "log.txt";
-
-
     @Override
-    public void log(Poruka poruka) {
-        try (PrintWriter pw = new PrintWriter(new FileWriter(LOG_FILE, true))) {
-            pw.println(poruka.toString());
-        } catch (IOException e) {
-            System.err.println("Greska pri upisu u fajl: " + e.getMessage());
-        }
-    }
-
-    @Override
-    public void update(Poruka notif) {
-        log(notif);
+    public void update(Object notif) {
+       try(BufferedWriter bw = new BufferedWriter(new FileWriter("src/main/resources/logs.txt", true))) {
+           bw.write(notif.toString());
+           bw.newLine();
+       } catch (IOException e) {
+           e.printStackTrace();
+       }
     }
 }
