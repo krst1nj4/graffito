@@ -6,11 +6,8 @@ import java.awt.event.ActionEvent;
 
 public class AboutUsAction extends AbstractGraffAction{
     public  AboutUsAction() {
-
         putValue(SHORT_DESCRIPTION, "About us Page");
         putValue(NAME, "About us");
-
-
     }
 
 
@@ -18,10 +15,7 @@ public class AboutUsAction extends AbstractGraffAction{
     @Override
     public void actionPerformed(ActionEvent e) {
         AboutUsView view = new AboutUsView();
-
         view.setVisible(true);
-        
-
     }
 
     @Override

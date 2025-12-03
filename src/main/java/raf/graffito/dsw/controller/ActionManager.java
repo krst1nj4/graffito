@@ -8,6 +8,8 @@ public class ActionManager {
     private ExitAction exitAct;
     private AboutUsAction aboutUsAct;
     private NewProjectAction newProjectAct;
+    private DeleteNodeAction deleteNodeAct;
+    private EditNameAction editNameAct;
 
     public ActionManager() {
         initialiseActions();
@@ -17,6 +19,8 @@ public class ActionManager {
         exitAct = new ExitAction();
         aboutUsAct = new AboutUsAction();
         newProjectAct = new NewProjectAction();
+        deleteNodeAct = new DeleteNodeAction();
+        editNameAct = new EditNameAction();
     }
 
 }

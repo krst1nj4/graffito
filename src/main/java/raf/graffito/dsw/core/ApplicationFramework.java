@@ -1,6 +1,7 @@
 package raf.graffito.dsw.core;
 import lombok.Getter;
 import lombok.Setter;
+import raf.graffito.dsw.core.messages.MessageGenerator;
 
 @Getter
 @Setter
@@ -9,6 +10,7 @@ public class ApplicationFramework {
 
     protected Gui gui;
     protected GraffRepository graffRepository;
+    private MessageGenerator dialogMssgGenerator;
 
     public void run() {
         this.gui.start();

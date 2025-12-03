@@ -8,10 +8,10 @@ public class Project extends GraffNodeComposite {
     private String autor;
     private int brSlajdova;
 
-    public Project(GraffNode parent, String name) {
+    public Project(String name, GraffNode parent, String autor) {
         super(parent, name);
+        this.autor = autor;
     }
-
     @Override
     public void addChild(GraffNode cvor) {
         super.getChilds().add(cvor);
