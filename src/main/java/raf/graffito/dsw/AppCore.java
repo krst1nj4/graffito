@@ -4,7 +4,7 @@ import raf.graffito.dsw.core.ApplicationFramework;
 import raf.graffito.dsw.core.GraffRepository;
 import raf.graffito.dsw.core.Gui;
 import raf.graffito.dsw.gui.swing.SwingGui;
-import raf.graffito.dsw.repozitorijum.GraffRepositoryImplements;
+import raf.graffito.dsw.core.graff.GraffRepositoryImplements;
 
 public class AppCore {
     public static void main(String[] args) {

@@ -3,10 +3,9 @@ package raf.graffito.dsw.gui.swing;
 import lombok.Getter;
 import lombok.Setter;
 import raf.graffito.dsw.core.ApplicationFramework;
-import raf.graffito.dsw.gui.swing.controller.ActionManager;
-import raf.graffito.dsw.gui.swing.tree.GraffTree;
-import raf.graffito.dsw.gui.swing.tree.GraffTreeImplements;
-import raf.graffito.dsw.gui.swing.tree.view.GraffTreeView;
+import raf.graffito.dsw.controller.ActionManager;
+import raf.graffito.dsw.tree.model.GraffTree;
+import raf.graffito.dsw.tree.model.GraffTreeImplements;
 
 import javax.swing.*;
 import java.awt.*;

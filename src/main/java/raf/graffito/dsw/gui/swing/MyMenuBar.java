@@ -2,8 +2,6 @@ package raf.graffito.dsw.gui.swing;
 
 
 
-import raf.graffito.dsw.gui.swing.controller.ExitAction;
-
 import javax.swing.*;
 import java.awt.event.KeyEvent;
 

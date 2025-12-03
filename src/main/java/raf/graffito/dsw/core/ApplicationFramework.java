@@ -1,8 +1,7 @@
 package raf.graffito.dsw.core;
 import lombok.Getter;
 import lombok.Setter;
-import raf.graffito.dsw.gui.swing.MainFrame;
-import raf.graffito.dsw.gui.swing.tree.model.GraffTreeItem;
+
 @Getter
 @Setter
 public class ApplicationFramework {

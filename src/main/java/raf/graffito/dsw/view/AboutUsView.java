@@ -34,24 +34,4 @@ public class AboutUsView extends JFrame{
 
         return panel;
     }
-//    public void setText(JLabel text) {
-//        this.text = text;
-//    }
-
-//    Dimension labelSize = imageLabel.getSize(); // Or JFrame.getSize()
-//    int newWidth = labelSize.width;
-//    int newHeight = labelSize.height;
-//
-//    // Maintain aspect ratio if desired
-//    // Example: calculate newHeight based on aspect ratio
-//    // double aspectRatio = (double) originalImage.getWidth(null) / originalImage.getHeight(null);
-//    // newHeight = (int) (newWidth / aspectRatio);
-//
-//    Image scaledImage = originalImage.getScaledInstance(newWidth, newHeight, Image.SCALE_SMOOTH);
-//    ImageIcon scaledIcon = new ImageIcon(scaledImage);
-//    imageLabel.setIcon(scaledIcon);
-//
-//    public void setImage(JLabel image) {
-//        this.image = image;
-//    }
 }

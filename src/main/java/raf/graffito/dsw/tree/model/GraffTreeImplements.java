@@ -1,0 +1,57 @@
+package raf.graffito.dsw.tree.model;
+
+import raf.graffito.dsw.tree.view.GraffTreeView;
+import raf.graffito.dsw.core.graff.model.Project;
+import raf.graffito.dsw.core.graff.model.Workspace;
+import raf.graffito.dsw.core.graff.composite.GraffNode;
+import raf.graffito.dsw.core.graff.composite.GraffNodeComposite;
+
+import javax.swing.*;
+import javax.swing.tree.DefaultTreeModel;
+
+public class GraffTreeImplements implements GraffTree {
+
+    private GraffTreeView graffTreeView;
+    private DefaultTreeModel treeModel;
+
+    @Override
+    public GraffTreeView generateTree(Workspace workspace) {
+        /// kreiramo korenski cvor stabla koji je kod nas workspace
+        GraffTreeItem koren = new GraffTreeItem(workspace);
+        /// kreiramo model stabla sa korenskim cvorom
+        treeModel = new DefaultTreeModel(koren);
+        /// kreiramo view stabla sa modelom
+        graffTreeView = new GraffTreeView(treeModel);
+
+
+        return graffTreeView;
+    }
+
+    @Override
+    public void addChild(GraffTreeItem parent) {
+        if(!((parent.getGraffNode()) instanceof GraffNodeComposite)) {
+            return;
+        }
+
+        GraffNode child = createChild(parent.getGraffNode());
+        parent.add(new GraffTreeItem(child));
+        ((GraffNodeComposite) parent.getGraffNode()).addChild(child);
+        graffTreeView.expandPath(graffTreeView.getSelectionPath());
+        SwingUtilities.updateComponentTreeUI(graffTreeView);
+
+    }
+
+    @Override
+    public GraffTreeItem getSelectedNode() {
+        return (GraffTreeItem) graffTreeView.getLastSelectedPathComponent();
+    }
+
+    private GraffNode createChild(GraffNode parent) {
+        if(parent instanceof Workspace) {
+            return new Project(parent, "Project X");
+        }
+
+        return null;
+    }
+
+}
