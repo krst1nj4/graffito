@@ -20,6 +20,6 @@ public class NewProjectAction extends AbstractGraffAction{
     @Override
     public void actionPerformed(ActionEvent e) {
         GraffTreeItem selektovan = (GraffTreeItem) MainFrame.getInstance().getGraffTree().getSelectedNode();
-        MainFrame.getInstance().getGraffTree().addChild(selektovan);
+        ///MainFrame.getInstance().getGraffTree().addChild(selektovan);
     }
 }

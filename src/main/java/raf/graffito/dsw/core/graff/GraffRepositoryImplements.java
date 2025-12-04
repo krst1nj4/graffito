@@ -22,11 +22,6 @@ public class GraffRepositoryImplements implements GraffRepository {
     }
 
     @Override
-    public void addChild(GraffNodeComposite parent, GraffNode child) {
-
-    }
-
-    @Override
     public GraffNodeStore createFactory(String type) {
         switch(type) {
             case "project":
