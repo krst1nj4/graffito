@@ -13,11 +13,12 @@ import raf.graffito.dsw.core.graff.model.Workspace;
 import raf.graffito.dsw.core.graff.composite.GraffNode;
 import raf.graffito.dsw.core.graff.composite.GraffNodeComposite;
 
+import javax.swing.*;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreePath;
 
-public class GraffTreeImplements implements GraffTree {
+public class GraffTreeImplements extends JTree implements GraffTree {
 
     private GraffTreeView graffTreeView;
     private DefaultTreeModel treeModel;

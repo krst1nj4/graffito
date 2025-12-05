@@ -15,6 +15,10 @@ import java.awt.*;
 @Getter
 @Setter
 
+/**
+ * MainFrame -> view za glavni prozor
+ */
+
 public class MainFrame extends JFrame implements Subscriber {
     private static MainFrame instance;
     private ActionManager actionManager;
@@ -22,7 +26,6 @@ public class MainFrame extends JFrame implements Subscriber {
     private JToolBar toolbar;
     private GraffTree graffTree;
 
-    // Buduća polja za sve komponente view-a na glavnom prozoru
 
     private MainFrame() {
 

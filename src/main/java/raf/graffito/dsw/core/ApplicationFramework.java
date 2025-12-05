@@ -6,6 +6,9 @@ import raf.graffito.dsw.core.logger.LoggerFactory;
 import raf.graffito.dsw.core.messages.MessageGenerator;
 import raf.graffito.dsw.gui.swing.MainFrame;
 
+/**
+ * Application Framework -> controller izmedju modela/akcija i view-a
+ */
 @Getter
 @Setter
 public class ApplicationFramework {
