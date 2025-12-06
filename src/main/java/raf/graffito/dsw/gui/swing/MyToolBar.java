@@ -7,9 +7,9 @@ public class MyToolBar extends JToolBar {
         super(HORIZONTAL);
         setFloatable(false);
 
-        /**
+
         /// stablo:
-        add(MainFrame.getInstance().getActionManager().getNewNodeAction());
+        add (MainFrame.getInstance().getActionManager().getNewNodeAction());
         addSeparator();
         add(MainFrame.getInstance().getActionManager().getEditAction());
         addSeparator();
@@ -20,7 +20,6 @@ public class MyToolBar extends JToolBar {
         add(MainFrame.getInstance().getActionManager().getAboutUsAct());
         addSeparator();
         add(MainFrame.getInstance().getActionManager().getExitAct());
-*/
 
     }
 }

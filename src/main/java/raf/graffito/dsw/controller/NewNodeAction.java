@@ -13,7 +13,7 @@ public class NewNodeAction extends AbstractGraffAction{
     public NewNodeAction() {
         putValue(NAME, "New Node");
         putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_N, ActionEvent.CTRL_MASK));
-        putValue(SMALL_ICON, "src/main/resources/images/plusicon2.png");
+        putValue(SMALL_ICON, loadIcon("/images/plusicon2.png"));
         putValue(SHORT_DESCRIPTION, "Create a new node");
 
     }
