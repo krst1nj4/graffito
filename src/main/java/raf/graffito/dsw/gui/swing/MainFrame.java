@@ -3,7 +3,7 @@ package raf.graffito.dsw.gui.swing;
 import lombok.Getter;
 import lombok.Setter;
 import raf.graffito.dsw.core.ApplicationFramework;
-import raf.graffito.dsw.controller.ActionManager;
+import raf.graffito.dsw.core.ActionManager;
 import raf.graffito.dsw.core.messages.Poruka;
 import raf.graffito.dsw.observer.Subscriber;
 import raf.graffito.dsw.tree.model.GraffTree;

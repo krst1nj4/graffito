@@ -4,12 +4,14 @@ import javax.swing.*;
 import javax.swing.JFrame;
 import java.awt.*;
 
-public class AboutUsView extends JFrame{
+public class AboutUsDialog extends JDialog{
 
-    public AboutUsView() {
+
+
+    public AboutUsDialog() {
         setTitle("About us ");
         setSize(800,600);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLayout(new GridLayout(1,2,50,0));
 
         ImageIcon image = new ImageIcon("src/main/resources/images/IMG_0200.PNG");

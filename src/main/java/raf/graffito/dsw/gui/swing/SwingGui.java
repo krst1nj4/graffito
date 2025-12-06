@@ -4,8 +4,6 @@ import raf.graffito.dsw.core.ApplicationFramework;
 import raf.graffito.dsw.core.Gui;
 
 public class SwingGui implements Gui {
-    private MainFrame instance;
-
     public SwingGui(){
 
     }
@@ -13,7 +11,6 @@ public class SwingGui implements Gui {
 
     @Override
     public void start() {
-        instance = MainFrame.getInstance();
-        instance.setVisible(true);
+        MainFrame.getInstance().setVisible(true);
     }
 }

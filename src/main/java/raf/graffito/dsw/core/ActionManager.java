@@ -1,15 +1,16 @@
-package raf.graffito.dsw.controller;
+package raf.graffito.dsw.core;
 
 import lombok.Getter;
+import raf.graffito.dsw.controller.*;
 
 @Getter
 
 public class ActionManager {
     private ExitAction exitAct;
     private AboutUsAction aboutUsAct;
-    private NewProjectAction newProjectAct;
     private DeleteNodeAction deleteNodeAct;
-    private EditNameAction editNameAct;
+    private EditAction editAction;
+    private NewNodeAction newNodeAction;
 
     public ActionManager() {
         initialiseActions();
@@ -18,9 +19,9 @@ public class ActionManager {
     private void initialiseActions() {
         exitAct = new ExitAction();
         aboutUsAct = new AboutUsAction();
-        newProjectAct = new NewProjectAction();
         deleteNodeAct = new DeleteNodeAction();
-        editNameAct = new EditNameAction();
+        editAction = new EditAction();
+        newNodeAction = new NewNodeAction();
     }
 
 }

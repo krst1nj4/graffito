@@ -5,7 +5,7 @@ import lombok.Getter;
 import javax.swing.*;
 import java.awt.*;
 
-public class NewProjectView {
+public class NewNodeDialog {
 
 
     public enum Tip {
@@ -28,7 +28,7 @@ public class NewProjectView {
     @Getter
     private Tip selectedTip;
 
-    public NewProjectView() {
+    public NewNodeDialog() {
         typeCB = new JComboBox<Tip>(Tip.values());
     }
 

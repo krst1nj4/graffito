@@ -4,7 +4,7 @@ import raf.graffito.dsw.core.ApplicationFramework;
 import raf.graffito.dsw.core.graff.model.Presentation;
 import raf.graffito.dsw.core.messages.MessageType;
 import raf.graffito.dsw.gui.swing.MainFrame;
-import raf.graffito.dsw.gui.swing.NewProjectView;
+import raf.graffito.dsw.gui.swing.NewNodeDialog;
 import raf.graffito.dsw.tree.controller.GraffTreeCellEditor;
 import raf.graffito.dsw.tree.view.GraffTreeCellRenderer;
 import raf.graffito.dsw.tree.view.GraffTreeView;
@@ -89,12 +89,12 @@ public class GraffTreeImplements extends JTree implements GraffTree {
         if(parentNode instanceof Workspace) {
             novi = ApplicationFramework.getInstance().getGraffRepository().getWorkspace();
         } else if(parentNode instanceof Project) {
-            NewProjectView pv = new NewProjectView();
+            NewNodeDialog pv = new NewNodeDialog();
 
             if(pv.showView(MainFrame.getInstance())) {
-                NewProjectView.Tip tip = pv.getSelectedTip();
+                NewNodeDialog.Tip tip = pv.getSelectedTip();
 
-                if(tip == NewProjectView.Tip.PRESENTATION) {
+                if(tip == NewNodeDialog.Tip.PRESENTATION) {
                     novi = ApplicationFramework.getInstance().getGraffRepository().createFactory("presentation").createGraffNode((GraffNodeComposite) parentNode);
                 } else {
                     novi = ApplicationFramework.getInstance().getGraffRepository().createFactory("slide").createGraffNode((GraffNodeComposite) parentNode);
@@ -121,6 +121,6 @@ public class GraffTreeImplements extends JTree implements GraffTree {
 
     @Override
     public void refreshTree() {
-
+        treeModel.reload();
     }
 }

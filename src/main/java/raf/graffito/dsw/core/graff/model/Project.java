@@ -1,7 +1,12 @@
 package raf.graffito.dsw.core.graff.model;
 
+import lombok.Getter;
+import lombok.Setter;
 import raf.graffito.dsw.core.graff.composite.GraffNode;
 import raf.graffito.dsw.core.graff.composite.GraffNodeComposite;
+
+@Getter
+@Setter
 
 public class Project extends GraffNodeComposite {
 

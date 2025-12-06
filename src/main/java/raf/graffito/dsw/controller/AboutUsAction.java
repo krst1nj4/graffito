@@ -1,6 +1,6 @@
 package raf.graffito.dsw.controller;
 
-import raf.graffito.dsw.gui.swing.AboutUsView;
+import raf.graffito.dsw.gui.swing.AboutUsDialog;
 
 import java.awt.event.ActionEvent;
 
@@ -14,7 +14,7 @@ public class AboutUsAction extends AbstractGraffAction{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        AboutUsView view = new AboutUsView();
+        AboutUsDialog view = new AboutUsDialog();
         view.setVisible(true);
     }
 
