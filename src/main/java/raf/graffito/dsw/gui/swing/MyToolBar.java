@@ -1,8 +1,5 @@
 package raf.graffito.dsw.gui.swing;
 
-import raf.graffito.dsw.gui.swing.controller.AboutUsAction;
-import raf.graffito.dsw.gui.swing.controller.ExitAction;
-
 import javax.swing.*;
 
 public class MyToolBar extends JToolBar {
@@ -10,9 +7,19 @@ public class MyToolBar extends JToolBar {
         super(HORIZONTAL);
         setFloatable(false);
 
-        add(MainFrame.getInstance().getActionManager().getExitAct());
-        add(MainFrame.getInstance().getActionManager().getNewProjectAct());
 
+        /// stablo:
+        add (MainFrame.getInstance().getActionManager().getNewNodeAction());
+        addSeparator();
+        add(MainFrame.getInstance().getActionManager().getEditAction());
+        addSeparator();
+        add(MainFrame.getInstance().getActionManager().getDeleteNodeAct());
+        addSeparator();
+
+        /// osnovne akcije:
+        add(MainFrame.getInstance().getActionManager().getAboutUsAct());
+        addSeparator();
+        add(MainFrame.getInstance().getActionManager().getExitAct());
 
     }
 }

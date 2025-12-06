@@ -1,0 +1,29 @@
+package raf.graffito.dsw.core.graff.model;
+
+import lombok.Getter;
+import lombok.Setter;
+import raf.graffito.dsw.core.graff.composite.GraffNode;
+import raf.graffito.dsw.core.graff.composite.GraffNodeComposite;
+
+@Getter
+@Setter
+
+public class Project extends GraffNodeComposite {
+
+    private String autor;
+    private int brSlajdova;
+
+    public Project(String name, GraffNode parent, String autor) {
+        super(parent, name);
+        this.autor = autor;
+    }
+    @Override
+    public void addChild(GraffNode cvor) {
+        super.getChilds().add(cvor);
+    }
+
+    @Override
+    public void removeChild(GraffNode cvor) {
+        super.getChilds().remove(cvor);
+    }
+}
