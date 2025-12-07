@@ -16,12 +16,13 @@ public class GraffTreeItem extends DefaultMutableTreeNode {
     private GraffNode graffNode;
 
     public GraffTreeItem(GraffNode nodeModel) {
+        super(nodeModel);
         this.graffNode = nodeModel;
     }
 
     @Override
     public String toString() {
-        return graffNode.getName();
+        return graffNode != null ? graffNode.getName() : "";
     }
 
     public void setName(String name) {

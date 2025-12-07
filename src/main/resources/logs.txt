@@ -38,3 +38,22 @@
 [UPOZORENJE] [07.12.2025. 13:46] Morate selektovati cvor!
 [GRESKA] [07.12.2025. 13:46] Morate izabrati projekat!
 [GRESKA] [07.12.2025. 13:46] Izaberite cvor za brisanje
+[UPOZORENJE] [07.12.2025. 13:55] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 13:55] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 13:55] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 13:55] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 13:55] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 13:55] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 13:55] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 13:55] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 13:58] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 14:03] Morate selektovati cvor!
+[GRESKA] [07.12.2025. 14:19] Morate izabrati projekat!
+[UPOZORENJE] [07.12.2025. 14:20] Morate selektovati cvor!
+[GRESKA] [07.12.2025. 14:20] Izaberite cvor za brisanje
+[GRESKA] [07.12.2025. 14:20] Morate izabrati projekat!
+[UPOZORENJE] [07.12.2025. 14:31] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 14:31] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 14:31] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 14:31] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 14:31] Morate selektovati cvor!

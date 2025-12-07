@@ -15,7 +15,7 @@ public interface GraffTree {
     void addChild(GraffTreeItem parent, GraffNode child);
 
     /// getter za selektovani node
-    GraffTreeItem getSelectedNode();
+    DefaultMutableTreeNode getSelectedNode();
 
     boolean createChild(DefaultMutableTreeNode node);
     boolean deleteChild(DefaultMutableTreeNode node);
