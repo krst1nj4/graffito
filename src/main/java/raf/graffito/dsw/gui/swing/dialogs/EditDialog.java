@@ -1,6 +1,5 @@
-package raf.graffito.dsw.gui.swing;
+package raf.graffito.dsw.gui.swing.dialogs;
 
-import lombok.Getter;
 import raf.graffito.dsw.core.graff.model.Project;
 
 import javax.swing.*;
@@ -19,7 +18,7 @@ public class EditDialog {
     private void initComponents(Project project) {
         panel = new JPanel(new GridLayout(2, 2, 5, 5));
         name = new JTextField(project.getName());
-        author = new JTextField(project.getAutor());
+        author = new JTextField(project.getAuthor());
 
         panel.add(new JLabel("Name:"));
         panel.add(name);

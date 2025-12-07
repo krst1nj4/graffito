@@ -19,8 +19,8 @@ public class Workspace extends GraffNodeComposite {
     public void addChild(GraffNode cvor) {
         if(cvor != null && cvor instanceof Project) {
             Project projekat = (Project)cvor;
-            if(!this.getChilds().contains(projekat)) {
-                this.getChilds().add(projekat);
+            if(!this.getChildren().contains(projekat)) {
+                this.getChildren().add(projekat);
             }
         }
     }
@@ -29,8 +29,8 @@ public class Workspace extends GraffNodeComposite {
     public void removeChild(GraffNode cvor) {
         if(cvor != null && cvor instanceof Project) {
             Project projekat = (Project)cvor;
-            if(this.getChilds().contains(projekat)) {
-                this.getChilds().remove(projekat);
+            if(this.getChildren().contains(projekat)) {
+                this.getChildren().remove(projekat);
             }
         }
     }

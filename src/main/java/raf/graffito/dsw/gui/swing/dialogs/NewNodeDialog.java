@@ -1,4 +1,4 @@
-package raf.graffito.dsw.gui.swing;
+package raf.graffito.dsw.gui.swing.dialogs;
 
 import lombok.Getter;
 

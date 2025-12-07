@@ -8,11 +8,11 @@ import java.util.ArrayList;
 @Getter
 
 public abstract class GraffNodeComposite extends GraffNode {
-    private List<GraffNode> childs;
+    private List<GraffNode> children;
 
     public GraffNodeComposite(GraffNode parent, String name) {
         super(parent, name);
-        this.childs = new ArrayList<>();
+        this.children = new ArrayList<>();
     }
 
     public abstract void addChild(GraffNode cvor);
@@ -24,7 +24,7 @@ public abstract class GraffNodeComposite extends GraffNode {
             GraffNode found = super.findByName(name);
             if(found != null) return found;
 
-            for(GraffNode child : childs){
+            for(GraffNode child : children){
                 found = child.findByName(name);
                 if(found != null) return found;
             }

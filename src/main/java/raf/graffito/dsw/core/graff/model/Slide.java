@@ -5,8 +5,13 @@ import raf.graffito.dsw.core.graff.composite.GraffNodeLeaf;
 
 public class Slide extends GraffNodeLeaf {
 
+    public Slide(String Name, GraffNode parentNode) {
+        super();
 
-    public Slide(GraffNode parent, String name) {
-        super(parent, name);
+        setName(Name);
+        setParent(parentNode);
+    }
+    public Slide() {
+        super();
     }
 }

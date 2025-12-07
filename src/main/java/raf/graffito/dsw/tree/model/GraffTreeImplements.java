@@ -4,7 +4,7 @@ import raf.graffito.dsw.core.ApplicationFramework;
 import raf.graffito.dsw.core.graff.model.Presentation;
 import raf.graffito.dsw.core.messages.MessageType;
 import raf.graffito.dsw.gui.swing.MainFrame;
-import raf.graffito.dsw.gui.swing.NewNodeDialog;
+import raf.graffito.dsw.gui.swing.dialogs.NewNodeDialog;
 import raf.graffito.dsw.tree.controller.GraffTreeCellEditor;
 import raf.graffito.dsw.tree.view.GraffTreeCellRenderer;
 import raf.graffito.dsw.tree.view.GraffTreeView;
@@ -56,7 +56,7 @@ public class GraffTreeImplements extends JTree implements GraffTree {
 
             if(child instanceof GraffNodeComposite) {
                 GraffNodeComposite com =  (GraffNodeComposite) child;
-                for(GraffNode grandchild : com.getChilds()) {
+                for(GraffNode grandchild : com.getChildren()) {
                     addChild(novi, grandchild);
                 }
             }
