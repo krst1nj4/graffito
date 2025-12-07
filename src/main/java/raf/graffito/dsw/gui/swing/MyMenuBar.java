@@ -13,7 +13,10 @@ public class MyMenuBar extends JMenuBar {
 
         JMenu editMenu = new JMenu("Edit");
         editMenu.setMnemonic(KeyEvent.VK_E);
-        ///editMenu.add(MainFrame.getInstance().getActionManager().getNewProjectAct());
+        editMenu.add(MainFrame.getInstance().getActionManager().getNewNodeAction());
+        editMenu.add(MainFrame.getInstance().getActionManager().getDeleteNodeAct());
+        editMenu.addSeparator();
+        editMenu.add(MainFrame.getInstance().getActionManager().getEditAction());
 
         JMenu helpMenu = new JMenu("Help");
         helpMenu.setMnemonic(KeyEvent.VK_H);

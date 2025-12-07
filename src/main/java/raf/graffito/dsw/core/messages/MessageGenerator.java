@@ -30,7 +30,7 @@ public class MessageGenerator implements Publisher {
     }
 
     @Override
-    public void notifySubscribers(Poruka notify) {
+    public void notifySubscribers(Object notify) {
         if(notify == null || this.subscribers == null || this.subscribers.isEmpty()) return;
 
         for(Subscriber subscriber : this.subscribers){

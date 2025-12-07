@@ -24,3 +24,5 @@
 [UPOZORENJE] [06.12.2025. 17:55] Morate selektovati cvor!
 [UPOZORENJE] [06.12.2025. 17:55] Morate selektovati cvor!
 [UPOZORENJE] [06.12.2025. 17:55] Morate selektovati cvor!
+[GRESKA] [07.12.2025. 12:34] Izaberite cvor za brisanje
+[GRESKA] [07.12.2025. 12:34] Izaberite cvor za brisanje
