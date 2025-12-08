@@ -14,7 +14,7 @@ public class EditAction extends AbstractGraffAction{
 
     public EditAction() {
         putValue(SMALL_ICON, loadIcon("/images/editicon.png"));
-        putValue(NAME, "Edit");
+        putValue(NAME, "Menjanje cvora");
         putValue(SHORT_DESCRIPTION, "Promena imena i autora projekta");
     }
 

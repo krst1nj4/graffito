@@ -7,16 +7,9 @@ import raf.graffito.dsw.core.graff.model.Workspace;
 import javax.swing.tree.DefaultMutableTreeNode;
 
 public interface GraffTree {
-    /// generisemo drvo
-    GraffTreeView generateTree(Workspace workspace);
-    /// dodajemo decu na korenski/roditeljski cvor
-    ///void addChild(GraffTreeItem parent);
-
+    void generateTree(GraffNode root);
     void addChild(GraffTreeItem parent, GraffNode child);
-
-    /// getter za selektovani node
     DefaultMutableTreeNode getSelectedNode();
-
     boolean createChild(DefaultMutableTreeNode node);
     boolean deleteChild(DefaultMutableTreeNode node);
     void refreshTree();

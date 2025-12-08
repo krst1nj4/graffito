@@ -5,7 +5,7 @@ import raf.graffito.dsw.core.graff.model.Presentation;
 import raf.graffito.dsw.core.messages.MessageType;
 import raf.graffito.dsw.gui.swing.MainFrame;
 import raf.graffito.dsw.gui.swing.dialogs.NewNodeDialog;
-import raf.graffito.dsw.tree.controller.GraffTreeCellEditor;
+import raf.graffito.dsw.tree.view.GraffTreeCellEditor;
 import raf.graffito.dsw.tree.controller.GraffTreeDragHandler;
 import raf.graffito.dsw.tree.view.GraffTreeCellRenderer;
 import raf.graffito.dsw.tree.view.GraffTreeView;
@@ -31,12 +31,10 @@ public class GraffTreeImplements extends JTree implements GraffTree {
     }
 
     public void init() {
-        // Kreiraj prazan root node
         GraffTreeItem root = new GraffTreeItem(null);
         treeModel = new DefaultTreeModel(root);
         setModel(treeModel);
 
-        // Postavi renderer i editor
         cellRenderer = new GraffTreeCellRenderer();
         setCellRenderer(cellRenderer);
 
@@ -44,17 +42,13 @@ public class GraffTreeImplements extends JTree implements GraffTree {
         setCellEditor(cellEditor);
         setEditable(true);
 
-        // Omogući drag & drop
         setDragEnabled(true);
         setDropMode(DropMode.ON_OR_INSERT);
         setTransferHandler(new GraffTreeDragHandler());
 
-        // Podešavanja
         setRootVisible(true);
         setShowsRootHandles(true);
     }
-
-
 
     @Override
     public void addChild(GraffTreeItem parent, GraffNode child) {
@@ -137,16 +131,37 @@ public class GraffTreeImplements extends JTree implements GraffTree {
     }
 
     @Override
-    public GraffTreeView generateTree(Workspace workspace) {
-        /// kreiramo korenski cvor stabla koji je kod nas workspace
-        GraffTreeItem koren = new GraffTreeItem(workspace);
-        /// kreiramo model stabla sa korenskim cvorom
-        treeModel = new DefaultTreeModel(koren);
-        /// kreiramo view stabla sa modelom
-        graffTreeView = new GraffTreeView(treeModel);
+    public void generateTree(GraffNode root) {
+        if (root == null) {
+            return;
+        }
 
+        GraffTreeItem rootItem = new GraffTreeItem(root);
+        treeModel.setRoot(rootItem);
 
-        return graffTreeView;
+        // Ako je root composite, dodaj njegovu decu rekurzivno
+        if (root instanceof GraffNodeComposite) {
+            GraffNodeComposite composite = (GraffNodeComposite) root;
+            for (GraffNode child : composite.getChildren()) {
+                addChild(rootItem, child);
+            }
+        }
+
+        // Proširi sve workspace i project čvorove
+        expandWorkspaceAndProjects(rootItem);
+    }
+
+    private void expandWorkspaceAndProjects(GraffTreeItem node) {
+        if (node.getGraffNode() instanceof Workspace ||
+                node.getGraffNode() instanceof Project) {
+            expandPath(new TreePath(treeModel.getPathToRoot(node)));
+        }
+
+        for (int i = 0; i < node.getChildCount(); i++) {
+            if (node.getChildAt(i) instanceof GraffTreeItem) {
+                expandWorkspaceAndProjects((GraffTreeItem) node.getChildAt(i));
+            }
+        }
     }
 
     @Override

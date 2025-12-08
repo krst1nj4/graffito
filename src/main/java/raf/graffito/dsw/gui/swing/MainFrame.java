@@ -62,6 +62,10 @@ public class MainFrame extends JFrame implements Subscriber {
 
         graffTree = new GraffTreeImplements();
 
+//        JTree workspaceTree = graffTree.generateTree(ApplicationFramework.getInstance().getGraffRepository().getWorkspace());
+
+//        System.out.println(ApplicationFramework.getInstance().getGraffRepository().getWorkspace().getChildren());
+
         JScrollPane treeScrollPane = new JScrollPane((JComponent) graffTree);
         treeScrollPane.setPreferredSize(new Dimension(250, 0));
 
@@ -103,8 +107,10 @@ public class MainFrame extends JFrame implements Subscriber {
                 JOptionPane.showMessageDialog(this, msg.getContent(), "GRESKA", JOptionPane.ERROR_MESSAGE);
                 break;
             case OBAVESTENJE:
-                JOptionPane.showMessageDialog(this, msg.getContent(), "OBAVESTENJE", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(this, msg.getContent(), "OBAVESTENJE", JOptionPane.PLAIN_MESSAGE);
                 break;
+            case UPOZORENJE:
+                JOptionPane.showMessageDialog(this, msg.getContent(), "UPOZORENJE", JOptionPane.WARNING_MESSAGE);
             default:
                 break;
 
