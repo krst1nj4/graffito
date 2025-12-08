@@ -54,18 +54,7 @@ public class GraffTreeImplements extends JTree implements GraffTree {
         setShowsRootHandles(true);
     }
 
-    @Override
-    public GraffTreeView generateTree(Workspace workspace) {
-        /// kreiramo korenski cvor stabla koji je kod nas workspace
-        GraffTreeItem koren = new GraffTreeItem(workspace);
-        /// kreiramo model stabla sa korenskim cvorom
-        treeModel = new DefaultTreeModel(koren);
-        /// kreiramo view stabla sa modelom
-        graffTreeView = new GraffTreeView(treeModel);
 
-
-        return graffTreeView;
-    }
 
     @Override
     public void addChild(GraffTreeItem parent, GraffNode child) {
@@ -145,6 +134,19 @@ public class GraffTreeImplements extends JTree implements GraffTree {
         }
 
         return false;
+    }
+
+    @Override
+    public GraffTreeView generateTree(Workspace workspace) {
+        /// kreiramo korenski cvor stabla koji je kod nas workspace
+        GraffTreeItem koren = new GraffTreeItem(workspace);
+        /// kreiramo model stabla sa korenskim cvorom
+        treeModel = new DefaultTreeModel(koren);
+        /// kreiramo view stabla sa modelom
+        graffTreeView = new GraffTreeView(treeModel);
+
+
+        return graffTreeView;
     }
 
     @Override
