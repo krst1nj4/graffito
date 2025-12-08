@@ -11,6 +11,7 @@ public class ActionManager {
     private DeleteNodeAction deleteNodeAct;
     private EditAction editAction;
     private NewNodeAction newNodeAction;
+    private OpenProjectAction openProjectAction;
 
     public ActionManager() {
         initialiseActions();
@@ -22,6 +23,7 @@ public class ActionManager {
         deleteNodeAct = new DeleteNodeAction();
         editAction = new EditAction();
         newNodeAction = new NewNodeAction();
+        openProjectAction = new OpenProjectAction();
     }
 
 }

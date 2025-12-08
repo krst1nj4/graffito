@@ -152,3 +152,8 @@
 [UPOZORENJE] [08.12.2025. 19:27] Ime vec postoji!
 [GRESKA] [08.12.2025. 19:31] Morate izabrati projekat!
 [OBAVESTENJE] [08.12.2025. 19:32] Kreirani slajd:O DAAAAAAAAAAA
+[GRESKA] [08.12.2025. 19:49] You have to select a project!
+[OBAVESTENJE] [08.12.2025. 19:49] Opened project ny
+[OBAVESTENJE] [08.12.2025. 19:50] Kreirani slajd:JEBI ME
+[GRESKA] [08.12.2025. 19:50] You have to select a project!
+[GRESKA] [08.12.2025. 19:50] Project is already opened!
