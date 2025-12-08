@@ -14,13 +14,8 @@ import raf.graffito.dsw.gui.swing.MainFrame;
 public class ApplicationFramework {
     // Buduća polja za model celog projekta
 
-    protected Gui gui;
     protected GraffRepository graffRepository;
     private MessageGenerator dialogMsgGenerator;
-
-    public void run() {
-        this.gui.start();
-    }
 
     public void initialize() {
         MainFrame mainFrame = MainFrame.getInstance();

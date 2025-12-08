@@ -1,13 +1,14 @@
 package raf.graffito.dsw.controller;
 
-import raf.graffito.dsw.gui.swing.AboutUsDialog;
+import raf.graffito.dsw.gui.swing.dialogs.AboutUsDialog;
 
 import java.awt.event.ActionEvent;
 
 public class AboutUsAction extends AbstractGraffAction{
     public  AboutUsAction() {
-        putValue(SHORT_DESCRIPTION, "About us Page");
+        putValue(SHORT_DESCRIPTION, "O developerima aplikacije");
         putValue(NAME, "About us");
+        putValue(SMALL_ICON, loadIcon("/images/aboutusicon.jpeg"));
     }
 
 

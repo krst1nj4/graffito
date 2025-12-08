@@ -17,7 +17,7 @@ public class PresFactory implements GraffNodeStore{
                 JOptionPane.QUESTION_MESSAGE);
 
         if(name != null && !name.trim().isEmpty()){
-            return new Presentation(parent, name.trim());
+            return new Presentation(name.trim(), parent);
         }
         return null;
     }

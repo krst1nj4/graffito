@@ -1,10 +1,9 @@
 package raf.graffito.dsw.controller;
 
 import raf.graffito.dsw.core.ApplicationFramework;
-import raf.graffito.dsw.core.graff.composite.GraffNodeComposite;
 import raf.graffito.dsw.core.graff.model.Project;
 import raf.graffito.dsw.core.messages.MessageType;
-import raf.graffito.dsw.gui.swing.EditDialog;
+import raf.graffito.dsw.gui.swing.dialogs.EditDialog;
 import raf.graffito.dsw.gui.swing.MainFrame;
 import raf.graffito.dsw.tree.model.GraffTreeItem;
 
@@ -15,7 +14,7 @@ public class EditAction extends AbstractGraffAction{
 
     public EditAction() {
         putValue(SMALL_ICON, loadIcon("/images/editicon.png"));
-        putValue(NAME, "Edit");
+        putValue(NAME, "Menjanje cvora");
         putValue(SHORT_DESCRIPTION, "Promena imena i autora projekta");
     }
 
@@ -51,7 +50,7 @@ public class EditAction extends AbstractGraffAction{
                 ApplicationFramework.getInstance().getDialogMsgGenerator().generateMessage(MessageType.OBAVESTENJE, "Preimenovano ime.");
                 project.setName(newName);
                 ApplicationFramework.getInstance().getDialogMsgGenerator().generateMessage(MessageType.OBAVESTENJE, "Preimenovan autor.");
-                project.setAutor(newAuthor);
+                project.setAuthor(newAuthor);
                 mf.getGraffTree().refreshTree();
             } else {
                 ApplicationFramework.getInstance().getDialogMsgGenerator().generateMessage(MessageType.UPOZORENJE, "Ime projekta ne moze biti prazno!");

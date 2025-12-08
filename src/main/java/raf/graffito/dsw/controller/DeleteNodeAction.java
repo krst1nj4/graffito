@@ -14,7 +14,7 @@ import java.awt.event.KeyEvent;
 public class DeleteNodeAction extends AbstractGraffAction {
 
     public DeleteNodeAction() {
-        putValue(NAME, "Delete Node");
+        putValue(NAME, "Brisanje cvora");
         putValue(SMALL_ICON, loadIcon("/images/deleteicon.png"));
         putValue(SHORT_DESCRIPTION, "Brisanje cvora");
         putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_DELETE, 0));

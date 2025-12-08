@@ -15,6 +15,7 @@ public class MyToolBar extends JToolBar {
         addSeparator();
         add(MainFrame.getInstance().getActionManager().getDeleteNodeAct());
         addSeparator();
+        add(MainFrame.getInstance().getActionManager().getOpenProjectAction());
 
         /// osnovne akcije:
         add(MainFrame.getInstance().getActionManager().getAboutUsAct());

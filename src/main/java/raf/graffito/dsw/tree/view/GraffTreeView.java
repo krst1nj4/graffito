@@ -1,6 +1,5 @@
 package raf.graffito.dsw.tree.view;
 
-import raf.graffito.dsw.tree.controller.GraffTreeCellEditor;
 import raf.graffito.dsw.tree.controller.GraffTreeSelectionListener;
 
 import javax.swing.*;
@@ -14,5 +13,6 @@ public class GraffTreeView extends JTree {
         setCellEditor(new GraffTreeCellEditor(this, graffTreeCellRenderer));
         setCellRenderer(graffTreeCellRenderer);
         setEditable(true);
+        setVisible(true);
     }
 }

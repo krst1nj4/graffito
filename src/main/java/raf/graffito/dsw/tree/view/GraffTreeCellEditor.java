@@ -1,4 +1,4 @@
-package raf.graffito.dsw.tree.controller;
+package raf.graffito.dsw.tree.view;
 
 import raf.graffito.dsw.core.ApplicationFramework;
 import raf.graffito.dsw.core.messages.MessageType;
@@ -9,7 +9,6 @@ import javax.swing.tree.DefaultTreeCellEditor;
 import javax.swing.tree.DefaultTreeCellRenderer;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.util.EventObject;
 
@@ -52,7 +51,7 @@ public class GraffTreeCellEditor extends DefaultTreeCellEditor {
 
             if(!name.isEmpty()){
                 if(editItem.getGraffNode().getParent() != null && editItem.getGraffNode().getParent().findByName(name) != null){
-                    ApplicationFramework.getInstance().getDialogMsgGenerator().generateMessage(MessageType.GRESKA, "Ime vec postoji!");
+                    ApplicationFramework.getInstance().getDialogMsgGenerator().generateMessage(MessageType.UPOZORENJE, "Ime vec postoji!");
                     return editItem;
                 }
 

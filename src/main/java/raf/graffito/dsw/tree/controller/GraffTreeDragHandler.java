@@ -127,7 +127,7 @@ public class GraffTreeDragHandler extends TransferHandler {
             childIndex--;
         }
 
-        ((GraffNodeComposite) parent.getGraffNode()).getChilds().add(childIndex, draggedNode.getGraffNode());
+        ((GraffNodeComposite) parent.getGraffNode()).getChildren().add(childIndex, draggedNode.getGraffNode());
         model.insertNodeInto(draggedNode, parent, childIndex);
 
         // Selektuj novi node

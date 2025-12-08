@@ -1,8 +1,10 @@
 package raf.graffito.dsw.core.graff.composite;
 
 public abstract class GraffNodeLeaf extends GraffNode {
-
-    public GraffNodeLeaf(GraffNode parent, String name) {
-        super(parent, name);
+    @Override
+    public GraffNode findByName(String name) {
+        if(this.getName().equals(name))
+            return this;
+        return null;
     }
 }

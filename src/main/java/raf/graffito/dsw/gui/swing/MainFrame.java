@@ -5,6 +5,7 @@ import lombok.Setter;
 import raf.graffito.dsw.core.ApplicationFramework;
 import raf.graffito.dsw.core.ActionManager;
 import raf.graffito.dsw.core.messages.Poruka;
+import raf.graffito.dsw.gui.swing.views.ProjectView;
 import raf.graffito.dsw.observer.Subscriber;
 import raf.graffito.dsw.tree.model.GraffTree;
 import raf.graffito.dsw.tree.model.GraffTreeImplements;
@@ -25,6 +26,8 @@ public class MainFrame extends JFrame implements Subscriber {
     private MyMenuBar menu;
     private JToolBar toolbar;
     private GraffTree graffTree;
+    private ProjectView projectView;
+    private JSplitPane splitPane;
 
 
     private MainFrame() {
@@ -57,15 +60,21 @@ public class MainFrame extends JFrame implements Subscriber {
         toolbar = new MyToolBar(); // Kreiranje toolbar-a
         add(toolbar, BorderLayout.NORTH); // Postavljanje toolbar-a na vrh prozora
 
-        JTree workspace = graffTree.generateTree(ApplicationFramework.getInstance().getGraffRepository().getWorkspace());
-        JPanel panel = new JPanel();
+        graffTree = new GraffTreeImplements();
 
-        JScrollPane scroll = new JScrollPane(workspace);
-        scroll.setMinimumSize(new Dimension(200, 150));
-        JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, scroll, panel);
-        getContentPane().add(splitPane, BorderLayout.CENTER);
+//        JTree workspaceTree = graffTree.generateTree(ApplicationFramework.getInstance().getGraffRepository().getWorkspace());
+
+//        System.out.println(ApplicationFramework.getInstance().getGraffRepository().getWorkspace().getChildren());
+
+        JScrollPane treeScrollPane = new JScrollPane((JComponent) graffTree);
+        treeScrollPane.setPreferredSize(new Dimension(250, 0));
+
+        splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
+        splitPane.setLeftComponent(treeScrollPane);
+        splitPane.setRightComponent(createPlaceholderPanel());
         splitPane.setDividerLocation(250);
-        splitPane.setOneTouchExpandable(true);
+
+        add(splitPane, BorderLayout.CENTER);
     }
 
     public static MainFrame getInstance() {
@@ -76,6 +85,20 @@ public class MainFrame extends JFrame implements Subscriber {
         return instance;
     }
 
+    private JPanel createPlaceholderPanel() {
+        JPanel panel = new JPanel(new BorderLayout());
+        JLabel label = new JLabel("Workspace", SwingConstants.CENTER);
+        label.setFont(new Font("Arial", Font.PLAIN, 24));
+        label.setForeground(Color.GRAY);
+        panel.add(label, BorderLayout.CENTER);
+        return panel;
+    }
+
+    public void setProjectView(ProjectView projectView) {
+        this.projectView = projectView;
+        splitPane.setRightComponent(projectView);
+    }
+
     @Override
     public void update(Object notif) {
         Poruka msg = (Poruka) notif;
@@ -84,8 +107,10 @@ public class MainFrame extends JFrame implements Subscriber {
                 JOptionPane.showMessageDialog(this, msg.getContent(), "GRESKA", JOptionPane.ERROR_MESSAGE);
                 break;
             case OBAVESTENJE:
-                JOptionPane.showMessageDialog(this, msg.getContent(), "OBAVESTENJE", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(this, msg.getContent(), "OBAVESTENJE", JOptionPane.PLAIN_MESSAGE);
                 break;
+            case UPOZORENJE:
+                JOptionPane.showMessageDialog(this, msg.getContent(), "UPOZORENJE", JOptionPane.WARNING_MESSAGE);
             default:
                 break;
 

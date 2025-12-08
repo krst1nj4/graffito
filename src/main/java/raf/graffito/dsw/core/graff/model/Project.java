@@ -2,28 +2,80 @@ package raf.graffito.dsw.core.graff.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import raf.graffito.dsw.core.graff.composite.GraffNode;
 import raf.graffito.dsw.core.graff.composite.GraffNodeComposite;
+import raf.graffito.dsw.observer.Publisher;
+import raf.graffito.dsw.observer.Subscriber;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
+@ToString
+public class Project extends GraffNodeComposite implements Publisher {
+    private String author;
+    private List<Subscriber> subscribers = new ArrayList<Subscriber>();
 
-public class Project extends GraffNodeComposite {
-
-    private String autor;
-    private int brSlajdova;
-
-    public Project(String name, GraffNode parent, String autor) {
+    public Project(String name, GraffNode parent, String author) {
         super(parent, name);
-        this.autor = autor;
+        this.author = author;
     }
-    @Override
-    public void addChild(GraffNode cvor) {
-        super.getChilds().add(cvor);
+
+    public int getNumber(){
+        int number = 0;
+
+        for(GraffNode child : getChildren()){
+            if(child instanceof Presentation){
+                number += ((Presentation) child).getNumberOfSlides();
+            } else {
+                number++;
+            }
+        }
+
+        return number;
     }
 
     @Override
-    public void removeChild(GraffNode cvor) {
-        super.getChilds().remove(cvor);
+    public void addChild(GraffNode child) {
+        getChildren().add(child);
+        notifySubscribers(child);
+    }
+
+    @Override
+    public void removeChild(GraffNode child) {
+        getChildren().remove(child);
+        notifySubscribers(child);
+    }
+
+    @Override
+    public void addSubscriber(Subscriber sub) {
+        if (!subscribers.contains(sub)) {
+            subscribers.add(sub);
+        }
+    }
+
+    @Override
+    public void removeSubscriber(Subscriber sub) {
+        subscribers.remove(sub);
+    }
+
+    @Override
+    public void notifySubscribers(Object notification) {
+        for (Subscriber subscriber : subscribers) {
+            subscriber.update(notification);
+        }
+    }
+
+    @Override
+    public void setName(String name) {
+        super.setName(name);
+        notifySubscribers("projectNameChanged");
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+        notifySubscribers("projectAuthorChanged");
     }
 }
