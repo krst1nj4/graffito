@@ -150,3 +150,5 @@
 [UPOZORENJE] [08.12.2025. 19:24] Ime vec postoji!
 [UPOZORENJE] [08.12.2025. 19:27] Morate selektovati cvor!
 [UPOZORENJE] [08.12.2025. 19:27] Ime vec postoji!
+[GRESKA] [08.12.2025. 19:31] Morate izabrati projekat!
+[OBAVESTENJE] [08.12.2025. 19:32] Kreirani slajd:O DAAAAAAAAAAA

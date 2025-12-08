@@ -103,7 +103,7 @@ public class GraffTreeImplements extends JTree implements GraffTree {
         GraffNode novi = null;
 
         if (parentNode instanceof Workspace) {
-            novi = ApplicationFramework.getInstance().getGraffRepository().getWorkspace();
+            novi = ApplicationFramework.getInstance().getGraffRepository().createFactory("project").createGraffNode((GraffNodeComposite) parentNode);
         } else if (parentNode instanceof Project) {
             NewNodeDialog pv = new NewNodeDialog();
 
@@ -117,7 +117,7 @@ public class GraffTreeImplements extends JTree implements GraffTree {
                 }
             }
         } else if (parentNode instanceof Presentation) {
-            novi = ApplicationFramework.getInstance().getGraffRepository().createFactory("presentation").createGraffNode((GraffNodeComposite) parentNode);
+            novi = ApplicationFramework.getInstance().getGraffRepository().createFactory("slide").createGraffNode((GraffNodeComposite) parentNode);
         } else {
             ApplicationFramework.getInstance().getDialogMsgGenerator().generateMessage(MessageType.UPOZORENJE, "Ne mozete dodati novi cvor izabranom cvoru!");
             return false;
