@@ -157,3 +157,19 @@
 [OBAVESTENJE] [08.12.2025. 19:50] Kreirani slajd:JEBI ME
 [GRESKA] [08.12.2025. 19:50] You have to select a project!
 [GRESKA] [08.12.2025. 19:50] Project is already opened!
+[GRESKA] [09.12.2025. 11:15] Izabrani cvor nije projekat!
+[UPOZORENJE] [09.12.2025. 11:16] Ime vec postoji!
+[OBAVESTENJE] [09.12.2025. 11:16] Opened project fsdf
+[OBAVESTENJE] [09.12.2025. 11:16] Obrisan cvor: fsdf
+[GRESKA] [09.12.2025. 11:16] Izabrani cvor nije projekat!
+[OBAVESTENJE] [09.12.2025. 11:16] Kreirani slajd:dghdfgh
+[GRESKA] [09.12.2025. 11:16] Izabrani cvor nije projekat!
+[GRESKA] [09.12.2025. 11:16] Izabrani cvor nije projekat!
+[OBAVESTENJE] [09.12.2025. 13:35] Kreirani slajd:pigger
+[UPOZORENJE] [09.12.2025. 13:35] Ne mozete dodati novi cvor izabranom cvoru!
+[GRESKA] [09.12.2025. 13:35] Ne mozete obrisati korenski cvor!
+[GRESKA] [09.12.2025. 13:35] Izabrani cvor nije projekat!
+[GRESKA] [09.12.2025. 13:35] Izabrani cvor nije projekat!
+[GRESKA] [09.12.2025. 13:35] Izabrani cvor nije projekat!
+[GRESKA] [09.12.2025. 13:36] You have to select a project!
+[OBAVESTENJE] [09.12.2025. 13:36] Opened project nsdg
