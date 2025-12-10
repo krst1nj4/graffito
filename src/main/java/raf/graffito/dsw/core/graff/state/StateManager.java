@@ -11,10 +11,10 @@ public class StateManager {
 
     public StateManager() {
 
-        selectState = new SelectState();
-        moveState = new MoveState();
-        resizeState = new ResizeState();
-        rotateState = new RotateState();
+        selectState = new SelectState(this);
+        moveState = new MoveState(this, selectState);
+        resizeState = new ResizeState(this, selectState);
+        rotateState = new RotateState(this, selectState);
 
         current = selectState;
     }
