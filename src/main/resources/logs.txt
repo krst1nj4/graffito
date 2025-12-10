@@ -173,3 +173,7 @@
 [GRESKA] [09.12.2025. 13:35] Izabrani cvor nije projekat!
 [GRESKA] [09.12.2025. 13:36] You have to select a project!
 [OBAVESTENJE] [09.12.2025. 13:36] Opened project nsdg
+[GRESKA] [10.12.2025. 16:07] Izabrani cvor nije projekat!
+[GRESKA] [10.12.2025. 16:08] Morate uneti ime!
+[OBAVESTENJE] [10.12.2025. 16:08] Kreirani slajd:slajdd
+[GRESKA] [10.12.2025. 16:08] You have to select a project!
