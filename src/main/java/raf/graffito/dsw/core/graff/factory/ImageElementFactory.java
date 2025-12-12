@@ -23,7 +23,7 @@ public class ImageElementFactory implements SlideElementFactory{
 
     private BufferedImage loadTestImage() {
         try{
-            return ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/home/mita/IdeaProjects/dsw-projekat-2025-tim_krstinjakostic_dimitrijestanojevic/src/main/resources/images/IMG_0200.PNG")));
+            return ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/images/IMG_0200.PNG")));
 
         } catch (Exception e) {
             e.printStackTrace();

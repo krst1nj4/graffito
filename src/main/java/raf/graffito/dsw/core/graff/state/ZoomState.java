@@ -34,6 +34,8 @@ public class ZoomState implements State{
             slideView.setScale(scale);
         }
 
+        slideView.setScale(scale);
+        slideView.repaint();
 
     }
 }

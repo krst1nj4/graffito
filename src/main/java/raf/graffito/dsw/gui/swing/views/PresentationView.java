@@ -3,6 +3,7 @@ package raf.graffito.dsw.gui.swing.views;
 import lombok.Getter;
 import raf.graffito.dsw.core.graff.model.Presentation;
 import raf.graffito.dsw.core.graff.model.Slide;
+import raf.graffito.dsw.gui.swing.controllers.SlideController;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -14,6 +15,8 @@ public class PresentationView extends JPanel {
 
     private Presentation presentation;
     private JPanel slidesPanel;
+    private SlideView slideView;
+    private JComponent rightPanel;
 
     public PresentationView(Presentation presentation) {
         this.presentation = presentation;
@@ -27,9 +30,14 @@ public class PresentationView extends JPanel {
         slidesPanel = new JPanel();
         slidesPanel.setLayout(new BoxLayout(slidesPanel, BoxLayout.Y_AXIS));
         slidesPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
-
         JScrollPane scrollPane = new JScrollPane(slidesPanel);
-        add(scrollPane, BorderLayout.CENTER);
+
+        rightPanel = new JPanel(new  BorderLayout());
+        rightPanel.setPreferredSize(new Dimension(850, 650));
+
+
+        JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, scrollPane, rightPanel);
+        add(splitPane, BorderLayout.CENTER);
     }
 
     private void loadSlides(){
@@ -53,6 +61,25 @@ public class PresentationView extends JPanel {
 
         slidesPanel.revalidate();
         slidesPanel.repaint();
+    }
+
+    private void openSlide(Slide slide) {
+        slideView = new SlideView(slide);
+
+        //update stateManager da zna view
+        ProjectView pv = (ProjectView) SwingUtilities.getAncestorOfClass(ProjectView.class, this);
+        pv.getStateManager().setSelectState();
+        pv.getStateManager().getSelectState().setSlide(slide);
+
+        rightPanel.removeAll();
+        rightPanel.add(slideView, BorderLayout.CENTER);
+
+        slideView.addMouseListener(new SlideController(slideView, pv.getStateManager()));
+        slideView.addMouseMotionListener(new SlideController(slideView, pv.getStateManager()));
+        slideView.addMouseWheelListener(new SlideController(slideView, pv.getStateManager()));
+
+        rightPanel.revalidate();
+        rightPanel.repaint();
     }
 
     private JPanel createSlidePanel(Slide slide, int index) {

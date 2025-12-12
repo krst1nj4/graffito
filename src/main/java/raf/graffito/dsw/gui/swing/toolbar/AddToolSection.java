@@ -21,9 +21,8 @@ public class AddToolSection extends JPanel {
         btnText.addActionListener(e -> stateManager.setAddState(new AddState(slide, new TextElementFactory())));
 
         JButton btnImage = new JButton("Add Image");
-        btnImage.addActionListener(e -> {
-            ImageElementFactory factory = new ImageElementFactory();});
-            stateManager.setAddState(new AddState(slide, new ImageElementFactory()));
+        btnImage.addActionListener(e ->
+            stateManager.setAddState(new AddState(slide, new ImageElementFactory())));
 
             JButton btnLogo = new JButton("Add Logo");
             btnLogo.addActionListener(e -> stateManager.setAddState(new AddState(slide, new LogoElementFactory())));
