@@ -28,7 +28,7 @@ public class SlideView extends JPanel implements Subscriber {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        if (slide != null) return;
+        if (slide == null) return;
 
         Graphics2D g2d = (Graphics2D) g.create();
         //Stavi scale

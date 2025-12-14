@@ -177,3 +177,18 @@
 [GRESKA] [10.12.2025. 16:08] Morate uneti ime!
 [OBAVESTENJE] [10.12.2025. 16:08] Kreirani slajd:slajdd
 [GRESKA] [10.12.2025. 16:08] You have to select a project!
+[OBAVESTENJE] [14.12.2025. 19:10] Opened project sdff
+[GRESKA] [14.12.2025. 19:11] Izabrani cvor nije projekat!
+[OBAVESTENJE] [14.12.2025. 19:11] Kreirani slajd:sdvv
+[GRESKA] [14.12.2025. 19:11] Izabrani cvor nije projekat!
+[OBAVESTENJE] [14.12.2025. 19:11] Kreirani slajd:sdvvc
+[OBAVESTENJE] [14.12.2025. 19:12] Obrisan cvor: sdvv
+[GRESKA] [14.12.2025. 21:00] Izabrani cvor nije projekat!
+[OBAVESTENJE] [14.12.2025. 21:00] Kreirani slajd:nosdv
+[GRESKA] [14.12.2025. 21:00] Izabrani cvor nije projekat!
+[GRESKA] [14.12.2025. 21:00] Izabrani cvor nije projekat!
+[GRESKA] [14.12.2025. 21:00] You have to select a project!
+[OBAVESTENJE] [14.12.2025. 21:00] Opened project sdv
+[OBAVESTENJE] [14.12.2025. 21:01] Kreirani slajd:fadsfasdf
+[OBAVESTENJE] [14.12.2025. 21:01] Kreirani slajd:sfdgdghdfgh
+[OBAVESTENJE] [14.12.2025. 21:01] Opened project gsdfg

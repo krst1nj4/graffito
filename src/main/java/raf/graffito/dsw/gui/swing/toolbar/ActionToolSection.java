@@ -20,20 +20,17 @@ public class ActionToolSection extends JPanel {
 
         JButton btnMove = new JButton("Move");
         btnMove.addActionListener(e -> {
-            stateManager.getMoveState().setSlide(slide);
             stateManager.setMoveState();
         });
 
         JButton btnResize = new JButton("Resize");
         btnResize.addActionListener(e -> {
-            stateManager.getResizeState().setSlide(slide);
             stateManager.setResizeState();
         });
 
         JButton btnRotateRight = new JButton("Rotate Right");
         btnRotateRight.addActionListener(e -> {
             RotateState rs = stateManager.getRotateState();
-            rs.setSlide(slide);
             rs.setClockwise(true);
             stateManager.setRotateState();
         });
@@ -41,16 +38,18 @@ public class ActionToolSection extends JPanel {
         JButton btnRotateLeft = new JButton("Rotate Left");
         btnRotateLeft.addActionListener(e -> {
            RotateState rs = stateManager.getRotateState();
-           rs.setSlide(slide);
            rs.setClockwise(false);
            stateManager.setRotateState();
         });
+
+        JButton btnZoom = new JButton("Zoom");
+        btnZoom.addActionListener(e -> {stateManager.setZoomState();});
 
         add(btnSelect);
         add(btnMove);
         add(btnResize);
         add(btnRotateRight);
         add(btnRotateLeft);
-
+        add(btnZoom);
     }
 }

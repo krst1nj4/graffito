@@ -1,11 +1,15 @@
 package raf.graffito.dsw.core.graff.state;
 
+import lombok.Getter;
+import lombok.Setter;
 import raf.graffito.dsw.gui.swing.views.SlideView;
 
 import java.awt.event.MouseWheelEvent;
-
+@Getter
+@Setter
 public class ZoomState implements State{
-    private final SlideView slideView;
+
+    private SlideView slideView;
 
     private static final double zoomStep = 0.1;
     private static final double zoomMin = 0.3;

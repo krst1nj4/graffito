@@ -1,9 +1,11 @@
 package raf.graffito.dsw.core.graff.state;
 
 import lombok.Getter;
+import lombok.Setter;
 import raf.graffito.dsw.gui.swing.views.SlideView;
 
 @Getter
+@Setter
 public class StateManager {
     //Trenutno aktivan state
     private State current;
@@ -14,6 +16,8 @@ public class StateManager {
     public RotateState rotateState;
     public ZoomState zoomState;
     private AddState addState;
+
+    private SlideView  slideView;
 
     public StateManager(SlideView slideView) {
 
@@ -35,5 +39,4 @@ public class StateManager {
 
     public void setAddState(AddState addState) { this.addState = addState; current = addState; }
 
-    public State getCurrent() {return current;}
 }

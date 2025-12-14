@@ -7,8 +7,8 @@ import java.awt.event.*;
 
 public class SlideController implements MouseListener, MouseMotionListener, MouseWheelListener {
 
-    private  SlideView slideView;
-    private  StateManager stateManager;
+    private final SlideView slideView;
+    private final StateManager stateManager;
 
     public SlideController(SlideView slideView, StateManager stateManager) {
         this.slideView = slideView;
