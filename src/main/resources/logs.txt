@@ -1,0 +1,13 @@
+[OBAVESTENJE] [20.12.2025. 17:45] Opened project fafasd
+[GRESKA] [20.12.2025. 17:45] Morate izabrati projekat!
+[GRESKA] [20.12.2025. 17:45] Izabrani cvor nije projekat!
+[GRESKA] [20.12.2025. 17:46] Izabrani cvor nije projekat!
+[GRESKA] [20.12.2025. 18:50] Izabrani cvor nije projekat!
+[UPOZORENJE] [20.12.2025. 18:50] Ime vec postoji!
+[GRESKA] [20.12.2025. 18:51] Izabrani cvor nije projekat!
+[GRESKA] [20.12.2025. 18:51] Izabrani cvor nije projekat!
+[GRESKA] [20.12.2025. 18:52] Izabrani cvor nije projekat!
+[GRESKA] [20.12.2025. 18:55] Izabrani cvor nije projekat!
+[GRESKA] [20.12.2025. 18:55] Izabrani cvor nije projekat!
+[OBAVESTENJE] [20.12.2025. 18:58] Preimenovano ime.
+[OBAVESTENJE] [20.12.2025. 18:58] Preimenovan autor.

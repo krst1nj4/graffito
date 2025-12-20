@@ -7,7 +7,9 @@ import raf.graffito.dsw.gui.swing.dialogs.EditDialog;
 import raf.graffito.dsw.gui.swing.MainFrame;
 import raf.graffito.dsw.tree.model.GraffTreeItem;
 
+import javax.swing.*;
 import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.TreePath;
 import java.awt.event.ActionEvent;
 
 public class EditAction extends AbstractGraffAction{
@@ -20,27 +22,31 @@ public class EditAction extends AbstractGraffAction{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        JTree tree = (JTree) MainFrame.getInstance().getGraffTree();
         MainFrame mf = MainFrame.getInstance();
-        DefaultMutableTreeNode selektovani = mf.getGraffTree().getSelectedNode();
 
-        if(selektovani == null) {
-            ApplicationFramework.getInstance().getDialogMsgGenerator().generateMessage(MessageType.GRESKA, "Morate izabrati projekat!");
+        TreePath path = tree.getSelectionPath();
+        if (path == null) {
+            ApplicationFramework.getInstance().getDialogMsgGenerator()
+                    .generateMessage(MessageType.UPOZORENJE, "Niste selektovali nijedan čvor u stablu!");
             return;
         }
 
-        if(!(selektovani instanceof GraffTreeItem)) {
+        Object selected = path.getLastPathComponent();
+        if (!(selected instanceof GraffTreeItem)) {
             return;
         }
+        GraffTreeItem item = (GraffTreeItem) selected;
 
-        GraffTreeItem item = (GraffTreeItem) selektovani;
-
-        if(!(item.getParent() instanceof Project)) {
-            ApplicationFramework.getInstance().getDialogMsgGenerator().generateMessage(MessageType.GRESKA, "Izabrani cvor nije projekat!");
+        if (!(item.getGraffNode() instanceof Project)) {
+            ApplicationFramework.getInstance().getDialogMsgGenerator()
+                    .generateMessage(MessageType.GRESKA, "Selektovani čvor nije Projekat!");
             return;
         }
 
         Project project = (Project) item.getGraffNode();
         EditDialog ed = new EditDialog(project);
+
 
         if(ed.showDialog(mf)) {
             String newName = ed.getProjectName();
@@ -56,7 +62,6 @@ public class EditAction extends AbstractGraffAction{
                 ApplicationFramework.getInstance().getDialogMsgGenerator().generateMessage(MessageType.UPOZORENJE, "Ime projekta ne moze biti prazno!");
             }
         }
-
 
     }
 }

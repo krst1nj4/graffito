@@ -88,6 +88,7 @@ public class OpenProjectAction extends AbstractGraffAction {
                 "Opened project " + project.getName()
 
         );
+        MainFrame.getInstance().getGraffTree().refreshTree();
         MainFrame.getInstance().setProjectView(new ProjectView((Project) graffNode, projectColor));
         MainFrame.getInstance().getProjectView().getProjectInfoPanel().setCurrentProject((Project) graffNode);
     }

@@ -55,6 +55,7 @@ public class GraffTreeImplements extends JTree implements GraffTree {
         if (parent instanceof GraffTreeItem && child != null) {
             GraffTreeItem graffParent = (GraffTreeItem) parent;
 
+            /// provera da li ime vec postoji
             if (graffParent.getGraffNode() instanceof GraffNodeComposite) {
                 if (graffParent.getGraffNode().findByName(child.getName()) != null) {
                     ApplicationFramework.getInstance().getDialogMsgGenerator().generateMessage(MessageType.UPOZORENJE, "Ime vec postoji!");
@@ -74,12 +75,18 @@ public class GraffTreeImplements extends JTree implements GraffTree {
             }
 
             TreePath path = new TreePath(treeModel.getPathToRoot(novi));
+            this.makeVisible(path);
+            // Čini čvor vidljivim (otvara roditelje)
+            this.setSelectionPath(path);
+            // Selektuje novi čvor
+            this.scrollPathToVisible(path);
+            // Skroluje do njega ako je lista dugačka
         }
     }
 
     @Override
     public DefaultMutableTreeNode getSelectedNode() {
-        TreePath path = getSelectionPath();
+        TreePath path = this.getSelectionPath();
         if (path != null) {
             return (DefaultMutableTreeNode) path.getLastPathComponent();
         }
