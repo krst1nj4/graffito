@@ -5,6 +5,7 @@ import raf.graffito.dsw.core.graff.model.Presentation;
 import raf.graffito.dsw.core.graff.model.Slide;
 import raf.graffito.dsw.core.graff.state.StateManager;
 import raf.graffito.dsw.gui.swing.controllers.SlideController;
+import raf.graffito.dsw.gui.swing.toolbar.DesniToolbar;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -12,16 +13,18 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 
 @Getter
-
 public class PresentationView extends JPanel {
 
     private Presentation presentation;
     private JPanel slidesPanel;
     private SlideView slideView;
-    private JPanel rightPanel;
+    private JPanel centerPanel;
+    private DesniToolbar desniToolbar;
+    private StateManager stateManager;
 
     public PresentationView(Presentation presentation) {
         this.presentation = presentation;
+        this.stateManager = new StateManager();
         initializeUI();
         loadSlides();
     }
@@ -34,13 +37,16 @@ public class PresentationView extends JPanel {
         slidesPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
         JScrollPane scrollPane = new JScrollPane(slidesPanel);
 
-        rightPanel = new JPanel(new  BorderLayout());
-        rightPanel.setPreferredSize(new Dimension(650, 450));
+        centerPanel = new JPanel(new  BorderLayout());
+        centerPanel.setBackground(Color.GRAY);
 
+        desniToolbar = new DesniToolbar(stateManager);
+        desniToolbar.setPreferredSize(new Dimension(150, 0));
 
-        JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, scrollPane, rightPanel);
+        JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, scrollPane, centerPanel);
         splitPane.setDividerLocation(300);
         add(splitPane, BorderLayout.CENTER);
+        add(desniToolbar, BorderLayout.EAST);
     }
 
     private void loadSlides(){
@@ -96,31 +102,17 @@ public class PresentationView extends JPanel {
     }
 
     private void openSlide(Slide slide) {
-        slideView = new SlideView(slide);
+        slideView = new SlideView(slide, stateManager);
 
-        //update stateManager da zna view
-        ProjectView pv = (ProjectView) SwingUtilities.getAncestorOfClass(ProjectView.class, this);
-
-        if(pv == null) return;
-
-        StateManager stateManager = pv.getStateManager();
+        desniToolbar.updateCurrentSlideView(this.slideView);
 
         stateManager.setSelectState();
-        stateManager.getSelectState().setSlide(slide);
-        stateManager.setSlideView(slideView);
+        centerPanel.removeAll();
+        centerPanel.add(slideView, BorderLayout.CENTER);
 
 
-        rightPanel.removeAll();
-        rightPanel.add(slideView, BorderLayout.CENTER);
-
-        SlideController slideController = new SlideController(slideView, stateManager);
-
-        slideView.addMouseListener(slideController);
-        slideView.addMouseMotionListener(slideController);
-        slideView.addMouseWheelListener(slideController);
-
-        rightPanel.revalidate();
-        rightPanel.repaint();
+        centerPanel.revalidate();
+        centerPanel.repaint();
     }
 
 

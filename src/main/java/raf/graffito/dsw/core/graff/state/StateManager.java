@@ -16,18 +16,24 @@ public class StateManager {
     public RotateState rotateState;
     public ZoomState zoomState;
     private AddState addState;
+    private DeleteState deleteState;
 
-    private SlideView  slideView;
+    public StateManager() {
+        init();
+    }
 
-    public StateManager(SlideView slideView) {
+    private void init(){
+        selectState = new SelectState();
+        moveState = new MoveState(this.selectState);
+        resizeState = new ResizeState(this.selectState);
+        rotateState = new RotateState(this.selectState);
+        addState = new AddState();
+        deleteState = new DeleteState(this.selectState);
 
-        selectState = new SelectState(this);
-        moveState = new MoveState(this, selectState);
-        resizeState = new ResizeState(this, selectState);
-        rotateState = new RotateState(this, selectState);
 
-        zoomState = new ZoomState(slideView);
+        zoomState = new ZoomState();
         current = selectState;
+
     }
 
 
@@ -36,7 +42,7 @@ public class StateManager {
     public void setResizeState() { current = resizeState; }
     public void setRotateState() { current = rotateState; }
     public void setZoomState() { current = zoomState; }
-
-    public void setAddState(AddState addState) { this.addState = addState; current = addState; }
+    public void setDeleteState() { current = deleteState; }
+    public void setAddState() { current = addState; }
 
 }

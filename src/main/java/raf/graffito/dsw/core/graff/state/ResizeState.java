@@ -2,26 +2,38 @@ package raf.graffito.dsw.core.graff.state;
 
 import raf.graffito.dsw.core.graff.model.Slide;
 import raf.graffito.dsw.core.graff.model.SlideElement;
+import raf.graffito.dsw.gui.swing.views.SlideView;
 
 import java.awt.event.MouseEvent;
 
 public class ResizeState implements State {
 
-    private Slide slide;
-    private SelectState  selectState;
+    private final SelectState selectState;
+    private double prosloX, prosloY;
 
-    public ResizeState(StateManager m, SelectState selectState) {
+    public ResizeState(SelectState selectState) {
         this.selectState = selectState;
     }
 
-    public void setSlide(Slide slide) {this.slide = slide;}
+    @Override
+    public void misKliknut(double x, double y, SlideView view) {
+        prosloX = x;
+        prosloY = y;
+    }
 
     @Override
-    public void mouseDragged(MouseEvent e) {
-        for(SlideElement el : selectState.selected){
-            el.setWidth(el.getWidth() +1);
-            el.setHeight(el.getHeight() +1);
+    public void misPovucen(double x, double y, SlideView view) {
+        if(selectState.getSelected().isEmpty()) return;
+
+        double razlikaX = x - prosloX;
+        double razlikaY = y - prosloY;
+
+        for(SlideElement el : selectState.getSelected()) {
+            el.setWidth((int) Math.max(10, el.getWidth() + razlikaX));
+            el.setHeight((int) Math.max(10, el.getHeight() + razlikaY));
         }
-        slide.notifySubscribers(slide);
+        prosloX = x;
+        prosloY = y;
+        view.getSlide().notifySubscribers(view.getSlide());
     }
 }

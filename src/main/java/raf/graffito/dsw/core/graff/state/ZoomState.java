@@ -9,37 +9,33 @@ import java.awt.event.MouseWheelEvent;
 @Setter
 public class ZoomState implements State{
 
-    private SlideView slideView;
 
     private static final double zoomStep = 0.1;
     private static final double zoomMin = 0.3;
     private static final double zoomMax = 3.0;
 
 
-    public ZoomState(SlideView slideView) {
-        this.slideView = slideView;
-    }
+    public ZoomState() {}
 
     @Override
-    public void mouseWheelMoved(MouseWheelEvent e) {
-        if(slideView == null) return;
+    public void misSkrolovan(double rotacija, SlideView view) {
+        double trenutnaSkala = view.getScale();
+        double novaSkala;
 
-        double scale = slideView.getScale();
-
-        if(e.getPreciseWheelRotation() < 0){
-            scale += zoomStep;
-            if(scale > zoomMax) scale = zoomMax;
-
-            slideView.setScale(scale);
-        }else{
-            scale -= zoomStep;
-            if(scale < zoomMin) scale = zoomMin;
-
-            slideView.setScale(scale);
+        if(rotacija < 0){
+            novaSkala = trenutnaSkala + zoomStep;
+        } else {
+            novaSkala = trenutnaSkala - zoomStep;
         }
 
-        slideView.setScale(scale);
-        slideView.repaint();
+        if(novaSkala < zoomMin){
+            novaSkala = zoomMin;
+        }else if(novaSkala > zoomMax){
+            novaSkala = zoomMax;
+        }
+
+        view.setScale(novaSkala);
+        view.repaint();
 
     }
 }

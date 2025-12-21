@@ -1,31 +1,26 @@
 package raf.graffito.dsw.core.graff.state;
 
+import lombok.Setter;
 import raf.graffito.dsw.core.graff.factory.SlideElementFactory;
 import raf.graffito.dsw.core.graff.model.Slide;
 import raf.graffito.dsw.core.graff.model.SlideElement;
+import raf.graffito.dsw.gui.swing.views.SlideView;
 
 import java.awt.event.MouseEvent;
 
 public class AddState implements State {
+    @Setter private SlideElementFactory factory;
 
-    private Slide slide;
-    private SlideElementFactory slideElementFactory;
-
-    public AddState(Slide slide, SlideElementFactory slideElementFactory) {
-        this.slide = slide;
-        this.slideElementFactory = slideElementFactory;
-    }
+    public AddState() {}
 
     @Override
-    public void mousePressed(MouseEvent e) {
-        SlideElement element = slideElementFactory.createSlideElement(slide);
-        if(element == null) return;
-
-        element.setX(e.getX());
-        element.setY(e.getY());
-
-        slide.addChild(element);
-
-        slide.notifySubscribers(slide);
+    public void misKliknut(double x, double y, SlideView view) {
+        if(factory == null) return;
+        SlideElement novi = factory.createSlideElement(view.getSlide());
+        if(novi != null){
+            novi.setX((int) x);
+            novi.setY((int) y);
+            view.getSlide().addChild(novi);
+        }
     }
 }

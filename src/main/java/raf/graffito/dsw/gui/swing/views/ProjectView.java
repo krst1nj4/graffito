@@ -34,7 +34,7 @@ public class ProjectView extends JPanel implements Subscriber {
         projectInfoPanel = new ProjectInfoPanel();
         add(projectInfoPanel, BorderLayout.EAST);
 
-        stateManager = new StateManager(null);
+        stateManager = new StateManager();
 
 
         tabbedPane.addChangeListener(new ChangeListener() {
