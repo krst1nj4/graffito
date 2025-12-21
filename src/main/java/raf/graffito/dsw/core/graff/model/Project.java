@@ -2,6 +2,7 @@ package raf.graffito.dsw.core.graff.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import raf.graffito.dsw.core.graff.composite.GraffNode;
@@ -15,6 +16,8 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
+
 public class Project extends GraffNodeComposite implements Publisher {
     private String author;
 

@@ -11,3 +11,20 @@
 [GRESKA] [20.12.2025. 18:55] Izabrani cvor nije projekat!
 [OBAVESTENJE] [20.12.2025. 18:58] Preimenovano ime.
 [OBAVESTENJE] [20.12.2025. 18:58] Preimenovan autor.
+[OBAVESTENJE] [20.12.2025. 19:31] Kreirani slajd:dgfgdfghdf
+[OBAVESTENJE] [20.12.2025. 19:32] Kreirani slajd:hdjhdtjd
+[UPOZORENJE] [20.12.2025. 19:32] Ne mozete dodati novi cvor izabranom cvoru!
+[OBAVESTENJE] [20.12.2025. 19:32] Kreirani slajd:fdfhdhfg
+[GRESKA] [20.12.2025. 19:32] Selected node is not a project! Saving can be done only for projects!
+[OBAVESTENJE] [20.12.2025. 19:34] Kreirani slajd:iiijijij
+[OBAVESTENJE] [20.12.2025. 19:34] Opened project giifiiofiu
+[OBAVESTENJE] [20.12.2025. 19:34] Project saved successfully on a new path: D:\MyDocs\caca\proba1.json
+[OBAVESTENJE] [20.12.2025. 19:39] Kreirani slajd:ggggg
+[OBAVESTENJE] [20.12.2025. 19:39] Opened project hghfjjghj
+[OBAVESTENJE] [20.12.2025. 19:40] Project saved successfully on a new path: C:\Users\Cale\Music\proba2.json
+[GRESKA] [20.12.2025. 19:40] Selected node is not a project! Saving can be done only for projects!
+[GRESKA] [20.12.2025. 19:40] Error occured while loading selected project
+[GRESKA] [20.12.2025. 19:45] Error occured while loading selected project
+[GRESKA] [20.12.2025. 19:49] Error occured while loading selected project
+[GRESKA] [21.12.2025. 14:57] Error occured while loading selected project
+[GRESKA] [21.12.2025. 14:58] Error occured while loading selected project

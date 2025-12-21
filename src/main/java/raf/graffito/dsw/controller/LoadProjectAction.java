@@ -13,7 +13,7 @@ import java.io.File;
 public class LoadProjectAction extends AbstractGraffAction {
 
     public LoadProjectAction() {
-        putValue(NAME, "Load Project");
+        putValue(NAME, "Load");
         putValue(SHORT_DESCRIPTION, "Load Project from a file");
         ///putValue(SMALL_ICON, loadIcon(""));
     }

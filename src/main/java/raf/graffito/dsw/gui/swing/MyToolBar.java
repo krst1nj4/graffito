@@ -22,5 +22,10 @@ public class MyToolBar extends JToolBar {
         addSeparator();
         add(MainFrame.getInstance().getActionManager().getExitAct());
 
+        /// nemamo desni toolbar, pa proveravam ovde da li mi radi serijalizacija
+        add(MainFrame.getInstance().getActionManager().getSaveAsAction());
+        add(MainFrame.getInstance().getActionManager().getSaveAction());
+        add(MainFrame.getInstance().getActionManager().getLoadProjectAction());
+
     }
 }

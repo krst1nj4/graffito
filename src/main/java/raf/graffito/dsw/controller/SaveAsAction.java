@@ -12,7 +12,7 @@ import java.io.File;
 public class SaveAsAction extends AbstractGraffAction {
 
     public SaveAsAction() {
-        putValue(NAME, "Save Project");
+        putValue(NAME, "Save As");
         putValue(SHORT_DESCRIPTION, "Save Project to a new file path");
     }
 

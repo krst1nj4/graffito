@@ -1,11 +1,13 @@
 package raf.graffito.dsw.core.graff.composite;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 import java.util.ArrayList;
 
 @Getter
+@NoArgsConstructor
 
 public abstract class GraffNodeComposite extends GraffNode {
     private List<GraffNode> children;
