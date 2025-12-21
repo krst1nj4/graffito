@@ -4,52 +4,76 @@ import raf.graffito.dsw.core.graff.model.Slide;
 import raf.graffito.dsw.core.graff.state.RotateState;
 import raf.graffito.dsw.core.graff.state.SelectState;
 import raf.graffito.dsw.core.graff.state.StateManager;
+import raf.graffito.dsw.gui.swing.MainFrame;
+import raf.graffito.dsw.gui.swing.views.SlideView;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class ActionToolSection extends JPanel {
+public class ActionToolSection extends JToolBar {
 
-    public ActionToolSection(StateManager stateManager, Slide slide, SelectState selectState) {
+    private StateManager stateManager;
+    private SlideView slideView;
 
-        setLayout(new GridLayout(0, 1));
-        setBackground(new Color(230, 230, 230));
+    public ActionToolSection(StateManager stateManager) {
+        super(JToolBar.VERTICAL);
+        this.stateManager = stateManager;
+        setFloatable(false);
+        initButtons();
+    }
 
+    private void initButtons() {
+        SlideView currentView = slideView;
+
+        // SELECT
         JButton btnSelect = new JButton("Select");
         btnSelect.addActionListener(e -> stateManager.setSelectState());
-
-        JButton btnMove = new JButton("Move");
-        btnMove.addActionListener(e -> {
-            stateManager.setMoveState();
-        });
-
-        JButton btnResize = new JButton("Resize");
-        btnResize.addActionListener(e -> {
-            stateManager.setResizeState();
-        });
-
-        JButton btnRotateRight = new JButton("Rotate Right");
-        btnRotateRight.addActionListener(e -> {
-            RotateState rs = stateManager.getRotateState();
-            rs.setClockwise(true);
-            stateManager.setRotateState();
-        });
-
-        JButton btnRotateLeft = new JButton("Rotate Left");
-        btnRotateLeft.addActionListener(e -> {
-           RotateState rs = stateManager.getRotateState();
-           rs.setClockwise(false);
-           stateManager.setRotateState();
-        });
-
-        JButton btnZoom = new JButton("Zoom");
-        btnZoom.addActionListener(e -> {stateManager.setZoomState();});
-
         add(btnSelect);
+
+        // MOVE
+        JButton btnMove = new JButton("Move");
+        btnMove.addActionListener(e -> stateManager.setMoveState());
         add(btnMove);
-        add(btnResize);
-        add(btnRotateRight);
-        add(btnRotateLeft);
+
+        // ROTATE LEFT (Rotacija ulevo)
+        JButton btnRotL = new JButton("Rot L");
+        btnRotL.addActionListener(e -> {
+            stateManager.setRotateState();
+            stateManager.getRotateState().setUSmeruKazaljke(false);
+            if (currentView != null) {
+                stateManager.getRotateState().izvrsiRotaciju(currentView);
+            }
+        });
+        add(btnRotL);
+
+        // ROTATE RIGHT (Rotacija udesno)
+        JButton btnRotR = new JButton("Rot R");
+        btnRotR.addActionListener(e -> {
+            stateManager.setRotateState();
+            stateManager.getRotateState().setUSmeruKazaljke(true);
+            if (currentView != null) {
+                stateManager.getRotateState().izvrsiRotaciju(currentView);
+            }
+        });
+        add(btnRotR);
+
+        // DELETE (Odmah briše selektovano)
+        JButton btnDelete = new JButton("Delete");
+        btnDelete.addActionListener(e -> {
+            stateManager.setDeleteState();
+            if (currentView != null) {
+                stateManager.getDeleteState().izbrisiSelektovane(currentView);
+            }
+        });
+        add(btnDelete);
+
+        // ZOOM
+        JButton btnZoom = new JButton("Zoom");
+        btnZoom.addActionListener(e -> stateManager.setZoomState());
         add(btnZoom);
+    }
+
+    public void setCurrentView(SlideView slideView) {
+        this.slideView = slideView;
     }
 }

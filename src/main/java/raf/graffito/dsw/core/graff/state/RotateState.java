@@ -4,29 +4,37 @@ import lombok.Getter;
 import lombok.Setter;
 import raf.graffito.dsw.core.graff.model.Slide;
 import raf.graffito.dsw.core.graff.model.SlideElement;
+import raf.graffito.dsw.gui.swing.views.SlideView;
 
 import java.awt.event.MouseEvent;
+import java.util.List;
 
 @Getter
 @Setter
 public class RotateState implements State{
-    private Slide slide;
-    private SelectState selectState;
-    private boolean clockwise;
+    private final SelectState selectState;
+    private static final double UGAO_90 = Math.toRadians(90);
 
-    public RotateState(StateManager m , SelectState selectState) {
+    @Setter private boolean uSmeruKazaljke = true;
+
+    public RotateState(SelectState selectState) {
         this.selectState = selectState;
     }
 
-    public void setSlide(Slide slide){this.slide = slide;}
-
     @Override
-    public void mousePressed(MouseEvent e) {
-        double angle = Math.toRadians(clockwise ? 90 : -90);
+    public void misKliknut(double x, double y, SlideView view) {
+        izvrsiRotaciju(view);
+    }
 
-        for(SlideElement el : selectState.selected){
-            el.setRotation(el.getRotation() + angle);
+    public void izvrsiRotaciju(SlideView view) {
+        if(selectState.getSelected().isEmpty()) return;
+
+        double ugao = uSmeruKazaljke ? UGAO_90 : -UGAO_90;
+
+        for(SlideElement el : selectState.getSelected()){
+            el.setRotation(el.getRotation() + ugao);
         }
-        slide.notifySubscribers(slide);
+
+        view.getSlide().notifySubscribers(view.getSlide());
     }
 }

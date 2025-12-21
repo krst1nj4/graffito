@@ -10,22 +10,29 @@ import raf.graffito.dsw.core.graff.state.StateManager;
 import javax.swing.*;
 import java.awt.*;
 
-public class AddToolSection extends JPanel {
+public class AddToolSection extends JToolBar {
 
-    public AddToolSection(StateManager stateManager, Slide slide) {
-
-        setLayout(new GridLayout(0, 1));
-        setBackground(new Color(240, 240, 240));
+    public AddToolSection(StateManager stateManager) {
+        super(JToolBar.VERTICAL);
+        setFloatable(false);
 
         JButton btnText = new JButton("Add Text");
-        btnText.addActionListener(e -> stateManager.setAddState(new AddState(slide, new TextElementFactory())));
+        btnText.addActionListener(e -> {
+                stateManager.setAddState();
+            ((AddState) stateManager.getCurrent()).setFactory(new TextElementFactory());
+                });
 
         JButton btnImage = new JButton("Add Image");
-        btnImage.addActionListener(e ->
-            stateManager.setAddState(new AddState(slide, new ImageElementFactory())));
+        btnImage.addActionListener(e ->{
+            stateManager.setAddState();
+            ((AddState) stateManager.getCurrent()).setFactory(new ImageElementFactory());
+        });
 
             JButton btnLogo = new JButton("Add Logo");
-            btnLogo.addActionListener(e -> stateManager.setAddState(new AddState(slide, new LogoElementFactory())));
+            btnLogo.addActionListener(e -> {
+                stateManager.setAddState();
+                ((AddState) stateManager.getCurrent()).setFactory(new LogoElementFactory());
+            });
 
             add(btnText);
             add(btnImage);
