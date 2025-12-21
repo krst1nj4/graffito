@@ -54,14 +54,14 @@ public class Project extends GraffNodeComposite implements Publisher {
     public void addChild(GraffNode child) {
         getChildren().add(child);
         this.changed = true;
-        notifySubscribers(child);
+        ///notifySubscribers(child);
     }
 
     @Override
     public void removeChild(GraffNode child) {
         getChildren().remove(child);
         this.changed = true;
-        notifySubscribers(child);
+        ///notifySubscribers(child);
     }
 
     @Override
@@ -78,8 +78,15 @@ public class Project extends GraffNodeComposite implements Publisher {
 
     @Override
     public void notifySubscribers(Object notification) {
+        if (subscribers == null || subscribers.isEmpty()) {
+            return;
+        }
+
         for (Subscriber subscriber : subscribers) {
-            subscriber.update(notification);
+            /// Dodatna provera za svaki slucaj
+            if (subscriber != null) {
+                subscriber.update(notification);
+            }
         }
     }
 
@@ -87,12 +94,12 @@ public class Project extends GraffNodeComposite implements Publisher {
     public void setName(String name) {
         super.setName(name);
         this.changed = true;
-        notifySubscribers("projectNameChanged");
+        ///notifySubscribers("projectNameChanged");
     }
 
     public void setAuthor(String author) {
         this.author = author;
         this.changed = true;
-        notifySubscribers("projectAuthorChanged");
+        ///notifySubscribers("projectAuthorChanged");
     }
 }

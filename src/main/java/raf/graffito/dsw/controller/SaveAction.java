@@ -35,6 +35,7 @@ public class SaveAction extends AbstractGraffAction {
             ApplicationFramework.getInstance().getDialogMsgGenerator().generateMessage(MessageType.GRESKA, "Selected node is not a project! Saving can be done only for projects!");
             return;
         }
+
         Project pr = (Project) item.getGraffNode();
         if(pr == null){
             ApplicationFramework.getInstance().getDialogMsgGenerator().generateMessage(MessageType.UPOZORENJE, "There are no active projects to save.");
@@ -48,9 +49,10 @@ public class SaveAction extends AbstractGraffAction {
 
         if(pr.getFilePath() == null){
             /// ako nije snimljen pre, pozivamo Save As akciju
-            MainFrame.getInstance().getActionManager().getSaveAsAction();
+            MainFrame.getInstance().getActionManager().getSaveAsAction().actionPerformed(null);
         } else {
             ApplicationFramework.getInstance().getSerializer().saveProject(pr, new File(pr.getFilePath()));
+            pr.setChanged(false);
             ApplicationFramework.getInstance().getDialogMsgGenerator().generateMessage(MessageType.OBAVESTENJE, "Project saved successfully.");
         }
     }

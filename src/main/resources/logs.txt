@@ -28,3 +28,23 @@
 [GRESKA] [20.12.2025. 19:49] Error occured while loading selected project
 [GRESKA] [21.12.2025. 14:57] Error occured while loading selected project
 [GRESKA] [21.12.2025. 14:58] Error occured while loading selected project
+[GRESKA] [21.12.2025. 15:06] Error occured while loading selected project
+[GRESKA] [21.12.2025. 15:17] Error occured while loading selected project
+[GRESKA] [21.12.2025. 15:20] Error occured while loading selected project
+[GRESKA] [21.12.2025. 15:21] Error occured while loading selected project
+[OBAVESTENJE] [21.12.2025. 15:28] Kreirani slajd:ddddddddddddddddd
+[OBAVESTENJE] [21.12.2025. 15:28] Project saved successfully on a new path: C:\Users\Cale\Documents\proba3.json
+[GRESKA] [21.12.2025. 15:29] Error occured while loading selected project
+[OBAVESTENJE] [21.12.2025. 15:29] NO changes were made
+[OBAVESTENJE] [21.12.2025. 15:29] Kreirani slajd:sgds
+[OBAVESTENJE] [21.12.2025. 15:29] Project saved successfully on a new path: C:\Users\Cale\Documents\proba4.json
+[OBAVESTENJE] [21.12.2025. 15:30] Kreirani slajd:dsdsdsdsd
+[OBAVESTENJE] [21.12.2025. 15:30] Kreirani slajd:sdsdsdsd
+[OBAVESTENJE] [21.12.2025. 15:30] Project saved successfully.
+[GRESKA] [21.12.2025. 15:34] Error occured while loading selected project
+[GRESKA] [21.12.2025. 15:42] Error occured while loading selected project
+[GRESKA] [21.12.2025. 15:42] Error occured while loading selected project
+[OBAVESTENJE] [21.12.2025. 15:43] Kreirani slajd:fgfdgd
+[OBAVESTENJE] [21.12.2025. 15:43] Kreirani slajd:fgdfgdfgd
+[OBAVESTENJE] [21.12.2025. 15:43] Project saved successfully on a new path: C:\Users\Cale\Documents\proba2.json
+[GRESKA] [21.12.2025. 15:43] Error occured while loading selected project

@@ -7,13 +7,16 @@ import java.util.List;
 import java.util.ArrayList;
 
 @Getter
-@NoArgsConstructor
 
 public abstract class GraffNodeComposite extends GraffNode {
     private List<GraffNode> children;
 
     public GraffNodeComposite(GraffNode parent, String name) {
         super(parent, name);
+        this.children = new ArrayList<>();
+    }
+
+    public GraffNodeComposite() {
         this.children = new ArrayList<>();
     }
 
