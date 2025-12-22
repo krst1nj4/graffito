@@ -3,6 +3,7 @@ package raf.graffito.dsw.gui.swing.views;
 import lombok.Getter;
 import raf.graffito.dsw.core.graff.model.Presentation;
 import raf.graffito.dsw.core.graff.model.Project;
+import raf.graffito.dsw.core.graff.state.StateManager;
 import raf.graffito.dsw.observer.Subscriber;
 
 import javax.swing.*;
@@ -17,6 +18,7 @@ public class ProjectView extends JPanel implements Subscriber {
     private JTabbedPane tabbedPane;
     private ProjectInfoPanel projectInfoPanel;
     private Color tabColor;
+    private StateManager stateManager;
 
     public ProjectView(Project project, Color tabColor) {
         this.project = project;
@@ -31,6 +33,9 @@ public class ProjectView extends JPanel implements Subscriber {
         add(tabbedPane, BorderLayout.CENTER);
         projectInfoPanel = new ProjectInfoPanel();
         add(projectInfoPanel, BorderLayout.EAST);
+
+        stateManager = new StateManager();
+
 
         tabbedPane.addChangeListener(new ChangeListener() {
             @Override

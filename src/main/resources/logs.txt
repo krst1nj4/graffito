@@ -1,50 +1,197 @@
-[OBAVESTENJE] [20.12.2025. 17:45] Opened project fafasd
-[GRESKA] [20.12.2025. 17:45] Morate izabrati projekat!
-[GRESKA] [20.12.2025. 17:45] Izabrani cvor nije projekat!
-[GRESKA] [20.12.2025. 17:46] Izabrani cvor nije projekat!
-[GRESKA] [20.12.2025. 18:50] Izabrani cvor nije projekat!
-[UPOZORENJE] [20.12.2025. 18:50] Ime vec postoji!
-[GRESKA] [20.12.2025. 18:51] Izabrani cvor nije projekat!
-[GRESKA] [20.12.2025. 18:51] Izabrani cvor nije projekat!
-[GRESKA] [20.12.2025. 18:52] Izabrani cvor nije projekat!
-[GRESKA] [20.12.2025. 18:55] Izabrani cvor nije projekat!
-[GRESKA] [20.12.2025. 18:55] Izabrani cvor nije projekat!
-[OBAVESTENJE] [20.12.2025. 18:58] Preimenovano ime.
-[OBAVESTENJE] [20.12.2025. 18:58] Preimenovan autor.
-[OBAVESTENJE] [20.12.2025. 19:31] Kreirani slajd:dgfgdfghdf
-[OBAVESTENJE] [20.12.2025. 19:32] Kreirani slajd:hdjhdtjd
-[UPOZORENJE] [20.12.2025. 19:32] Ne mozete dodati novi cvor izabranom cvoru!
-[OBAVESTENJE] [20.12.2025. 19:32] Kreirani slajd:fdfhdhfg
-[GRESKA] [20.12.2025. 19:32] Selected node is not a project! Saving can be done only for projects!
-[OBAVESTENJE] [20.12.2025. 19:34] Kreirani slajd:iiijijij
-[OBAVESTENJE] [20.12.2025. 19:34] Opened project giifiiofiu
-[OBAVESTENJE] [20.12.2025. 19:34] Project saved successfully on a new path: D:\MyDocs\caca\proba1.json
-[OBAVESTENJE] [20.12.2025. 19:39] Kreirani slajd:ggggg
-[OBAVESTENJE] [20.12.2025. 19:39] Opened project hghfjjghj
-[OBAVESTENJE] [20.12.2025. 19:40] Project saved successfully on a new path: C:\Users\Cale\Music\proba2.json
-[GRESKA] [20.12.2025. 19:40] Selected node is not a project! Saving can be done only for projects!
-[GRESKA] [20.12.2025. 19:40] Error occured while loading selected project
-[GRESKA] [20.12.2025. 19:45] Error occured while loading selected project
-[GRESKA] [20.12.2025. 19:49] Error occured while loading selected project
-[GRESKA] [21.12.2025. 14:57] Error occured while loading selected project
-[GRESKA] [21.12.2025. 14:58] Error occured while loading selected project
-[GRESKA] [21.12.2025. 15:06] Error occured while loading selected project
-[GRESKA] [21.12.2025. 15:17] Error occured while loading selected project
-[GRESKA] [21.12.2025. 15:20] Error occured while loading selected project
-[GRESKA] [21.12.2025. 15:21] Error occured while loading selected project
-[OBAVESTENJE] [21.12.2025. 15:28] Kreirani slajd:ddddddddddddddddd
-[OBAVESTENJE] [21.12.2025. 15:28] Project saved successfully on a new path: C:\Users\Cale\Documents\proba3.json
-[GRESKA] [21.12.2025. 15:29] Error occured while loading selected project
-[OBAVESTENJE] [21.12.2025. 15:29] NO changes were made
-[OBAVESTENJE] [21.12.2025. 15:29] Kreirani slajd:sgds
-[OBAVESTENJE] [21.12.2025. 15:29] Project saved successfully on a new path: C:\Users\Cale\Documents\proba4.json
-[OBAVESTENJE] [21.12.2025. 15:30] Kreirani slajd:dsdsdsdsd
-[OBAVESTENJE] [21.12.2025. 15:30] Kreirani slajd:sdsdsdsd
-[OBAVESTENJE] [21.12.2025. 15:30] Project saved successfully.
-[GRESKA] [21.12.2025. 15:34] Error occured while loading selected project
-[GRESKA] [21.12.2025. 15:42] Error occured while loading selected project
-[GRESKA] [21.12.2025. 15:42] Error occured while loading selected project
-[OBAVESTENJE] [21.12.2025. 15:43] Kreirani slajd:fgfdgd
-[OBAVESTENJE] [21.12.2025. 15:43] Kreirani slajd:fgdfgdfgd
-[OBAVESTENJE] [21.12.2025. 15:43] Project saved successfully on a new path: C:\Users\Cale\Documents\proba2.json
-[GRESKA] [21.12.2025. 15:43] Error occured while loading selected project
+[UPOZORENJE] [06.12.2025. 17:47] Morate selektovati cvor!
+[UPOZORENJE] [06.12.2025. 17:47] Morate selektovati cvor!
+[UPOZORENJE] [06.12.2025. 17:47] Morate selektovati cvor!
+[UPOZORENJE] [06.12.2025. 17:47] Morate selektovati cvor!
+[UPOZORENJE] [06.12.2025. 17:47] Morate selektovati cvor!
+[UPOZORENJE] [06.12.2025. 17:47] Morate selektovati cvor!
+[UPOZORENJE] [06.12.2025. 17:47] Morate selektovati cvor!
+[UPOZORENJE] [06.12.2025. 17:47] Morate selektovati cvor!
+[GRESKA] [06.12.2025. 17:47] Morate izabrati projekat!
+[GRESKA] [06.12.2025. 17:47] Morate izabrati projekat!
+[GRESKA] [06.12.2025. 17:47] Izaberite cvor za brisanje
+[GRESKA] [06.12.2025. 17:47] Izaberite cvor za brisanje
+[UPOZORENJE] [06.12.2025. 17:52] Morate selektovati cvor!
+[UPOZORENJE] [06.12.2025. 17:52] Morate selektovati cvor!
+[UPOZORENJE] [06.12.2025. 17:52] Morate selektovati cvor!
+[UPOZORENJE] [06.12.2025. 17:52] Morate selektovati cvor!
+[UPOZORENJE] [06.12.2025. 17:52] Morate selektovati cvor!
+[UPOZORENJE] [06.12.2025. 17:52] Morate selektovati cvor!
+[OBAVESTENJE] [06.12.2025. 17:52] Cvor: My Workspace promenjeno u: My Workspace
+[OBAVESTENJE] [06.12.2025. 17:52] Cvor: My Workspace promenjeno u: My Workspace
+[UPOZORENJE] [06.12.2025. 17:53] Morate selektovati cvor!
+[UPOZORENJE] [06.12.2025. 17:53] Morate selektovati cvor!
+[UPOZORENJE] [06.12.2025. 17:55] Morate selektovati cvor!
+[UPOZORENJE] [06.12.2025. 17:55] Morate selektovati cvor!
+[UPOZORENJE] [06.12.2025. 17:55] Morate selektovati cvor!
+[UPOZORENJE] [06.12.2025. 17:55] Morate selektovati cvor!
+[GRESKA] [07.12.2025. 12:34] Izaberite cvor za brisanje
+[GRESKA] [07.12.2025. 12:34] Izaberite cvor za brisanje
+[UPOZORENJE] [07.12.2025. 12:55] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 12:56] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 12:56] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 13:02] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 13:46] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 13:46] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 13:46] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 13:46] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 13:46] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 13:46] Morate selektovati cvor!
+[GRESKA] [07.12.2025. 13:46] Morate izabrati projekat!
+[GRESKA] [07.12.2025. 13:46] Izaberite cvor za brisanje
+[UPOZORENJE] [07.12.2025. 13:55] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 13:55] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 13:55] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 13:55] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 13:55] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 13:55] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 13:55] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 13:55] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 13:58] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 14:03] Morate selektovati cvor!
+[GRESKA] [07.12.2025. 14:19] Morate izabrati projekat!
+[UPOZORENJE] [07.12.2025. 14:20] Morate selektovati cvor!
+[GRESKA] [07.12.2025. 14:20] Izaberite cvor za brisanje
+[GRESKA] [07.12.2025. 14:20] Morate izabrati projekat!
+[UPOZORENJE] [07.12.2025. 14:31] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 14:31] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 14:31] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 14:31] Morate selektovati cvor!
+[UPOZORENJE] [07.12.2025. 14:31] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:12] Morate selektovati cvor!
+[GRESKA] [08.12.2025. 17:12] Morate izabrati projekat!
+[GRESKA] [08.12.2025. 17:12] Izaberite cvor za brisanje
+[UPOZORENJE] [08.12.2025. 17:12] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:12] Morate selektovati cvor!
+[GRESKA] [08.12.2025. 17:12] Izaberite cvor za brisanje
+[GRESKA] [08.12.2025. 17:12] Morate izabrati projekat!
+[UPOZORENJE] [08.12.2025. 17:12] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:12] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:12] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:12] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:12] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:12] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:36] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:36] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:36] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:36] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:36] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:36] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:36] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:36] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:36] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:41] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:41] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:41] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:41] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:41] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:54] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:54] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:54] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:54] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:54] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:54] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:54] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:54] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:54] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 17:54] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:04] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:05] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:05] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:05] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:05] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:05] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:05] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:05] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:05] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:05] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:05] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:05] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:05] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:05] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 18:05] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 19:11] Ime vec postoji!
+[UPOZORENJE] [08.12.2025. 19:12] Ime vec postoji!
+[UPOZORENJE] [08.12.2025. 19:12] Ime vec postoji!
+[UPOZORENJE] [08.12.2025. 19:12] Ime vec postoji!
+[UPOZORENJE] [08.12.2025. 19:18] Ime vec postoji!
+[UPOZORENJE] [08.12.2025. 19:18] Ime vec postoji!
+[GRESKA] [08.12.2025. 19:18] Izabrani cvor nije projekat!
+[GRESKA] [08.12.2025. 19:18] Ne mozete obrisati korenski cvor!
+[GRESKA] [08.12.2025. 19:18] Izabrani cvor nije projekat!
+[UPOZORENJE] [08.12.2025. 19:18] Ime vec postoji!
+[UPOZORENJE] [08.12.2025. 19:24] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 19:24] Ime vec postoji!
+[GRESKA] [08.12.2025. 19:24] Izabrani cvor nije projekat!
+[GRESKA] [08.12.2025. 19:24] Ne mozete obrisati korenski cvor!
+[UPOZORENJE] [08.12.2025. 19:24] Ime vec postoji!
+[UPOZORENJE] [08.12.2025. 19:27] Morate selektovati cvor!
+[UPOZORENJE] [08.12.2025. 19:27] Ime vec postoji!
+[GRESKA] [08.12.2025. 19:31] Morate izabrati projekat!
+[OBAVESTENJE] [08.12.2025. 19:32] Kreirani slajd:O DAAAAAAAAAAA
+[GRESKA] [08.12.2025. 19:49] You have to select a project!
+[OBAVESTENJE] [08.12.2025. 19:49] Opened project ny
+[OBAVESTENJE] [08.12.2025. 19:50] Kreirani slajd:JEBI ME
+[GRESKA] [08.12.2025. 19:50] You have to select a project!
+[GRESKA] [08.12.2025. 19:50] Project is already opened!
+[GRESKA] [09.12.2025. 11:15] Izabrani cvor nije projekat!
+[UPOZORENJE] [09.12.2025. 11:16] Ime vec postoji!
+[OBAVESTENJE] [09.12.2025. 11:16] Opened project fsdf
+[OBAVESTENJE] [09.12.2025. 11:16] Obrisan cvor: fsdf
+[GRESKA] [09.12.2025. 11:16] Izabrani cvor nije projekat!
+[OBAVESTENJE] [09.12.2025. 11:16] Kreirani slajd:dghdfgh
+[GRESKA] [09.12.2025. 11:16] Izabrani cvor nije projekat!
+[GRESKA] [09.12.2025. 11:16] Izabrani cvor nije projekat!
+[OBAVESTENJE] [09.12.2025. 13:35] Kreirani slajd:pigger
+[UPOZORENJE] [09.12.2025. 13:35] Ne mozete dodati novi cvor izabranom cvoru!
+[GRESKA] [09.12.2025. 13:35] Ne mozete obrisati korenski cvor!
+[GRESKA] [09.12.2025. 13:35] Izabrani cvor nije projekat!
+[GRESKA] [09.12.2025. 13:35] Izabrani cvor nije projekat!
+[GRESKA] [09.12.2025. 13:35] Izabrani cvor nije projekat!
+[GRESKA] [09.12.2025. 13:36] You have to select a project!
+[OBAVESTENJE] [09.12.2025. 13:36] Opened project nsdg
+[GRESKA] [10.12.2025. 16:07] Izabrani cvor nije projekat!
+[GRESKA] [10.12.2025. 16:08] Morate uneti ime!
+[OBAVESTENJE] [10.12.2025. 16:08] Kreirani slajd:slajdd
+[GRESKA] [10.12.2025. 16:08] You have to select a project!
+[OBAVESTENJE] [14.12.2025. 19:10] Opened project sdff
+[GRESKA] [14.12.2025. 19:11] Izabrani cvor nije projekat!
+[OBAVESTENJE] [14.12.2025. 19:11] Kreirani slajd:sdvv
+[GRESKA] [14.12.2025. 19:11] Izabrani cvor nije projekat!
+[OBAVESTENJE] [14.12.2025. 19:11] Kreirani slajd:sdvvc
+[OBAVESTENJE] [14.12.2025. 19:12] Obrisan cvor: sdvv
+[GRESKA] [14.12.2025. 21:00] Izabrani cvor nije projekat!
+[OBAVESTENJE] [14.12.2025. 21:00] Kreirani slajd:nosdv
+[GRESKA] [14.12.2025. 21:00] Izabrani cvor nije projekat!
+[GRESKA] [14.12.2025. 21:00] Izabrani cvor nije projekat!
+[GRESKA] [14.12.2025. 21:00] You have to select a project!
+[OBAVESTENJE] [14.12.2025. 21:00] Opened project sdv
+[OBAVESTENJE] [14.12.2025. 21:01] Kreirani slajd:fadsfasdf
+[OBAVESTENJE] [14.12.2025. 21:01] Kreirani slajd:sfdgdghdfgh
+[OBAVESTENJE] [14.12.2025. 21:01] Opened project gsdfg
+[OBAVESTENJE] [21.12.2025. 20:01] Kreirani slajd:dghdfghdfgh
+[OBAVESTENJE] [21.12.2025. 20:01] Kreirani slajd:dfgjdfhghdfghdghdgh
+[OBAVESTENJE] [21.12.2025. 20:01] Opened project sdgsdfg

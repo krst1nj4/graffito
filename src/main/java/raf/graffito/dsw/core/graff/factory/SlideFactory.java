@@ -19,7 +19,7 @@ public class SlideFactory implements GraffNodeStore{
                 JOptionPane.QUESTION_MESSAGE);
 
         if (name != null && !name.trim().isEmpty()) {
-            Slide slide = new Slide();
+            Slide slide = new Slide(name, parent);
             slide.setName(name.trim());
             slide.setParent(parent);
             ApplicationFramework.getInstance().getDialogMsgGenerator().generateMessage(MessageType.OBAVESTENJE, "Kreirani slajd:" + name);
