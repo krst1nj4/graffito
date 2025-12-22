@@ -1,5 +1,6 @@
 package raf.graffito.dsw.tree.model;
 
+import lombok.Getter;
 import raf.graffito.dsw.core.ApplicationFramework;
 import raf.graffito.dsw.core.graff.model.Presentation;
 import raf.graffito.dsw.core.messages.MessageType;
@@ -22,7 +23,10 @@ import javax.swing.tree.TreePath;
 public class GraffTreeImplements extends JTree implements GraffTree {
 
     private GraffTreeView graffTreeView;
+
+    @Getter
     private DefaultTreeModel treeModel;
+
     private GraffTreeCellRenderer cellRenderer;
     private GraffTreeCellEditor cellEditor;
 
@@ -55,6 +59,7 @@ public class GraffTreeImplements extends JTree implements GraffTree {
         if (parent instanceof GraffTreeItem && child != null) {
             GraffTreeItem graffParent = (GraffTreeItem) parent;
 
+            /// provera da li ime vec postoji
             if (graffParent.getGraffNode() instanceof GraffNodeComposite) {
                 if (graffParent.getGraffNode().findByName(child.getName()) != null) {
                     ApplicationFramework.getInstance().getDialogMsgGenerator().generateMessage(MessageType.UPOZORENJE, "Ime vec postoji!");
@@ -74,12 +79,18 @@ public class GraffTreeImplements extends JTree implements GraffTree {
             }
 
             TreePath path = new TreePath(treeModel.getPathToRoot(novi));
+            this.makeVisible(path);
+            // Čini čvor vidljivim (otvara roditelje)
+            this.setSelectionPath(path);
+            // Selektuje novi čvor
+            this.scrollPathToVisible(path);
+            // Skroluje do njega ako je lista dugačka
         }
     }
 
     @Override
     public DefaultMutableTreeNode getSelectedNode() {
-        TreePath path = getSelectionPath();
+        TreePath path = this.getSelectionPath();
         if (path != null) {
             return (DefaultMutableTreeNode) path.getLastPathComponent();
         }
@@ -128,6 +139,34 @@ public class GraffTreeImplements extends JTree implements GraffTree {
         }
 
         return false;
+    }
+
+    @Override
+    public void loadProject(Project project) {
+        GraffTreeItem root = (GraffTreeItem) treeModel.getRoot();
+
+        /// kreiramo cvor za stablo
+        GraffTreeItem projectItem = new GraffTreeItem(project);
+
+        // ubacujemo u tree i osvezavamo izgled
+        treeModel.insertNodeInto(projectItem, root, root.getChildCount());
+
+        // rekurzivno dodajemo svu decu
+        addLoadedChildren(projectItem, project);
+
+        // siri stablo da se vide deca
+        this.expandPath(new TreePath(projectItem.getPath()));
+    }
+
+    private void addLoadedChildren(GraffTreeItem parentItem, GraffNodeComposite parentNode) {
+        for (GraffNode childNode : parentNode.getChildren()) {
+            GraffTreeItem childItem = new GraffTreeItem(childNode);
+            parentItem.add(childItem);
+
+            if (childNode instanceof GraffNodeComposite) {
+                addLoadedChildren(childItem, (GraffNodeComposite) childNode);
+            }
+        }
     }
 
     @Override

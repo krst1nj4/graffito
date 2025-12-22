@@ -2,6 +2,8 @@ package raf.graffito.dsw.core;
 import lombok.Getter;
 import lombok.Setter;
 import raf.graffito.dsw.core.graff.GraffRepositoryImplements;
+import raf.graffito.dsw.core.graff.serializer.JacksonSerializer;
+import raf.graffito.dsw.core.graff.serializer.Serializer;
 import raf.graffito.dsw.core.logger.LoggerFactory;
 import raf.graffito.dsw.core.messages.MessageGenerator;
 import raf.graffito.dsw.gui.swing.MainFrame;
@@ -16,6 +18,7 @@ public class ApplicationFramework {
 
     protected GraffRepository graffRepository;
     private MessageGenerator dialogMsgGenerator;
+    private Serializer serializer;
 
     public void initialize() {
         MainFrame mainFrame = MainFrame.getInstance();
@@ -32,6 +35,7 @@ public class ApplicationFramework {
     private ApplicationFramework() {
         graffRepository = new GraffRepositoryImplements();
         dialogMsgGenerator = new MessageGenerator();
+        serializer = new JacksonSerializer();
     }
 
     public static ApplicationFramework getInstance(){

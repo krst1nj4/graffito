@@ -1,6 +1,8 @@
 package raf.graffito.dsw.core.graff.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import raf.graffito.dsw.core.graff.composite.GraffNode;
@@ -14,9 +16,20 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
+
 public class Project extends GraffNodeComposite implements Publisher {
     private String author;
-    private List<Subscriber> subscribers = new ArrayList<Subscriber>();
+
+    @JsonIgnore
+    private List<Subscriber> subscribers = new ArrayList<>();
+
+    @JsonIgnore
+    @Getter
+    private String filePath;
+
+    @JsonIgnore
+    private boolean changed = false;
 
     public Project(String name, GraffNode parent, String author) {
         super(parent, name);
@@ -40,13 +53,15 @@ public class Project extends GraffNodeComposite implements Publisher {
     @Override
     public void addChild(GraffNode child) {
         getChildren().add(child);
-        notifySubscribers(child);
+        this.changed = true;
+        ///notifySubscribers(child);
     }
 
     @Override
     public void removeChild(GraffNode child) {
         getChildren().remove(child);
-        notifySubscribers(child);
+        this.changed = true;
+        ///notifySubscribers(child);
     }
 
     @Override
@@ -63,19 +78,28 @@ public class Project extends GraffNodeComposite implements Publisher {
 
     @Override
     public void notifySubscribers(Object notification) {
+        if (subscribers == null || subscribers.isEmpty()) {
+            return;
+        }
+
         for (Subscriber subscriber : subscribers) {
-            subscriber.update(notification);
+            /// Dodatna provera za svaki slucaj
+            if (subscriber != null) {
+                subscriber.update(notification);
+            }
         }
     }
 
     @Override
     public void setName(String name) {
         super.setName(name);
-        notifySubscribers("projectNameChanged");
+        this.changed = true;
+        ///notifySubscribers("projectNameChanged");
     }
 
     public void setAuthor(String author) {
         this.author = author;
-        notifySubscribers("projectAuthorChanged");
+        this.changed = true;
+        ///notifySubscribers("projectAuthorChanged");
     }
 }

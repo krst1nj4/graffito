@@ -36,8 +36,8 @@ public class MainFrame extends JFrame implements Subscriber {
     }
 
     private void initialize(){
-        actionManager = new ActionManager();
         graffTree = new GraffTreeImplements();
+        actionManager = new ActionManager();
         initializeGUI();
     }
 

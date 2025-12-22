@@ -28,6 +28,7 @@ public class NewNodeAction extends AbstractGraffAction{
             return;
         }
 
+        mf.getGraffTree().refreshTree();
         mf.getGraffTree().createChild(selektovani);
     }
 }

@@ -1,6 +1,7 @@
 package raf.graffito.dsw.core.graff.composite;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -12,6 +13,10 @@ public abstract class GraffNodeComposite extends GraffNode {
 
     public GraffNodeComposite(GraffNode parent, String name) {
         super(parent, name);
+        this.children = new ArrayList<>();
+    }
+
+    public GraffNodeComposite() {
         this.children = new ArrayList<>();
     }
 

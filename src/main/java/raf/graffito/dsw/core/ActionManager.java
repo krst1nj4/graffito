@@ -12,6 +12,9 @@ public class ActionManager {
     private EditAction editAction;
     private NewNodeAction newNodeAction;
     private OpenProjectAction openProjectAction;
+    private SaveAsAction saveAsAction;
+    private SaveAction saveAction;
+    private LoadProjectAction loadProjectAction;
 
     public ActionManager() {
         initialiseActions();
@@ -24,6 +27,9 @@ public class ActionManager {
         editAction = new EditAction();
         newNodeAction = new NewNodeAction();
         openProjectAction = new OpenProjectAction();
+        saveAsAction = new SaveAsAction();
+        saveAction = new SaveAction();
+        loadProjectAction = new LoadProjectAction();
     }
 
 }
