@@ -18,7 +18,7 @@ public class DeleteState implements State {
 
     @Override
     public void misKliknut(double x, double y, SlideView view) {
-
+        izbrisiSelektovane(view);
     }
 
     public void izbrisiSelektovane(SlideView view){

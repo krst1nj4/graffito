@@ -81,7 +81,7 @@ public class PresentationView extends JPanel implements Subscriber {
                 BorderFactory.createLineBorder(Color.GRAY, 1),
                 new EmptyBorder(10, 10, 10, 10)
         ));
-        panel.setBackground(Color.WHITE);
+        panel.setBackground(MainFrame.getInstance().getActionManager().getOpenProjectAction().getSelectedColor());
         panel.setMaximumSize(new Dimension(Integer.MAX_VALUE, 100));
 
         JLabel slideLabel = new JLabel(index + ". " + slide.getName());
