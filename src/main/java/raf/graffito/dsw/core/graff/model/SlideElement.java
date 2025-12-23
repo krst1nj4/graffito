@@ -21,6 +21,10 @@ public abstract class SlideElement extends GraffNodeLeaf implements Cloneable {
         this.height = height;
     }
 
+    public SlideElement() {
+        super();
+    }
+
     @Override
     public SlideElement clone() {
         try {

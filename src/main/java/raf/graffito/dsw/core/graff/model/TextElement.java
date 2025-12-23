@@ -14,6 +14,10 @@ public class TextElement extends SlideElement {
         this.text = text;
     }
 
+    public TextElement() {
+        super();
+    }
+
     @Override
     public void paint(Graphics2D g) {
         AffineTransform old =  g.getTransform();

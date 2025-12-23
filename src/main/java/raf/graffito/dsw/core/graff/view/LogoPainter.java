@@ -4,6 +4,7 @@ import raf.graffito.dsw.core.graff.model.LogoElement;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
+import java.awt.geom.Path2D;
 
 public class LogoPainter {
 
@@ -35,9 +36,29 @@ public class LogoPainter {
         g.fillOval(x + width/4- eyeW/2, y + height/3 - eyeH/2, eyeW, eyeH);
         g.fillOval(x + 3*width/4 - eyeW/2, y + height/3 - eyeH/2, eyeW, eyeH);
 
-        g.drawArc(x + width/4 + height/2,y + height/2, width/4, height/3, 200, 140);
+        double mouthW = width * 0.4;
+        double mouthH = height * 0.15;
+        double startX = x + width / 2.0 - mouthW / 2.0;
+        double startY = y + height * 0.6;
+        double midX = x + width / 2.0;
+        double endX = x + width / 2.0 + mouthW / 2.0;
 
-        g.drawArc(x + width/2, y + height/2, width/4, height/3, 200, -140);
+        Path2D.Double mouth = new Path2D.Double();
+        mouth.moveTo(startX, startY);
+
+        mouth.curveTo(
+                startX + mouthW / 4, startY + mouthH,
+                midX - mouthW / 4, startY + mouthH,
+                midX, startY
+        );
+
+        mouth.curveTo(
+                midX + mouthW / 4, startY + mouthH,
+                endX - mouthW / 4, startY + mouthH,
+                endX, startY
+        );
+
+        g.draw(mouth);
 
         g.setTransform(old);
     }

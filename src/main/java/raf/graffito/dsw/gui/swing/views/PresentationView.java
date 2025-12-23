@@ -4,8 +4,10 @@ import lombok.Getter;
 import raf.graffito.dsw.core.graff.model.Presentation;
 import raf.graffito.dsw.core.graff.model.Slide;
 import raf.graffito.dsw.core.graff.state.StateManager;
+import raf.graffito.dsw.gui.swing.MainFrame;
 import raf.graffito.dsw.gui.swing.controllers.SlideController;
 import raf.graffito.dsw.gui.swing.toolbar.DesniToolbar;
+import raf.graffito.dsw.observer.Subscriber;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -13,7 +15,7 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 
 @Getter
-public class PresentationView extends JPanel {
+public class PresentationView extends JPanel implements Subscriber {
 
     private Presentation presentation;
     private JPanel slidesPanel;
@@ -24,6 +26,7 @@ public class PresentationView extends JPanel {
 
     public PresentationView(Presentation presentation) {
         this.presentation = presentation;
+        this.presentation.addSubscriber(this);
         this.stateManager = new StateManager();
         initializeUI();
         loadSlides();
@@ -38,7 +41,7 @@ public class PresentationView extends JPanel {
         JScrollPane scrollPane = new JScrollPane(slidesPanel);
 
         centerPanel = new JPanel(new  BorderLayout());
-        centerPanel.setBackground(Color.GRAY);
+        centerPanel.setBackground(MainFrame.getInstance().getActionManager().getOpenProjectAction().getSelectedColor());
 
         desniToolbar = new DesniToolbar(stateManager);
         desniToolbar.setPreferredSize(new Dimension(150, 0));
@@ -78,7 +81,7 @@ public class PresentationView extends JPanel {
                 BorderFactory.createLineBorder(Color.GRAY, 1),
                 new EmptyBorder(10, 10, 10, 10)
         ));
-        panel.setBackground(Color.WHITE);
+        panel.setBackground(MainFrame.getInstance().getActionManager().getOpenProjectAction().getSelectedColor());
         panel.setMaximumSize(new Dimension(Integer.MAX_VALUE, 100));
 
         JLabel slideLabel = new JLabel(index + ". " + slide.getName());
@@ -115,10 +118,12 @@ public class PresentationView extends JPanel {
         centerPanel.repaint();
     }
 
-
-
     public void refresh() {
         loadSlides();
     }
 
+    @Override
+    public void update(Object notification) {
+        loadSlides();
+    }
 }
