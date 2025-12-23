@@ -195,3 +195,34 @@
 [OBAVESTENJE] [21.12.2025. 20:01] Kreirani slajd:dghdfghdfgh
 [OBAVESTENJE] [21.12.2025. 20:01] Kreirani slajd:dfgjdfhghdfghdghdgh
 [OBAVESTENJE] [21.12.2025. 20:01] Opened project sdgsdfg
+[OBAVESTENJE] [23.12.2025. 15:31] Kreirani slajd:retertete
+[OBAVESTENJE] [23.12.2025. 15:32] Opened project jtkjkj
+[GRESKA] [23.12.2025. 15:35] You have to select a project!
+[OBAVESTENJE] [23.12.2025. 15:35] Project saved successfully on a new path: C:\Users\kkostic2924rn\Documents\proba1.json
+[GRESKA] [23.12.2025. 15:35] Error occured while loading selected project
+[OBAVESTENJE] [23.12.2025. 15:38] Opened project y5wtwe
+[GRESKA] [23.12.2025. 15:40] Error occured while loading selected project
+[OBAVESTENJE] [23.12.2025. 15:40] Kreirani slajd:sdgdsgsg
+[OBAVESTENJE] [23.12.2025. 15:40] Kreirani slajd:gsdgsdgsdgs
+[OBAVESTENJE] [23.12.2025. 15:40] Opened project dggfs
+[OBAVESTENJE] [23.12.2025. 15:41] Kreirani slajd:dfdhdl
+[OBAVESTENJE] [23.12.2025. 15:45] Kreirani slajd:skjbgfkjdb
+[OBAVESTENJE] [23.12.2025. 15:45] Kreirani slajd:faf
+[OBAVESTENJE] [23.12.2025. 15:45] Kreirani slajd:rts
+[OBAVESTENJE] [23.12.2025. 15:45] Kreirani slajd:adsdds
+[GRESKA] [23.12.2025. 15:46] Error occured while loading selected project
+[GRESKA] [23.12.2025. 15:49] Error occured while loading selected project
+[OBAVESTENJE] [23.12.2025. 15:49] Project saved successfully on a new path: C:\Users\kkostic2924rn\Documents\proba2.json
+[GRESKA] [23.12.2025. 15:49] Error occured while loading selected project
+[OBAVESTENJE] [23.12.2025. 16:06] Kreirani slajd:fgdgdfgd
+[OBAVESTENJE] [23.12.2025. 16:06] Kreirani slajd:dfgdgdfg
+[OBAVESTENJE] [23.12.2025. 16:06] Opened project sgdfkjs
+[OBAVESTENJE] [23.12.2025. 16:06] Kreirani slajd:rdth
+[UPOZORENJE] [23.12.2025. 16:27] Ime vec postoji!
+[OBAVESTENJE] [23.12.2025. 16:31] Project jtkjkj has been loaded
+[OBAVESTENJE] [23.12.2025. 16:31] Opened project jtkjkj
+[OBAVESTENJE] [23.12.2025. 16:52] Opened project fsdfsfd
+[OBAVESTENJE] [23.12.2025. 16:52] Kreirani slajd:fsfdsfsd
+[OBAVESTENJE] [23.12.2025. 16:55] Opened project fsdsdf
+[OBAVESTENJE] [23.12.2025. 16:55] Kreirani slajd:sdfsdfsf
+[UPOZORENJE] [23.12.2025. 16:55] Ime vec postoji!
