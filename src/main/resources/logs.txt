@@ -195,3 +195,28 @@
 [OBAVESTENJE] [21.12.2025. 20:01] Kreirani slajd:dghdfghdfgh
 [OBAVESTENJE] [21.12.2025. 20:01] Kreirani slajd:dfgjdfhghdfghdghdgh
 [OBAVESTENJE] [21.12.2025. 20:01] Opened project sdgsdfg
+[GRESKA] [22.12.2025. 12:37] Selektovani čvor nije Projekat!
+[OBAVESTENJE] [22.12.2025. 12:37] Opened project sdfgsdfgsd
+[OBAVESTENJE] [22.12.2025. 12:38] Kreirani slajd:sdfgsdfgsdfg
+[GRESKA] [22.12.2025. 12:38] Project is already opened!
+[GRESKA] [22.12.2025. 12:38] Project is already opened!
+[OBAVESTENJE] [22.12.2025. 15:31] Kreirani slajd:sdfgsdfgsdfg
+[OBAVESTENJE] [22.12.2025. 15:32] Kreirani slajd:sdfgsdfgsdfgsfd
+[OBAVESTENJE] [22.12.2025. 15:32] Opened project sfdgsdfg
+[GRESKA] [22.12.2025. 15:32] You have to select a project!
+[GRESKA] [22.12.2025. 15:32] Project is already opened!
+[UPOZORENJE] [22.12.2025. 15:32] Ime vec postoji!
+[OBAVESTENJE] [22.12.2025. 15:32] Kreirani slajd:sdfgsdfgsdfg
+[UPOZORENJE] [22.12.2025. 15:32] Ne mozete dodati novi cvor izabranom cvoru!
+[OBAVESTENJE] [22.12.2025. 15:32] Kreirani slajd:sdfgsdfgsdfgsdfgsdfgsdfg
+[OBAVESTENJE] [22.12.2025. 15:33] Opened project gsdfgsdfgsdf
+[GRESKA] [22.12.2025. 15:33] You have to select a project!
+[UPOZORENJE] [22.12.2025. 15:33] You have to select a project!
+[OBAVESTENJE] [22.12.2025. 15:35] Kreirani slajd:dghdfghdfghdf
+[OBAVESTENJE] [22.12.2025. 15:36] Kreirani slajd:dfghdfghdgh
+[OBAVESTENJE] [22.12.2025. 15:36] Opened project sdfdgf
+[OBAVESTENJE] [23.12.2025. 21:19] Kreirani slajd:s
+[OBAVESTENJE] [23.12.2025. 21:20] Opened project sf
+[OBAVESTENJE] [23.12.2025. 21:20] Opened project sf
+[OBAVESTENJE] [23.12.2025. 21:23] Kreirani slajd:d
+[OBAVESTENJE] [23.12.2025. 21:23] Opened project a

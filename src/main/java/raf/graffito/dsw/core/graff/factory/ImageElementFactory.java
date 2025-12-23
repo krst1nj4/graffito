@@ -12,13 +12,25 @@ public class ImageElementFactory implements SlideElementFactory{
 
     private final BufferedImage image;
 
-    public ImageElementFactory() {
+    public ImageElementFactory(BufferedImage image) {
+        this.image = image;
+    }
+
+    public ImageElementFactory(){
         this.image = loadTestImage();
     }
 
     @Override
     public SlideElement createSlideElement(Slide slide) {
-        return new ImageElement(slide, "image", 50, 50, image.getWidth()/3, image.getHeight()/3, image);
+        int width = image.getWidth();
+        int height = image.getHeight();
+
+        if(width > 400 ){
+            double ratio = (double) width/height;
+            width = 400;
+            height = (int)(width/ratio);
+        }
+        return new ImageElement(slide, "image", 50, 50, width, height, image);
     }
 
     private BufferedImage loadTestImage() {
@@ -26,6 +38,7 @@ public class ImageElementFactory implements SlideElementFactory{
             return ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/images/IMG_0200.PNG")));
 
         } catch (Exception e) {
+            System.out.println("Nije pronadjena default slika");
             e.printStackTrace();
             return null;
         }

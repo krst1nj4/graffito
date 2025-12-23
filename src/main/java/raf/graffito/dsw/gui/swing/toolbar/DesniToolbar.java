@@ -12,6 +12,7 @@ public class DesniToolbar extends JToolBar {
 
     private ActionToolSection actionSection;
     private AddToolSection addSection;
+    private ImageGalleryPanel galleryPanel;
 
     public DesniToolbar(StateManager stateManager) {
         super(JToolBar.VERTICAL);
@@ -20,7 +21,7 @@ public class DesniToolbar extends JToolBar {
 
         actionSection = new ActionToolSection(stateManager);
         addSection = new AddToolSection(stateManager);
-
+        galleryPanel =  new ImageGalleryPanel(stateManager);
         // Dodajemo komponente u JToolBar
         add(new JLabel(" ALATI "));
         add(actionSection);
@@ -29,6 +30,9 @@ public class DesniToolbar extends JToolBar {
         add(new JLabel(" DODAVANJE "));
         add(addSection);
         addSeparator();
+
+        add(new JLabel(" GALERIJA "));
+        add(galleryPanel);
     }
 
     public void updateCurrentSlideView(SlideView slideView) {
