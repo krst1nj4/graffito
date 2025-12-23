@@ -226,3 +226,19 @@
 [OBAVESTENJE] [23.12.2025. 16:55] Opened project fsdsdf
 [OBAVESTENJE] [23.12.2025. 16:55] Kreirani slajd:sdfsdfsf
 [UPOZORENJE] [23.12.2025. 16:55] Ime vec postoji!
+[OBAVESTENJE] [23.12.2025. 17:02] Project jtkjkj has been loaded
+[OBAVESTENJE] [23.12.2025. 17:03] Project gdfafgka has been loaded
+[OBAVESTENJE] [23.12.2025. 17:07] Project jtkjkj has been loaded
+[OBAVESTENJE] [23.12.2025. 17:12] Project jtkjkj has been loaded
+[OBAVESTENJE] [23.12.2025. 17:12] Cvor: jtkjkj promenjeno u: jtkjkj
+[OBAVESTENJE] [23.12.2025. 17:12] Opened project jtkjkj
+[OBAVESTENJE] [23.12.2025. 17:14] Project jtkjkj has been loaded
+[OBAVESTENJE] [23.12.2025. 17:17] Project jtkjkj has been loaded
+[OBAVESTENJE] [23.12.2025. 17:26] Project jtkjkj has been loaded
+[OBAVESTENJE] [23.12.2025. 17:29] Project jtkjkj has been loaded
+[GRESKA] [23.12.2025. 17:33] Error occured while loading selected project
+[OBAVESTENJE] [23.12.2025. 17:34] Project jtkjkj has been loaded
+[OBAVESTENJE] [23.12.2025. 17:35] Opened project dgdsgs
+[OBAVESTENJE] [23.12.2025. 17:45] Opened project jzdzfjdzlhf
+[OBAVESTENJE] [23.12.2025. 17:45] Opened project dgsgsdg
+[GRESKA] [23.12.2025. 17:45] Project is already opened!

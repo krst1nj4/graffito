@@ -4,6 +4,7 @@ import lombok.Getter;
 import raf.graffito.dsw.core.graff.model.Presentation;
 import raf.graffito.dsw.core.graff.model.Slide;
 import raf.graffito.dsw.core.graff.state.StateManager;
+import raf.graffito.dsw.gui.swing.MainFrame;
 import raf.graffito.dsw.gui.swing.controllers.SlideController;
 import raf.graffito.dsw.gui.swing.toolbar.DesniToolbar;
 import raf.graffito.dsw.observer.Subscriber;
@@ -40,7 +41,7 @@ public class PresentationView extends JPanel implements Subscriber {
         JScrollPane scrollPane = new JScrollPane(slidesPanel);
 
         centerPanel = new JPanel(new  BorderLayout());
-        centerPanel.setBackground(Color.GRAY);
+        centerPanel.setBackground(MainFrame.getInstance().getActionManager().getOpenProjectAction().getSelectedColor());
 
         desniToolbar = new DesniToolbar(stateManager);
         desniToolbar.setPreferredSize(new Dimension(150, 0));
@@ -116,8 +117,6 @@ public class PresentationView extends JPanel implements Subscriber {
         centerPanel.revalidate();
         centerPanel.repaint();
     }
-
-
 
     public void refresh() {
         loadSlides();

@@ -25,10 +25,16 @@ public class JacksonSerializer implements Serializer {
         try {
             Project project = objectMapper.readValue(file, Project.class);
             if (project != null) {
+                System.out.println("Učitan projekat: " + project.getName());
+                if (project.getChildren() != null) {
+                    System.out.println("Broj prezentacija u JSON-u: " + project.getChildren().size());
+                } else {
+                    System.out.println("GREŠKA: Lista children je NULL nakon readValue!");
+                }
                 restoreParents(project);
             }
             return project;
-            ///  cita iz JSON fajla i mapira ga u Projcet objekar
+            ///  cita iz JSON fajla i mapira ga u Project objekar
         } catch (IOException e) {
             e.printStackTrace();
             return null;
@@ -36,6 +42,8 @@ public class JacksonSerializer implements Serializer {
     }
 
     private void restoreParents(GraffNodeComposite parent) {
+        if(parent.getChildren() == null) return;
+
         for (GraffNode child : parent.getChildren()) {
             child.setParent(parent);
             if (child instanceof GraffNodeComposite) {
