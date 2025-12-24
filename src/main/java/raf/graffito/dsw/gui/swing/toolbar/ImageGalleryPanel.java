@@ -1,8 +1,10 @@
 package raf.graffito.dsw.gui.swing.toolbar;
 
 import raf.graffito.dsw.core.graff.factory.ImageElementFactory;
+import raf.graffito.dsw.core.graff.model.SlideElement;
 import raf.graffito.dsw.core.graff.state.AddState;
 import raf.graffito.dsw.core.graff.state.StateManager;
+import raf.graffito.dsw.gui.swing.views.SlideView;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -17,6 +19,7 @@ public class ImageGalleryPanel extends JPanel {
 
     private StateManager stateManager;
     private JPanel tumbnailPanel;
+    private SlideView slideView;
 
     public ImageGalleryPanel(StateManager stateManager) {
         this.stateManager = stateManager;
@@ -38,6 +41,10 @@ public class ImageGalleryPanel extends JPanel {
         scrollPane.setPreferredSize(new Dimension(140, 300));
 
         add(scrollPane, BorderLayout.CENTER);
+    }
+
+    public void setCurrentView(SlideView slideView){
+        this.slideView = slideView;
     }
 
     private void openFIleChooser(){
@@ -66,10 +73,17 @@ public class ImageGalleryPanel extends JPanel {
             thumbButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 
             thumbButton.addActionListener(e -> {
-                stateManager.setAddState();
-                if(stateManager.getCurrent() instanceof AddState){
-                    ((AddState) stateManager.getCurrent()).setFactory(new ImageElementFactory(file.getAbsolutePath()));
+                if(slideView == null){
+                    JOptionPane.showMessageDialog(this, "Nije selektovan slajd!");
+                    return;
                 }
+                stateManager.setAddState();
+
+                AddState addState = stateManager.getAddState();
+                addState.setFactory(new ImageElementFactory(file.getAbsolutePath()));
+
+                addState.misKliknut(-1, -1, slideView);
+
             });
 
             tumbnailPanel.add(thumbButton);
@@ -84,5 +98,4 @@ public class ImageGalleryPanel extends JPanel {
         }
 
     }
-
 }

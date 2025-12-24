@@ -36,6 +36,9 @@ public class DesniToolbar extends JToolBar {
     }
 
     public void updateCurrentSlideView(SlideView slideView) {
+
         actionSection.setCurrentView(slideView);
+        addSection.setCurrentView(slideView);
+        galleryPanel.setCurrentView(slideView);
     }
 }

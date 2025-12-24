@@ -23,8 +23,6 @@ public class ActionToolSection extends JToolBar {
     }
 
     private void initButtons() {
-        SlideView currentView = slideView;
-
         // SELECT
         JButton btnSelect = new JButton("Select");
         btnSelect.addActionListener(e -> stateManager.setSelectState());
@@ -40,8 +38,8 @@ public class ActionToolSection extends JToolBar {
         btnRotL.addActionListener(e -> {
             stateManager.setRotateState();
             stateManager.getRotateState().setUSmeruKazaljke(false);
-            if (currentView != null) {
-                stateManager.getRotateState().izvrsiRotaciju(currentView);
+            if (this.slideView != null) {
+                stateManager.getRotateState().izvrsiRotaciju(this.slideView);
             }
         });
         add(btnRotL);
@@ -51,19 +49,20 @@ public class ActionToolSection extends JToolBar {
         btnRotR.addActionListener(e -> {
             stateManager.setRotateState();
             stateManager.getRotateState().setUSmeruKazaljke(true);
-            if (currentView != null) {
-                stateManager.getRotateState().izvrsiRotaciju(currentView);
+            if (this.slideView != null) {
+                stateManager.getRotateState().izvrsiRotaciju(this.slideView);
             }
         });
         add(btnRotR);
 
-        // DELETE (Odmah briše selektovano)
+        // DELETE
         JButton btnDelete = new JButton("Delete");
         btnDelete.addActionListener(e -> {
             stateManager.setDeleteState();
-            if (currentView != null) {
-                stateManager.getDeleteState().izbrisiSelektovane(currentView);
+            if (this.slideView != null) {
+                stateManager.getDeleteState().izbrisiSelektovane(this.slideView);
             }
+            stateManager.setSelectState();
         });
         add(btnDelete);
 
