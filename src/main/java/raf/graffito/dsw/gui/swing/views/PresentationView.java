@@ -39,6 +39,7 @@ public class PresentationView extends JPanel implements Subscriber {
         slidesPanel.setLayout(new BoxLayout(slidesPanel, BoxLayout.Y_AXIS));
         slidesPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
         JScrollPane scrollPane = new JScrollPane(slidesPanel);
+        scrollPane.setMaximumSize(new Dimension(30, 0));
 
         centerPanel = new JPanel(new  BorderLayout());
         centerPanel.setBackground(MainFrame.getInstance().getActionManager().getOpenProjectAction().getSelectedColor());
@@ -47,7 +48,7 @@ public class PresentationView extends JPanel implements Subscriber {
         desniToolbar.setPreferredSize(new Dimension(150, 0));
 
         JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, scrollPane, centerPanel);
-        splitPane.setDividerLocation(300);
+        splitPane.setDividerLocation(180);
         add(splitPane, BorderLayout.CENTER);
         add(desniToolbar, BorderLayout.EAST);
     }

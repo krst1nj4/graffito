@@ -23,15 +23,15 @@ public class DesniToolbar extends JToolBar {
         addSection = new AddToolSection(stateManager);
         galleryPanel =  new ImageGalleryPanel(stateManager);
         // Dodajemo komponente u JToolBar
-        add(new JLabel(" ALATI "));
+        add(new JLabel("ALATI"));
         add(actionSection);
         addSeparator();
 
-        add(new JLabel(" DODAVANJE "));
+        add(new JLabel("DODAVANJE"));
         add(addSection);
         addSeparator();
 
-        add(new JLabel(" GALERIJA "));
+        add(new JLabel("GALERIJA"));
         add(galleryPanel);
     }
 

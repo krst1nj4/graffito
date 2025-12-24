@@ -34,6 +34,8 @@ public class ProjectView extends JPanel implements Subscriber {
         projectInfoPanel = new ProjectInfoPanel();
         add(projectInfoPanel, BorderLayout.EAST);
 
+        projectInfoPanel.setPreferredSize(new Dimension(150, 0));
+        projectInfoPanel.setMinimumSize(new Dimension(50, 0));
         stateManager = new StateManager();
 
 
