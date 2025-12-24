@@ -1,5 +1,6 @@
 package raf.graffito.dsw.core.graff.composite;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -9,6 +10,7 @@ import java.util.ArrayList;
 @Getter
 
 public abstract class GraffNodeComposite extends GraffNode {
+    @JsonIgnore
     private List<GraffNode> children;
 
     public GraffNodeComposite(GraffNode parent, String name) {

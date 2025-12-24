@@ -36,6 +36,7 @@ public class Project extends GraffNodeComposite implements Publisher {
         this.author = author;
     }
 
+    @JsonIgnore
     public int getNumber(){
         int number = 0;
 
@@ -54,14 +55,14 @@ public class Project extends GraffNodeComposite implements Publisher {
     public void addChild(GraffNode child) {
         getChildren().add(child);
         this.changed = true;
-        ///notifySubscribers(child);
+        notifySubscribers(child);
     }
 
     @Override
     public void removeChild(GraffNode child) {
         getChildren().remove(child);
         this.changed = true;
-        ///notifySubscribers(child);
+        notifySubscribers(child);
     }
 
     @Override
@@ -94,12 +95,12 @@ public class Project extends GraffNodeComposite implements Publisher {
     public void setName(String name) {
         super.setName(name);
         this.changed = true;
-        ///notifySubscribers("projectNameChanged");
+        notifySubscribers("projectNameChanged");
     }
 
     public void setAuthor(String author) {
         this.author = author;
         this.changed = true;
-        ///notifySubscribers("projectAuthorChanged");
+        notifySubscribers("projectAuthorChanged");
     }
 }

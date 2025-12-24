@@ -1,5 +1,6 @@
 package raf.graffito.dsw.controller;
 
+import lombok.Getter;
 import raf.graffito.dsw.core.ApplicationFramework;
 import raf.graffito.dsw.core.graff.decorator.ColorDecorator;
 import raf.graffito.dsw.core.graff.model.Project;
@@ -16,6 +17,8 @@ import java.util.*;
 import java.util.List;
 
 public class OpenProjectAction extends AbstractGraffAction {
+    @Getter
+    private Color selectedColor;
     public OpenProjectAction() {
         putValue(NAME, "Open Project");
         putValue(SHORT_DESCRIPTION, "Open all presentations of the selected project");
@@ -67,7 +70,7 @@ public class OpenProjectAction extends AbstractGraffAction {
                 .orElse(null);
 
         if (decorator == null || decorator.getColor() == null) {
-            Color selectedColor = JColorChooser.showDialog(null, "Choose color of the project", Color.CYAN);
+            selectedColor = JColorChooser.showDialog(null, "Choose color of the project", Color.CYAN);
             if(usedColors.contains(selectedColor)) {
                 ApplicationFramework.getInstance().getDialogMsgGenerator().generateMessage(
                         MessageType.GRESKA,

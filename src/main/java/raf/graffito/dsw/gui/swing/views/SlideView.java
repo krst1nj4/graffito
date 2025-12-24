@@ -40,15 +40,14 @@ public class SlideView extends JPanel implements Subscriber {
         if (slide == null) return;
 
         Graphics2D g2d = (Graphics2D) g.create();
-        //Stavi scale
+
         g2d.scale(scale, scale);
-        //crta belu stranicu sa ivicom
+        //ivica:
         g2d.setBackground(Color.WHITE);
         g2d.fillRect(0, 0, 800, 600);
 
-        g2d.setColor(Color.LIGHT_GRAY);
+        g2d.setColor(Color.BLUE);
         g2d.drawRect(0, 0, 800, 600);
-        //Crta sve slajd elemente
         for (GraffNode node : slide.getChildren()){
             if(node instanceof SlideElement el){
                 el.paint(g2d);
@@ -56,7 +55,7 @@ public class SlideView extends JPanel implements Subscriber {
         }
 
         if (stateManager.getSelectState().getLasoPravougaonik() != null) {
-            g2d.setColor(new Color(100, 150, 255, 100)); // Poluprovidna plava
+            g2d.setColor(new Color(100, 150, 255, 100));
             g2d.fill(stateManager.getSelectState().getLasoPravougaonik());
             g2d.setColor(Color.BLUE);
             g2d.draw(stateManager.getSelectState().getLasoPravougaonik());

@@ -20,7 +20,7 @@ public class GraffMouseController implements MouseListener, MouseMotionListener,
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        stateManager.getCurrent().misKliknut(transformX(e.getX()), transformY(e.getY()), view);
+       // stateManager.getCurrent().misKliknut(transformX(e.getX()), transformY(e.getY()), view);
     }
 
     @Override

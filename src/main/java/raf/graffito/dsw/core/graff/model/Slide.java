@@ -1,5 +1,6 @@
 package raf.graffito.dsw.core.graff.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import raf.graffito.dsw.core.graff.composite.GraffNode;
 import raf.graffito.dsw.core.graff.composite.GraffNodeComposite;
 import raf.graffito.dsw.core.graff.composite.GraffNodeLeaf;
@@ -10,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Slide extends GraffNodeComposite implements Publisher {
+    @JsonIgnore
     private List<Subscriber> subscribers = new ArrayList<Subscriber>();
 
     public Slide(String Name, GraffNode parentNode) {

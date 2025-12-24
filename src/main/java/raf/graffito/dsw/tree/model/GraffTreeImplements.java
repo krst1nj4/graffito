@@ -159,9 +159,11 @@ public class GraffTreeImplements extends JTree implements GraffTree {
     }
 
     private void addLoadedChildren(GraffTreeItem parentItem, GraffNodeComposite parentNode) {
+        if(parentNode.getChildren() == null) return;
+
         for (GraffNode childNode : parentNode.getChildren()) {
             GraffTreeItem childItem = new GraffTreeItem(childNode);
-            parentItem.add(childItem);
+            treeModel.insertNodeInto(childItem, parentItem, parentItem.getChildCount());
 
             if (childNode instanceof GraffNodeComposite) {
                 addLoadedChildren(childItem, (GraffNodeComposite) childNode);

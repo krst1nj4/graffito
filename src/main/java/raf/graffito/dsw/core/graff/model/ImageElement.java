@@ -19,6 +19,10 @@ public class ImageElement extends SlideElement{
         this.image = image;
     }
 
+    public ImageElement(){
+        super();
+    }
+
     @Override
     public void paint(Graphics2D g) {
         if(image == null) return;

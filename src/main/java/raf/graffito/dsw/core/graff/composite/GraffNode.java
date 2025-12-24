@@ -8,9 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import raf.graffito.dsw.core.graff.model.Presentation;
-import raf.graffito.dsw.core.graff.model.Project;
-import raf.graffito.dsw.core.graff.model.Slide;
+import raf.graffito.dsw.core.graff.model.*;
 
 @Getter
 @Setter
@@ -20,7 +18,10 @@ import raf.graffito.dsw.core.graff.model.Slide;
 @JsonSubTypes({
         @JsonSubTypes.Type(value = Project.class, name = "project"),
         @JsonSubTypes.Type(value = Presentation.class, name = "presentation"),
-        @JsonSubTypes.Type(value = Slide.class, name = "slide")
+        @JsonSubTypes.Type(value = Slide.class, name = "slide"),
+        @JsonSubTypes.Type(value = TextElement.class, name = "TextElement"),
+        @JsonSubTypes.Type(value = LogoElement.class, name = "LogoElement"),
+        @JsonSubTypes.Type(value = ImageElement.class, name = "ImageElement")
 })
 public abstract class GraffNode {
     @JsonIgnore
