@@ -68,7 +68,7 @@ public class ImageGalleryPanel extends JPanel {
             thumbButton.addActionListener(e -> {
                 stateManager.setAddState();
                 if(stateManager.getCurrent() instanceof AddState){
-                    ((AddState) stateManager.getCurrent()).setFactory(new ImageElementFactory(fullImage));
+                    ((AddState) stateManager.getCurrent()).setFactory(new ImageElementFactory(file.getAbsolutePath()));
                 }
             });
 

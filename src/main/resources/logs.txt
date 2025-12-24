@@ -220,3 +220,11 @@
 [OBAVESTENJE] [23.12.2025. 21:20] Opened project sf
 [OBAVESTENJE] [23.12.2025. 21:23] Kreirani slajd:d
 [OBAVESTENJE] [23.12.2025. 21:23] Opened project a
+[OBAVESTENJE] [24.12.2025. 16:12] Kreirani slajd:s
+[OBAVESTENJE] [24.12.2025. 16:12] Opened project sdf
+[OBAVESTENJE] [24.12.2025. 16:29] Kreirani slajd:gdfg
+[GRESKA] [24.12.2025. 16:29] You have to select a project!
+[OBAVESTENJE] [24.12.2025. 16:29] Opened project sdgf
+[GRESKA] [24.12.2025. 16:39] Morate uneti ime!
+[OBAVESTENJE] [24.12.2025. 16:39] Kreirani slajd:s
+[OBAVESTENJE] [24.12.2025. 16:39] Opened project sdf
