@@ -70,6 +70,28 @@ public class ActionToolSection extends JToolBar {
         JButton btnZoom = new JButton("Zoom");
         btnZoom.addActionListener(e -> stateManager.setZoomState());
         add(btnZoom);
+
+        JButton btnCopy = new JButton("Copy");
+        btnCopy.addActionListener(e -> {
+           stateManager.setCopyState();
+           stateManager.getCopyState().copy();
+           stateManager.setSelectState();
+        });
+        add(btnCopy);
+
+        JButton btnPaste = new JButton("Paste");
+        btnPaste.addActionListener(e -> {
+            if(this.slideView != null) {
+                stateManager.setPasteState();
+                stateManager.getPasteState().paste(this.slideView);
+                stateManager.setSelectState();
+            }else{
+                JOptionPane.showMessageDialog(this, "Nije selektovan slajd za nalepljivanje");
+            }
+        });
+        add(btnPaste);
+
+        addSeparator();
     }
 
     public void setCurrentView(SlideView slideView) {

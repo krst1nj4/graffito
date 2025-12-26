@@ -68,12 +68,12 @@ public class MainFrame extends JFrame implements Subscriber {
 //        System.out.println(ApplicationFramework.getInstance().getGraffRepository().getWorkspace().getChildren());
 
         JScrollPane treeScrollPane = new JScrollPane((JComponent) graffTree);
-        treeScrollPane.setPreferredSize(new Dimension(250, 0));
+        treeScrollPane.setPreferredSize(new Dimension(175, 0));
 
         splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
         splitPane.setLeftComponent(treeScrollPane);
         splitPane.setRightComponent(createPlaceholderPanel());
-        splitPane.setDividerLocation(250);
+        splitPane.setDividerLocation(175);
 
         add(splitPane, BorderLayout.CENTER);
     }
