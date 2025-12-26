@@ -26,6 +26,7 @@ import raf.graffito.dsw.core.graff.model.*;
 public abstract class GraffNode {
     @JsonIgnore
     private GraffNode parent;
+    @Getter
     private String name;
 
     public GraffNode findByName(String name){

@@ -2,8 +2,7 @@ package raf.graffito.dsw.tree.model;
 
 import lombok.Getter;
 import raf.graffito.dsw.core.ApplicationFramework;
-import raf.graffito.dsw.core.graff.model.Presentation;
-import raf.graffito.dsw.core.graff.model.Slide;
+import raf.graffito.dsw.core.graff.model.*;
 import raf.graffito.dsw.core.messages.MessageType;
 import raf.graffito.dsw.gui.swing.MainFrame;
 import raf.graffito.dsw.gui.swing.dialogs.NewNodeDialog;
@@ -11,8 +10,6 @@ import raf.graffito.dsw.tree.view.GraffTreeCellEditor;
 import raf.graffito.dsw.tree.controller.GraffTreeDragHandler;
 import raf.graffito.dsw.tree.view.GraffTreeCellRenderer;
 import raf.graffito.dsw.tree.view.GraffTreeView;
-import raf.graffito.dsw.core.graff.model.Project;
-import raf.graffito.dsw.core.graff.model.Workspace;
 import raf.graffito.dsw.core.graff.composite.GraffNode;
 import raf.graffito.dsw.core.graff.composite.GraffNodeComposite;
 
@@ -130,11 +127,7 @@ public class GraffTreeImplements extends JTree implements GraffTree {
             }
         } else if (parentNode instanceof Presentation) {
             novi = ApplicationFramework.getInstance().getGraffRepository().createFactory("slide").createGraffNode((GraffNodeComposite) parentNode);
-        } else if(parentNode instanceof Slide) {
-
-        }
-
-        else {
+        } else {
             ApplicationFramework.getInstance().getDialogMsgGenerator().generateMessage(MessageType.UPOZORENJE, "Ne mozete dodati novi cvor izabranom cvoru!");
             return false;
         }
@@ -253,6 +246,14 @@ public class GraffTreeImplements extends JTree implements GraffTree {
         }
 
         return false;
+    }
+
+    public void addElementToTree(GraffTreeItem slideItem, SlideElement element) {
+        /// slideItem -> cvor koji predstavlja slajd
+        GraffTreeItem elementNode = new GraffTreeItem(element);
+        treeModel.insertNodeInto(elementNode, slideItem, slideItem.getChildCount());
+        /// grana ce se prosiriti kad se doda element
+        expandPath(new TreePath(slideItem.getPath()));
     }
 
     @Override

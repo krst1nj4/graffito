@@ -105,17 +105,25 @@ public class ProjectView extends JPanel implements Subscriber {
     }
 
     private void openSlideTab(Slide slide) {
-        for(int i = 0; i < tabbedPane.getTabCount(); i++){
-            Component comp = tabbedPane.getComponentAt(i);
-            if(comp instanceof SlideView sv && sv.getSlide() == slide) {
-                tabbedPane.setSelectedIndex(i);
-                return;
-            }
-        }
+//        for(int i = 0; i < tabbedPane.getTabCount(); i++){
+//            Component comp = tabbedPane.getComponentAt(i);
+//            if(comp instanceof SlideView sv && sv.getSlide() == slide) {
+//                tabbedPane.setSelectedIndex(i);
+//                return;
+//            }
+//        }
+//
+//        SlideView newSlide = new SlideView(slide, stateManager);
+//        tabbedPane.addTab(slide.getName(), newSlide);
+//        tabbedPane.setSelectedComponent(newSlide);
 
-        SlideView newSlide = new SlideView(slide, stateManager);
-        tabbedPane.addTab(slide.getName(), newSlide);
-        tabbedPane.setSelectedComponent(newSlide);
+        SlideEditorPanel editor = new SlideEditorPanel(slide, this.stateManager);
+
+        // 3. Dodaj ga kao novi tab u tabbedPane
+        tabbedPane.addTab(slide.getName(), editor);
+
+        // 4. Selektuj taj novo otvoreni tab
+        tabbedPane.setSelectedComponent(editor);
     }
 
     public void closeSlideTab(Slide slide) {
