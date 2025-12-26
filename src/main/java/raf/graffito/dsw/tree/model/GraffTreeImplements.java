@@ -3,6 +3,7 @@ package raf.graffito.dsw.tree.model;
 import lombok.Getter;
 import raf.graffito.dsw.core.ApplicationFramework;
 import raf.graffito.dsw.core.graff.model.Presentation;
+import raf.graffito.dsw.core.graff.model.Slide;
 import raf.graffito.dsw.core.messages.MessageType;
 import raf.graffito.dsw.gui.swing.MainFrame;
 import raf.graffito.dsw.gui.swing.dialogs.NewNodeDialog;
@@ -129,7 +130,11 @@ public class GraffTreeImplements extends JTree implements GraffTree {
             }
         } else if (parentNode instanceof Presentation) {
             novi = ApplicationFramework.getInstance().getGraffRepository().createFactory("slide").createGraffNode((GraffNodeComposite) parentNode);
-        } else {
+        } else if(parentNode instanceof Slide) {
+
+        }
+
+        else {
             ApplicationFramework.getInstance().getDialogMsgGenerator().generateMessage(MessageType.UPOZORENJE, "Ne mozete dodati novi cvor izabranom cvoru!");
             return false;
         }

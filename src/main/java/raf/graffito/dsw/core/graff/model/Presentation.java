@@ -19,7 +19,10 @@ public class Presentation extends GraffNodeComposite implements Publisher {
 
     @Override
     public void addChild(GraffNode child) {
-        getChildren().add(child);
+        if(child instanceof Slide) {
+            this.getChildren().add(child);
+            this.notifySubscribers(child);
+        }
     }
 
     @Override

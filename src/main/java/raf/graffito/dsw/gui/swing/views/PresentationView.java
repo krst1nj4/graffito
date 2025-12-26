@@ -126,5 +126,8 @@ public class PresentationView extends JPanel implements Subscriber {
     @Override
     public void update(Object notification) {
         loadSlides();
+
+        revalidate();
+        repaint();
     }
 }
