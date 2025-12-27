@@ -5,7 +5,6 @@ import raf.graffito.dsw.core.graff.model.Presentation;
 import raf.graffito.dsw.core.graff.model.Slide;
 import raf.graffito.dsw.core.graff.state.StateManager;
 import raf.graffito.dsw.gui.swing.MainFrame;
-import raf.graffito.dsw.gui.swing.controllers.SlideController;
 import raf.graffito.dsw.gui.swing.toolbar.DesniToolbar;
 import raf.graffito.dsw.observer.Subscriber;
 
@@ -126,8 +125,5 @@ public class PresentationView extends JPanel implements Subscriber {
     @Override
     public void update(Object notification) {
         loadSlides();
-
-        revalidate();
-        repaint();
     }
 }
