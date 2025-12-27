@@ -14,6 +14,7 @@ public class SlideEditorPanel extends JPanel {
     private DesniToolbar desniToolbar;
 
     public SlideEditorPanel(Slide slide, StateManager stateManager) {
+        setLayout(new BorderLayout());
         this.slideView = new SlideView(slide, stateManager);
         this.desniToolbar = new DesniToolbar(stateManager);
 
