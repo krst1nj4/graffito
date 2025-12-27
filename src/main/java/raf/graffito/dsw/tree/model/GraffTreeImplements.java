@@ -248,14 +248,6 @@ public class GraffTreeImplements extends JTree implements GraffTree {
         return false;
     }
 
-    public void addElementToTree(GraffTreeItem slideItem, SlideElement element) {
-        /// slideItem -> cvor koji predstavlja slajd
-        GraffTreeItem elementNode = new GraffTreeItem(element);
-        treeModel.insertNodeInto(elementNode, slideItem, slideItem.getChildCount());
-        /// grana ce se prosiriti kad se doda element
-        expandPath(new TreePath(slideItem.getPath()));
-    }
-
     @Override
     public void refreshTree() {
         treeModel.reload();
