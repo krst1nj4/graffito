@@ -13,7 +13,7 @@ public class NewNodeAction extends AbstractGraffAction{
     public NewNodeAction() {
         putValue(NAME, "Novi cvor");
         putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_N, ActionEvent.CTRL_MASK));
-        putValue(SMALL_ICON, loadIcon("/images/plusicon2.png"));
+        putValue(SMALL_ICON, loadIcon("/images/addicon.png"));
         putValue(SHORT_DESCRIPTION, "Napravite novi cvor");
 
     }

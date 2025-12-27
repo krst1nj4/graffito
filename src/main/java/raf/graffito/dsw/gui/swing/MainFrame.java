@@ -7,6 +7,7 @@ import raf.graffito.dsw.core.ActionManager;
 import raf.graffito.dsw.core.messages.Poruka;
 import raf.graffito.dsw.gui.swing.toolbar.DesniToolbar;
 import raf.graffito.dsw.gui.swing.views.ProjectView;
+import raf.graffito.dsw.gui.swing.views.SlideView;
 import raf.graffito.dsw.observer.Subscriber;
 import raf.graffito.dsw.tree.model.GraffTree;
 import raf.graffito.dsw.tree.model.GraffTreeImplements;
@@ -98,6 +99,10 @@ public class MainFrame extends JFrame implements Subscriber {
     public void setProjectView(ProjectView projectView) {
         this.projectView = projectView;
         splitPane.setRightComponent(projectView);
+
+    }
+
+    public void setActiveSlideView(SlideView slideView) {
 
     }
 

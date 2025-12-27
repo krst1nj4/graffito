@@ -17,7 +17,7 @@ public class SaveAction extends AbstractGraffAction {
     public SaveAction() {
         putValue(NAME, "Save");
         putValue(SHORT_DESCRIPTION, "Save Project to a current file path");
-        /// putValue(SMALL_ICON, loadIcon(""));
+        putValue(SMALL_ICON, loadIcon("/images/saveicon.png"));
     }
 
     @Override

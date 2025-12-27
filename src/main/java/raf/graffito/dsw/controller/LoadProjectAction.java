@@ -19,7 +19,7 @@ public class LoadProjectAction extends AbstractGraffAction {
     public LoadProjectAction() {
         putValue(NAME, "Load");
         putValue(SHORT_DESCRIPTION, "Load Project from a file");
-        ///putValue(SMALL_ICON, loadIcon(""));
+        putValue(SMALL_ICON, loadIcon("/images/loadicon.png"));
     }
 
     @Override

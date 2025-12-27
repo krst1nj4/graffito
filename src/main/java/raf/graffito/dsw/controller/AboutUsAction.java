@@ -8,7 +8,7 @@ public class AboutUsAction extends AbstractGraffAction{
     public  AboutUsAction() {
         putValue(SHORT_DESCRIPTION, "O developerima aplikacije");
         putValue(NAME, "About us");
-        putValue(SMALL_ICON, loadIcon("/images/aboutusicon.jpeg"));
+        putValue(SMALL_ICON, loadIcon("/images/aboutusicon.png"));
     }
 
 
