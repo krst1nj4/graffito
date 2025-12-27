@@ -39,13 +39,5 @@ public class AddState implements State {
             element.setY((int) y);
         }
         slideView.getSlide().addChild(element);
-
-        GraffTreeItem noviCvor = new GraffTreeItem(element);
-        DefaultMutableTreeNode selected = MainFrame.getInstance().getGraffTree().getSelectedNode();
-        if (selected instanceof GraffTreeItem parentItem && parentItem.getGraffNode() == slideView.getSlide()) {
-            MainFrame.getInstance().getGraffTree().addChild(parentItem, element);
-        }
-//        MainFrame.getInstance().getGraffTree().addChild((GraffTreeItem) selected, noviCvor.getGraffNode());
-        slideView.getSlide().addChild(element);
     }
 }
