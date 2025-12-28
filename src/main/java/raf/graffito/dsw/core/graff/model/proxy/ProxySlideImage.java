@@ -10,6 +10,13 @@ public class ProxySlideImage implements ISlideImage {
         this.filePath = filePath;
     }
 
+    private RealSlideImage getRealImage() {
+        if (realImage == null) {
+            realImage = new RealSlideImage(filePath);
+        }
+        return realImage;
+    }
+
     @Override
     public void paint(Graphics2D g, int width, int height) {
         if (realImage == null) {

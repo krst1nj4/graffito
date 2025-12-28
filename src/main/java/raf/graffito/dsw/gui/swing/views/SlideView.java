@@ -20,8 +20,8 @@ public class SlideView extends JPanel implements Subscriber {
     private double scale = 1.0;
     private StateManager stateManager;
 
-    public static final int LOGICAL_WIDTH = 800;
-    public static final int LOGICAL_HEIGHT = 600;
+    public static final int LOGICAL_WIDTH = 1280;
+    public static final int LOGICAL_HEIGHT = 720;
 
     public SlideView(Slide slide, StateManager stateManager) {
         this.slide = slide;
@@ -50,10 +50,22 @@ public class SlideView extends JPanel implements Subscriber {
         double scaleX = panelWidth / LOGICAL_WIDTH;
         double scaleY = panelHeight / LOGICAL_HEIGHT;
 
-        double scale = Math.min(scaleX, scaleY);
+        this.scale = Math.min(scaleX, scaleY) * 0.95;
 
-        double dx = (panelWidth - (LOGICAL_WIDTH * scale)) / 2;
-        double dy = (panelHeight - (LOGICAL_HEIGHT * scale)) / 2;
+
+        double scaledWidth = LOGICAL_WIDTH * this.scale;
+        double scaledHeight = LOGICAL_HEIGHT * this.scale;
+
+        double dx = (panelWidth - scaledWidth) / 2;
+        double dy = (panelHeight - scaledHeight) / 2;
+
+//        if (getWidth() > scaledWidth) {
+//            dx = (getWidth() - scaledWidth) / 2;
+//        }
+//        if (getHeight() > scaledHeight) {
+//            dy = (getHeight() - scaledHeight) / 2;
+//        }
+
         g2d.translate(dx, dy);
 
         g2d.scale(scale, scale);
