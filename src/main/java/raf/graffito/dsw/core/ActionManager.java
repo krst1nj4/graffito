@@ -2,6 +2,7 @@ package raf.graffito.dsw.core;
 
 import lombok.Getter;
 import raf.graffito.dsw.controller.*;
+import raf.graffito.dsw.gui.swing.controllers.ChangeWindowModeAction;
 import raf.graffito.dsw.gui.swing.controllers.RedoAction;
 import raf.graffito.dsw.gui.swing.controllers.UndoAction;
 
@@ -19,6 +20,9 @@ public class ActionManager {
     private LoadProjectAction loadProjectAction;
     private UndoAction undoAction;
     private RedoAction redoAction;
+    private ChangeWindowModeAction normalModeAction;
+    private ChangeWindowModeAction smallModeAction;
+    private ChangeWindowModeAction fullModeAction;
 
     public ActionManager() {
         initialiseActions();
@@ -36,6 +40,10 @@ public class ActionManager {
         loadProjectAction = new LoadProjectAction();
         undoAction = new UndoAction();
         redoAction = new RedoAction();
+
+        normalModeAction = new ChangeWindowModeAction("Normal");
+        smallModeAction = new ChangeWindowModeAction("Small");
+        fullModeAction = new ChangeWindowModeAction("Fullscreen");
     }
 
 }

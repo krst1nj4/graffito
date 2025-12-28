@@ -30,6 +30,7 @@ public class MainFrame extends JFrame implements Subscriber {
     private GraffTree graffTree;
     private ProjectView projectView;
     private JSplitPane splitPane;
+    private Dimension normalSize;
 
 
     private MainFrame() {
@@ -49,9 +50,11 @@ public class MainFrame extends JFrame implements Subscriber {
     private void initializeGUI() {
         Toolkit kit = Toolkit.getDefaultToolkit(); // Toolkit omogućava interakciju sa platformom
         Dimension screenSize = kit.getScreenSize(); // Veličina ekrana
-        int screenHeight = screenSize.height;
-        int screenWidth = screenSize.width;
-        setSize(screenWidth / 2, screenHeight / 2);
+        int screenHeight = screenSize.height / 2;
+        int screenWidth = screenSize.width / 2;
+        normalSize = new Dimension(screenWidth, screenHeight);
+
+                setSize(normalSize);
         setLocationRelativeTo(null); // Centriranje prozora na ekranu
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Zatvaranje aplikacije pri zatvaranju prozora
         setTitle("Graffito"); // Naslov prozora
@@ -122,5 +125,27 @@ public class MainFrame extends JFrame implements Subscriber {
                 break;
 
         }
+    }
+
+    public void setModeNormal(){
+        setExtendedState(JFrame.NORMAL);
+        setSize(normalSize);
+        setLocationRelativeTo(null);
+        revalidate();
+        repaint();
+    }
+
+    public void setModeSmall(){
+        setExtendedState(JFrame.NORMAL);
+        setSize(normalSize.width / 2, normalSize.height / 2);
+        setLocationRelativeTo(null);
+        revalidate();
+        repaint();
+    }
+
+    public void setModeFullScreen(){
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
+        revalidate();
+        repaint();
     }
 }
