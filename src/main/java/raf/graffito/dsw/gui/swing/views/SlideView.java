@@ -20,11 +20,14 @@ public class SlideView extends JPanel implements Subscriber {
     private double scale = 1.0;
     private StateManager stateManager;
 
+    public static final int LOGICAL_WIDTH = 800;
+    public static final int LOGICAL_HEIGHT = 600;
+
     public SlideView(Slide slide, StateManager stateManager) {
         this.slide = slide;
         this.stateManager =  stateManager;
         slide.addSubscriber(this);
-        setPreferredSize(new Dimension(800, 600));
+        setPreferredSize(new Dimension(LOGICAL_WIDTH, LOGICAL_HEIGHT));
         setBackground(Color.WHITE);
 
         GraffMouseController controller = new GraffMouseController(this, stateManager);
@@ -41,13 +44,25 @@ public class SlideView extends JPanel implements Subscriber {
 
         Graphics2D g2d = (Graphics2D) g.create();
 
+        double panelWidth = getWidth();
+        double panelHeight = getHeight();
+
+        double scaleX = panelWidth / LOGICAL_WIDTH;
+        double scaleY = panelHeight / LOGICAL_HEIGHT;
+
+        double scale = Math.min(scaleX, scaleY);
+
+        double dx = (panelWidth - (LOGICAL_WIDTH * scale)) / 2;
+        double dy = (panelHeight - (LOGICAL_HEIGHT * scale)) / 2;
+        g2d.translate(dx, dy);
+
         g2d.scale(scale, scale);
         //ivica:
         g2d.setBackground(Color.WHITE);
-        g2d.fillRect(0, 0, 800, 600);
+        g2d.fillRect(0, 0, LOGICAL_WIDTH, LOGICAL_HEIGHT);
 
         g2d.setColor(Color.BLUE);
-        g2d.drawRect(0, 0, 800, 600);
+        g2d.drawRect(0, 0, LOGICAL_WIDTH, LOGICAL_HEIGHT);
         for (GraffNode node : slide.getChildren()){
             if(node instanceof SlideElement el){
                 el.paint(g2d);
