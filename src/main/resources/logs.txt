@@ -350,3 +350,24 @@
 [OBAVESTENJE] [28.12.2025. 19:10] Opened project sdf
 [OBAVESTENJE] [28.12.2025. 20:14] Kreirani slajd:s
 [OBAVESTENJE] [28.12.2025. 20:14] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 21:03] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 21:03] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 21:10] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 21:10] Opened project sdf
+[UPOZORENJE] [28.12.2025. 21:11] Morate selektovati cvor!
+[OBAVESTENJE] [28.12.2025. 21:11] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 21:11] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 21:14] Kreirani slajd:s
+[GRESKA] [28.12.2025. 21:14] You have to select a project!
+[OBAVESTENJE] [28.12.2025. 21:14] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 21:16] Kreirani slajd:d
+[OBAVESTENJE] [28.12.2025. 21:16] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 21:24] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 21:24] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 21:28] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 21:28] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 21:28] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 21:29] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 21:30] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 21:30] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 21:33] Kreirani slajd:ff

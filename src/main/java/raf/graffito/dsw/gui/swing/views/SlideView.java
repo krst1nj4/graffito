@@ -11,6 +11,7 @@ import raf.graffito.dsw.observer.Subscriber;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.geom.AffineTransform;
 
 @Getter
 @Setter
@@ -22,6 +23,8 @@ public class SlideView extends JPanel implements Subscriber {
 
     public static final int LOGICAL_WIDTH = 800;
     public static final int LOGICAL_HEIGHT = 600;
+
+    private AffineTransform transform = new AffineTransform();
 
     public SlideView(Slide slide, StateManager stateManager) {
         this.slide = slide;
@@ -54,9 +57,12 @@ public class SlideView extends JPanel implements Subscriber {
 
         double dx = (panelWidth - (LOGICAL_WIDTH * scale)) / 2;
         double dy = (panelHeight - (LOGICAL_HEIGHT * scale)) / 2;
-        g2d.translate(dx, dy);
 
-        g2d.scale(scale, scale);
+        transform = new AffineTransform();
+        transform.translate(dx, dy);
+        transform.scale(scale, scale);
+
+        g2d.transform(transform);
         //ivica:
         g2d.setBackground(Color.WHITE);
         g2d.fillRect(0, 0, LOGICAL_WIDTH, LOGICAL_HEIGHT);

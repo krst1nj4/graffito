@@ -38,7 +38,7 @@ public class ImageGalleryPanel extends JPanel {
         JScrollPane scrollPane = new JScrollPane(tumbnailPanel);
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-        scrollPane.setPreferredSize(new Dimension(140, 300));
+        scrollPane.setPreferredSize(new Dimension(140, 300)); //140 300
 
         add(scrollPane, BorderLayout.CENTER);
     }
