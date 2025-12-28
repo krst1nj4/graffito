@@ -51,6 +51,5 @@ public class MyToolBar extends JToolBar {
         add(btnNormal);
         add(btnSmall);
         add(btnFull);
-
     }
 }
