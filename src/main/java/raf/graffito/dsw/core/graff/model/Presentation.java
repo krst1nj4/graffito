@@ -1,6 +1,7 @@
 package raf.graffito.dsw.core.graff.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Getter;
 import raf.graffito.dsw.core.graff.composite.GraffNode;
 import raf.graffito.dsw.core.graff.composite.GraffNodeComposite;
 import raf.graffito.dsw.observer.Publisher;
@@ -11,10 +12,18 @@ import java.util.List;
 
 public class Presentation extends GraffNodeComposite implements Publisher {
     @JsonIgnore
-    private List<Subscriber> subscribers = new ArrayList<>();
+    @Getter
+    private List<Subscriber> subscribers =  new ArrayList<>();
+
+
 
     public Presentation(String name, GraffNode parent) {
         super(parent, name);
+    }
+
+    public Presentation() {
+        super();
+        this.subscribers = new ArrayList<>();
     }
 
     @Override

@@ -6,6 +6,7 @@ import lombok.Setter;
 import raf.graffito.dsw.core.graff.factory.SlideElementFactory;
 import raf.graffito.dsw.core.graff.model.Slide;
 import raf.graffito.dsw.core.graff.model.SlideElement;
+import raf.graffito.dsw.core.graff.strategy.DodajStrategija;
 import raf.graffito.dsw.gui.swing.MainFrame;
 import raf.graffito.dsw.gui.swing.views.SlideView;
 import raf.graffito.dsw.tree.model.GraffTree;
@@ -38,6 +39,7 @@ public class AddState implements State {
             element.setX((int) x);
             element.setY((int) y);
         }
-        slideView.getSlide().addChild(element);
+        DodajStrategija strategija = new DodajStrategija(slideView.getSlide(), element);
+        slideView.getSlide().getKomandaManager().dodajKomandu(strategija);
     }
 }

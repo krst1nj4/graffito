@@ -55,6 +55,12 @@ public class ActionToolSection extends JToolBar {
         });
         add(btnRotR);
 
+        JButton btnResize = new JButton("Resize");
+        btnResize.addActionListener(e -> {
+            stateManager.setResizeState();
+        });
+        add(btnResize);
+
         // DELETE
         JButton btnDelete = new JButton("Delete");
         btnDelete.addActionListener(e -> {

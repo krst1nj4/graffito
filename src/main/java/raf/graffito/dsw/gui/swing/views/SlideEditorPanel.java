@@ -23,4 +23,8 @@ public class SlideEditorPanel extends JPanel {
         add(slideView, BorderLayout.CENTER);
         add(desniToolbar, BorderLayout.EAST);
     }
+
+    public Slide getSlide() {
+        return slideView.getSlide();
+    }
 }

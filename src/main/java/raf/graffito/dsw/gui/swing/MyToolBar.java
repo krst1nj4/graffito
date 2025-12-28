@@ -21,6 +21,9 @@ public class MyToolBar extends JToolBar {
         add(MainFrame.getInstance().getActionManager().getAboutUsAct());
         addSeparator();
         add(MainFrame.getInstance().getActionManager().getExitAct());
+        addSeparator();
+        add(MainFrame.getInstance().getActionManager().getUndoAction());
+        add(MainFrame.getInstance().getActionManager().getRedoAction());
 
         /// nemamo desni toolbar, pa proveravam ovde da li mi radi serijalizacija
         add(MainFrame.getInstance().getActionManager().getSaveAsAction());

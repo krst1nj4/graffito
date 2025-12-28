@@ -3,6 +3,9 @@ package raf.graffito.dsw.core.graff.state;
 import raf.graffito.dsw.core.graff.model.SlideElement;
 import raf.graffito.dsw.gui.swing.views.SlideView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PasteState implements State {
 
     private StateManager stateManager;
@@ -25,6 +28,8 @@ public class PasteState implements State {
 
         stateManager.getSelectState().getSelected().clear();
 
+        List<SlideElement> elementiZaPaste = new ArrayList<>();
+
         for(SlideElement el : stateManager.getClipBoard()){
 
             SlideElement novi = el.clone();
@@ -32,8 +37,9 @@ public class PasteState implements State {
             novi.setX(novi.getX() + 20);
             novi.setY(novi.getY() + 20);
 
-            view.getSlide().addChild(novi);
+            elementiZaPaste.add(novi);
 
+            view.getSlide().addChild(novi);
             stateManager.getSelectState().getSelected().add(novi);
         }
 

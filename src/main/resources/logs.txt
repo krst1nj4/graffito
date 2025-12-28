@@ -316,3 +316,35 @@
 [OBAVESTENJE] [27.12.2025. 14:21] Kreirani slajd:khkhkhkj
 [GRESKA] [27.12.2025. 14:21] Morate uneti ime!
 [OBAVESTENJE] [27.12.2025. 14:22] Kreirani slajd:jhjkhhkjhkkhkjhkhkkhhkjhjh
+[OBAVESTENJE] [27.12.2025. 14:43] Kreirani slajd:lkkkkkkkkkkl
+[OBAVESTENJE] [27.12.2025. 14:43] Kreirani slajd:ppp
+[OBAVESTENJE] [27.12.2025. 14:44] Project saved successfully on a new path: C:\Users\Cale\Documents\proba3.json
+[GRESKA] [27.12.2025. 14:44] Selected node is not a project! Saving can be done only for projects!
+[OBAVESTENJE] [27.12.2025. 14:44] Project saved successfully.
+[OBAVESTENJE] [27.12.2025. 14:44] Kreirani slajd:lll
+[OBAVESTENJE] [27.12.2025. 14:44] Opened project jjjj
+[OBAVESTENJE] [27.12.2025. 14:44] Opened project jjjj
+[GRESKA] [27.12.2025. 14:45] You have to select a project!
+[OBAVESTENJE] [27.12.2025. 14:45] Opened project jjjj
+[OBAVESTENJE] [27.12.2025. 14:45] Project jjjj has been loaded
+[OBAVESTENJE] [27.12.2025. 14:46] Project jjjj has been loaded
+[OBAVESTENJE] [27.12.2025. 14:46] Cvor: jjjj promenjeno u: jjjj
+[OBAVESTENJE] [27.12.2025. 14:48] Project jjjj has been loaded
+[OBAVESTENJE] [27.12.2025. 14:50] Project jjjj has been loaded
+[OBAVESTENJE] [28.12.2025. 18:08] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 18:22] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 18:25] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 18:25] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 18:26] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 18:27] Opened project sdf
+[UPOZORENJE] [28.12.2025. 18:31] Morate selektovati cvor!
+[OBAVESTENJE] [28.12.2025. 18:31] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 18:31] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 18:57] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 18:57] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 19:00] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 19:00] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 19:02] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 19:02] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 19:10] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 19:10] Opened project sdf

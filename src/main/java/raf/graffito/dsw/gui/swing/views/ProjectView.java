@@ -29,7 +29,7 @@ public class ProjectView extends JPanel implements Subscriber {
         initialize();
     }
 
-    private void initialize(){
+    private void initialize() {
         setLayout(new BorderLayout());
         tabbedPane = new JTabbedPane();
         add(tabbedPane, BorderLayout.CENTER);
@@ -40,13 +40,16 @@ public class ProjectView extends JPanel implements Subscriber {
         projectInfoPanel.setMinimumSize(new Dimension(50, 0));
         stateManager = new StateManager();
 
-        for(GraffNode node : project.getChildren()) {
-            if(node instanceof Presentation p) {
+        if (project.getChildren() != null) {
+
+        for (GraffNode node : project.getChildren()) {
+            if (node instanceof Presentation p) {
                 openPresentationTab(p);
-            } else if(node instanceof Slide s) {
+            } else if (node instanceof Slide s) {
                 openSlideTab(s);
             }
         }
+    }
 
 
         tabbedPane.addChangeListener(new ChangeListener() {
@@ -167,5 +170,23 @@ public class ProjectView extends JPanel implements Subscriber {
         } else if (notification.equals("presentationNameChanged")) {
             refreshTabTitles();
         }
+    }
+
+    public Slide getCurrentSlide() {
+        int index =  tabbedPane.getSelectedIndex();
+
+        if(index == -1) return null;
+
+        Component comp = tabbedPane.getComponentAt(index);
+
+        if (comp instanceof SlideEditorPanel) {
+            return ((SlideEditorPanel) comp).getSlide();
+        }
+
+        if(comp  instanceof PresentationView){
+            return ((PresentationView) comp).getCurrentSlide();
+        }
+
+        return null;
     }
 }
