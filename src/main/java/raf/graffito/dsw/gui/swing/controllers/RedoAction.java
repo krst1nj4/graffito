@@ -15,7 +15,6 @@ public class RedoAction extends AbstractGraffAction {
     public RedoAction() {
         putValue(NAME, "Redo");
         putValue(SHORT_DESCRIPTION, "Redo last action");
-        putValue(SMALL_ICON, loadIcon("/images/redo.png"));
         // Preclica CTRL + Y
         putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_Y, ActionEvent.CTRL_MASK));
     }
