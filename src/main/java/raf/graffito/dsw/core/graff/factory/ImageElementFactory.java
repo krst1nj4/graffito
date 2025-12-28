@@ -6,8 +6,11 @@ import raf.graffito.dsw.core.graff.model.SlideElement;
 import raf.graffito.dsw.core.graff.model.proxy.ISlideImage;
 import raf.graffito.dsw.core.graff.model.proxy.ProxySlideImage;
 import raf.graffito.dsw.core.graff.model.proxy.RealSlideImage;
+import raf.graffito.dsw.core.graff.space.SpaceValidator;
+import raf.graffito.dsw.gui.swing.MainFrame;
 
 import javax.imageio.ImageIO;
+import javax.swing.*;
 import java.awt.image.BufferedImage;
 import java.util.Objects;
 
@@ -28,6 +31,15 @@ public class ImageElementFactory implements SlideElementFactory{
         ISlideImage imageContent;
         int width = 200;
         int height = 150;
+
+        boolean imaMesta = SpaceValidator.getInstance().checkSpace(slide, 50, 50, width, height);
+
+        if (!imaMesta) {
+            JOptionPane.showMessageDialog(MainFrame.getInstance(),
+                    "Nema dovoljno mesta za sliku!",
+                    "Greska", JOptionPane.ERROR_MESSAGE);
+            return null;
+        }
 
         if(imagePath != null){
             imageContent = new ProxySlideImage(imagePath);
