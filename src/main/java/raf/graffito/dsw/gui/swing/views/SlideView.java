@@ -62,13 +62,6 @@ public class SlideView extends JPanel implements Subscriber {
         double dx = (panelWidth - scaledWidth) / 2;
         double dy = (panelHeight - scaledHeight) / 2;
 
-//        if (getWidth() > scaledWidth) {
-//            dx = (getWidth() - scaledWidth) / 2;
-//        }
-//        if (getHeight() > scaledHeight) {
-//            dy = (getHeight() - scaledHeight) / 2;
-//        }
-
         g2d.translate(dx, dy);
 
         transform = new AffineTransform();
