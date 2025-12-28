@@ -4,8 +4,6 @@ import raf.graffito.dsw.core.graff.factory.ImageElementFactory;
 import raf.graffito.dsw.core.graff.factory.LogoElementFactory;
 import raf.graffito.dsw.core.graff.factory.SlideElementFactory;
 import raf.graffito.dsw.core.graff.factory.TextElementFactory;
-import raf.graffito.dsw.core.graff.model.Slide;
-import raf.graffito.dsw.core.graff.model.SlideElement;
 import raf.graffito.dsw.core.graff.state.AddState;
 import raf.graffito.dsw.core.graff.state.StateManager;
 import raf.graffito.dsw.gui.swing.views.SlideView;
@@ -35,7 +33,7 @@ public class AddToolSection extends JToolBar {
         btnImage.setToolTipText("Add Image");
         btnImage.addActionListener(e -> dodajElement(new ImageElementFactory()));
 
-            JButton btnLogo = new JButton(loadIcon("/images/LogoZaGraffito(1).png"));
+            JButton btnLogo = new JButton(loadIcon("/images/LogoZaGraffito.png"));
             btnLogo.setToolTipText("Add Logo");
             btnLogo.addActionListener(e -> dodajElement(new LogoElementFactory()));
 

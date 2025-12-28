@@ -3,6 +3,7 @@ package raf.graffito.dsw.core.graff.state;
 
 import raf.graffito.dsw.core.graff.model.Slide;
 import raf.graffito.dsw.core.graff.model.SlideElement;
+import raf.graffito.dsw.core.graff.strategy.ObrisiStrateigja;
 import raf.graffito.dsw.gui.swing.views.SlideView;
 
 import java.awt.event.MouseEvent;
@@ -31,11 +32,14 @@ public class DeleteState implements State {
 
         List<SlideElement> kopijaZaBrisanje = new ArrayList<>(zaBrisanje);
 
-        for(SlideElement el : kopijaZaBrisanje){
-            view.getSlide().removeChild(el);
-        }
 
-        zaBrisanje.clear();
+        ObrisiStrateigja komanda = new ObrisiStrateigja(view.getSlide(), kopijaZaBrisanje);
+        view.getSlide().getKomandaManager().dodajKomandu(komanda);
+//        for(SlideElement el : kopijaZaBrisanje){
+//            view.getSlide().removeChild(el);
+//        }
+
+//        zaBrisanje.clear();
 
         view.getSlide().notifySubscribers(view.getSlide());
 

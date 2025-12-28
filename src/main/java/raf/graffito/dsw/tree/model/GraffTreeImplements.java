@@ -2,7 +2,7 @@ package raf.graffito.dsw.tree.model;
 
 import lombok.Getter;
 import raf.graffito.dsw.core.ApplicationFramework;
-import raf.graffito.dsw.core.graff.model.Presentation;
+import raf.graffito.dsw.core.graff.model.*;
 import raf.graffito.dsw.core.messages.MessageType;
 import raf.graffito.dsw.gui.swing.MainFrame;
 import raf.graffito.dsw.gui.swing.dialogs.NewNodeDialog;
@@ -10,8 +10,6 @@ import raf.graffito.dsw.tree.view.GraffTreeCellEditor;
 import raf.graffito.dsw.tree.controller.GraffTreeDragHandler;
 import raf.graffito.dsw.tree.view.GraffTreeCellRenderer;
 import raf.graffito.dsw.tree.view.GraffTreeView;
-import raf.graffito.dsw.core.graff.model.Project;
-import raf.graffito.dsw.core.graff.model.Workspace;
 import raf.graffito.dsw.core.graff.composite.GraffNode;
 import raf.graffito.dsw.core.graff.composite.GraffNodeComposite;
 

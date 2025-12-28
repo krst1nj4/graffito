@@ -273,3 +273,111 @@
 [OBAVESTENJE] [26.12.2025. 17:44] Opened project sdf
 [OBAVESTENJE] [26.12.2025. 18:27] Kreirani slajd:s
 [OBAVESTENJE] [26.12.2025. 18:27] Opened project sdf
+[OBAVESTENJE] [26.12.2025. 20:29] Opened project gffgf
+[OBAVESTENJE] [26.12.2025. 20:29] Kreirani slajd:hujhjjhjhj
+[OBAVESTENJE] [26.12.2025. 20:29] Kreirani slajd:tytyttyt
+[OBAVESTENJE] [26.12.2025. 20:29] Kreirani slajd:stop
+[OBAVESTENJE] [26.12.2025. 20:29] Kreirani slajd:youre
+[OBAVESTENJE] [26.12.2025. 20:29] Kreirani slajd:loosing
+[OBAVESTENJE] [26.12.2025. 20:30] Kreirani slajd:me
+[OBAVESTENJE] [26.12.2025. 20:34] Opened project gjhgjgjh\
+[OBAVESTENJE] [26.12.2025. 20:34] Kreirani slajd:jjj
+[UPOZORENJE] [26.12.2025. 20:35] Ime vec postoji!
+[OBAVESTENJE] [26.12.2025. 20:35] Cvor: jjj promenjeno u: j
+[OBAVESTENJE] [26.12.2025. 20:37] Kreirani slajd:jjjj
+[OBAVESTENJE] [26.12.2025. 20:38] Kreirani slajd:kkkkkkkkkkk
+[OBAVESTENJE] [26.12.2025. 20:39] Kreirani slajd:jbhhhl
+[OBAVESTENJE] [26.12.2025. 20:48] Kreirani slajd:dsfsdfs
+[OBAVESTENJE] [26.12.2025. 20:48] Opened project hkj
+[UPOZORENJE] [26.12.2025. 20:48] Ime vec postoji!
+[OBAVESTENJE] [26.12.2025. 20:49] Kreirani slajd:peace
+[OBAVESTENJE] [26.12.2025. 20:49] Opened project k
+[OBAVESTENJE] [26.12.2025. 20:58] Kreirani slajd:dfsd
+[OBAVESTENJE] [26.12.2025. 20:58] Opened project fdfs
+[OBAVESTENJE] [26.12.2025. 22:55] Kreirani slajd:fgdfgd
+[OBAVESTENJE] [26.12.2025. 22:55] Opened project lkl
+[OBAVESTENJE] [26.12.2025. 22:56] Kreirani slajd:jkh
+[OBAVESTENJE] [26.12.2025. 22:57] Opened project jk
+[OBAVESTENJE] [26.12.2025. 23:35] Kreirani slajd:hjjl
+[OBAVESTENJE] [26.12.2025. 23:35] Opened project kl
+[UPOZORENJE] [26.12.2025. 23:36] Morate selektovati cvor!
+[OBAVESTENJE] [26.12.2025. 23:37] Kreirani slajd:l
+[OBAVESTENJE] [26.12.2025. 23:37] Opened project ;lll
+[OBAVESTENJE] [26.12.2025. 23:39] Opened project ;lll
+[OBAVESTENJE] [26.12.2025. 23:42] Kreirani slajd:fdgdfg
+[OBAVESTENJE] [26.12.2025. 23:42] Opened project dsdsgs
+[UPOZORENJE] [26.12.2025. 23:44] Morate selektovati cvor!
+[UPOZORENJE] [26.12.2025. 23:44] Ime vec postoji!
+[OBAVESTENJE] [26.12.2025. 23:44] Kreirani slajd:hjghjhgjh
+[OBAVESTENJE] [26.12.2025. 23:44] Kreirani slajd:hjgjghjg
+[OBAVESTENJE] [26.12.2025. 23:45] Kreirani slajd:ghhhhhhhhhhhhh
+[OBAVESTENJE] [26.12.2025. 23:45] Opened project jjjjjjjjj
+[OBAVESTENJE] [27.12.2025. 13:34] Opened project fhfgf
+[OBAVESTENJE] [27.12.2025. 13:34] Kreirani slajd:hhhh
+[OBAVESTENJE] [27.12.2025. 13:34] Kreirani slajd:jjjjjjjjjjjjjjjj
+[OBAVESTENJE] [27.12.2025. 13:38] Kreirani slajd:lll
+[OBAVESTENJE] [27.12.2025. 13:39] Opened project jhhjhj
+[OBAVESTENJE] [27.12.2025. 13:41] Kreirani slajd:hjg
+[OBAVESTENJE] [27.12.2025. 13:41] Opened project gggg
+[OBAVESTENJE] [27.12.2025. 13:49] Kreirani slajd:k
+[OBAVESTENJE] [27.12.2025. 13:49] Opened project lll
+[OBAVESTENJE] [27.12.2025. 13:56] Project sdfd has been loaded
+[OBAVESTENJE] [27.12.2025. 14:21] Opened project dgdghdth
+[OBAVESTENJE] [27.12.2025. 14:21] Kreirani slajd:khkhkhkj
+[GRESKA] [27.12.2025. 14:21] Morate uneti ime!
+[OBAVESTENJE] [27.12.2025. 14:22] Kreirani slajd:jhjkhhkjhkkhkjhkhkkhhkjhjh
+[OBAVESTENJE] [27.12.2025. 14:43] Kreirani slajd:lkkkkkkkkkkl
+[OBAVESTENJE] [27.12.2025. 14:43] Kreirani slajd:ppp
+[OBAVESTENJE] [27.12.2025. 14:44] Project saved successfully on a new path: C:\Users\Cale\Documents\proba3.json
+[GRESKA] [27.12.2025. 14:44] Selected node is not a project! Saving can be done only for projects!
+[OBAVESTENJE] [27.12.2025. 14:44] Project saved successfully.
+[OBAVESTENJE] [27.12.2025. 14:44] Kreirani slajd:lll
+[OBAVESTENJE] [27.12.2025. 14:44] Opened project jjjj
+[OBAVESTENJE] [27.12.2025. 14:44] Opened project jjjj
+[GRESKA] [27.12.2025. 14:45] You have to select a project!
+[OBAVESTENJE] [27.12.2025. 14:45] Opened project jjjj
+[OBAVESTENJE] [27.12.2025. 14:45] Project jjjj has been loaded
+[OBAVESTENJE] [27.12.2025. 14:46] Project jjjj has been loaded
+[OBAVESTENJE] [27.12.2025. 14:46] Cvor: jjjj promenjeno u: jjjj
+[OBAVESTENJE] [27.12.2025. 14:48] Project jjjj has been loaded
+[OBAVESTENJE] [27.12.2025. 14:50] Project jjjj has been loaded
+[OBAVESTENJE] [28.12.2025. 18:08] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 18:22] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 18:25] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 18:25] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 18:26] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 18:27] Opened project sdf
+[UPOZORENJE] [28.12.2025. 18:31] Morate selektovati cvor!
+[OBAVESTENJE] [28.12.2025. 18:31] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 18:31] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 18:57] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 18:57] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 19:00] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 19:00] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 19:02] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 19:02] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 19:10] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 19:10] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 20:14] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 20:14] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 21:03] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 21:03] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 21:10] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 21:10] Opened project sdf
+[UPOZORENJE] [28.12.2025. 21:11] Morate selektovati cvor!
+[OBAVESTENJE] [28.12.2025. 21:11] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 21:11] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 21:14] Kreirani slajd:s
+[GRESKA] [28.12.2025. 21:14] You have to select a project!
+[OBAVESTENJE] [28.12.2025. 21:14] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 21:16] Kreirani slajd:d
+[OBAVESTENJE] [28.12.2025. 21:16] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 21:24] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 21:24] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 21:28] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 21:28] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 21:28] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 21:29] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 21:30] Kreirani slajd:s
+[OBAVESTENJE] [28.12.2025. 21:30] Opened project sdf
+[OBAVESTENJE] [28.12.2025. 21:33] Kreirani slajd:ff

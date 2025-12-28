@@ -2,9 +2,12 @@ package raf.graffito.dsw.controller;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.net.URL;
 
 public abstract class AbstractGraffAction extends AbstractAction {
+
+    private Image originalImage;
 
     public Icon loadIcon(String path) {
         Icon icon = null;
@@ -19,8 +22,15 @@ public abstract class AbstractGraffAction extends AbstractAction {
         return icon;
     }
 
+    public void setIconSize(int size) {
+        if (originalImage != null) {
+            Image scaled = originalImage.getScaledInstance(size, size, Image.SCALE_SMOOTH);
+            putValue(SMALL_ICON, new ImageIcon(scaled));
+        }
+    }
+
     public AbstractGraffAction() {}
 
 
-
+    public abstract void actionPerformed(ActionEvent e);
 }

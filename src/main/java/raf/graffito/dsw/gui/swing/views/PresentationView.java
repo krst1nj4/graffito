@@ -5,7 +5,6 @@ import raf.graffito.dsw.core.graff.model.Presentation;
 import raf.graffito.dsw.core.graff.model.Slide;
 import raf.graffito.dsw.core.graff.state.StateManager;
 import raf.graffito.dsw.gui.swing.MainFrame;
-import raf.graffito.dsw.gui.swing.controllers.SlideController;
 import raf.graffito.dsw.gui.swing.toolbar.DesniToolbar;
 import raf.graffito.dsw.observer.Subscriber;
 
@@ -37,15 +36,19 @@ public class PresentationView extends JPanel implements Subscriber {
 
         slidesPanel = new JPanel();
         slidesPanel.setLayout(new BoxLayout(slidesPanel, BoxLayout.Y_AXIS));
-        slidesPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
+        slidesPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+        slidesPanel.setMinimumSize(new Dimension(10, 0));
         JScrollPane scrollPane = new JScrollPane(slidesPanel);
-        scrollPane.setMaximumSize(new Dimension(30, 0));
+        scrollPane.getVerticalScrollBar().setUnitIncrement(400);
+        slidesPanel.setPreferredSize(new Dimension(10, 0));
+
 
         centerPanel = new JPanel(new  BorderLayout());
+        centerPanel.setMinimumSize(new Dimension(500, 0));
         centerPanel.setBackground(MainFrame.getInstance().getActionManager().getOpenProjectAction().getSelectedColor());
 
         desniToolbar = new DesniToolbar(stateManager);
-        desniToolbar.setPreferredSize(new Dimension(150, 0));
+        desniToolbar.setPreferredSize(new Dimension(100, 0));
 
         JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, scrollPane, centerPanel);
         splitPane.setDividerLocation(180);
@@ -126,5 +129,12 @@ public class PresentationView extends JPanel implements Subscriber {
     @Override
     public void update(Object notification) {
         loadSlides();
+    }
+
+    public Slide getCurrentSlide(){
+        if(slideView != null){
+            return slideView.getSlide();
+        }
+        return null;
     }
 }

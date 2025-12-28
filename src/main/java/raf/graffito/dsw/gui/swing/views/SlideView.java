@@ -11,6 +11,7 @@ import raf.graffito.dsw.observer.Subscriber;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.geom.AffineTransform;
 
 @Getter
 @Setter
@@ -20,11 +21,16 @@ public class SlideView extends JPanel implements Subscriber {
     private double scale = 1.0;
     private StateManager stateManager;
 
+    public static final int LOGICAL_WIDTH = 1280;
+    public static final int LOGICAL_HEIGHT = 720;
+
+    private AffineTransform transform = new AffineTransform();
+
     public SlideView(Slide slide, StateManager stateManager) {
         this.slide = slide;
         this.stateManager =  stateManager;
         slide.addSubscriber(this);
-        setPreferredSize(new Dimension(800, 600));
+        setPreferredSize(new Dimension(LOGICAL_WIDTH, LOGICAL_HEIGHT));
         setBackground(Color.WHITE);
 
         GraffMouseController controller = new GraffMouseController(this, stateManager);
@@ -41,13 +47,41 @@ public class SlideView extends JPanel implements Subscriber {
 
         Graphics2D g2d = (Graphics2D) g.create();
 
-        g2d.scale(scale, scale);
+        double panelWidth = getWidth();
+        double panelHeight = getHeight();
+
+        double scaleX = panelWidth / LOGICAL_WIDTH;
+        double scaleY = panelHeight / LOGICAL_HEIGHT;
+
+        this.scale = Math.min(scaleX, scaleY) * 0.95;
+
+
+        double scaledWidth = LOGICAL_WIDTH * this.scale;
+        double scaledHeight = LOGICAL_HEIGHT * this.scale;
+
+        double dx = (panelWidth - scaledWidth) / 2;
+        double dy = (panelHeight - scaledHeight) / 2;
+
+//        if (getWidth() > scaledWidth) {
+//            dx = (getWidth() - scaledWidth) / 2;
+//        }
+//        if (getHeight() > scaledHeight) {
+//            dy = (getHeight() - scaledHeight) / 2;
+//        }
+
+        g2d.translate(dx, dy);
+
+        transform = new AffineTransform();
+        transform.translate(dx, dy);
+        transform.scale(scale, scale);
+
+        g2d.transform(transform);
         //ivica:
         g2d.setBackground(Color.WHITE);
-        g2d.fillRect(0, 0, 800, 600);
+        g2d.fillRect(0, 0, LOGICAL_WIDTH, LOGICAL_HEIGHT);
 
         g2d.setColor(Color.BLUE);
-        g2d.drawRect(0, 0, 800, 600);
+        g2d.drawRect(0, 0, LOGICAL_WIDTH, LOGICAL_HEIGHT);
         for (GraffNode node : slide.getChildren()){
             if(node instanceof SlideElement el){
                 el.paint(g2d);

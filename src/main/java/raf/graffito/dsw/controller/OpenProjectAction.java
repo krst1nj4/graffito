@@ -22,7 +22,7 @@ public class OpenProjectAction extends AbstractGraffAction {
     public OpenProjectAction() {
         putValue(NAME, "Open Project");
         putValue(SHORT_DESCRIPTION, "Open all presentations of the selected project");
-       /// putValue(SMALL_ICON, loadIcon());
+       putValue(SMALL_ICON, loadIcon("/images/openprojecticon.png"));
     }
 
     @Override

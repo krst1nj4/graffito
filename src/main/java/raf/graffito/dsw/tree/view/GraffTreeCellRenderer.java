@@ -1,11 +1,8 @@
 package raf.graffito.dsw.tree.view;
 
 import lombok.NoArgsConstructor;
+import raf.graffito.dsw.core.graff.model.*;
 import raf.graffito.dsw.tree.model.GraffTreeItem;
-import raf.graffito.dsw.core.graff.model.Presentation;
-import raf.graffito.dsw.core.graff.model.Project;
-import raf.graffito.dsw.core.graff.model.Slide;
-import raf.graffito.dsw.core.graff.model.Workspace;
 
 import javax.swing.*;
 import javax.swing.tree.DefaultTreeCellRenderer;
@@ -39,6 +36,18 @@ public class GraffTreeCellRenderer extends DefaultTreeCellRenderer {
 
         else if(((GraffTreeItem)value).getGraffNode() instanceof Slide) {
             imageURL = getClass().getResource("/images/slideicon.png");
+        }
+
+        else if(((GraffTreeItem)value).getGraffNode() instanceof LogoElement) {
+            imageURL = null;
+        }
+
+        else if(((GraffTreeItem)value).getGraffNode() instanceof ImageElement) {
+            imageURL = null;
+        }
+
+        else if(((GraffTreeItem)value).getGraffNode() instanceof TextElement) {
+            imageURL = null;
         }
 
         Icon icon = null;

@@ -4,9 +4,11 @@ import lombok.Getter;
 import lombok.Setter;
 import raf.graffito.dsw.core.graff.model.Slide;
 import raf.graffito.dsw.core.graff.model.SlideElement;
+import raf.graffito.dsw.core.graff.strategy.RotirajStrategija;
 import raf.graffito.dsw.gui.swing.views.SlideView;
 
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -31,9 +33,10 @@ public class RotateState implements State{
 
         double ugao = uSmeruKazaljke ? UGAO_90 : -UGAO_90;
 
-        for(SlideElement el : selectState.getSelected()){
-            el.setRotation(el.getRotation() + ugao);
-        }
+        List<SlideElement> elementi = new ArrayList<>(selectState.getSelected());
+        RotirajStrategija komanda = new RotirajStrategija(elementi, ugao);
+
+        view.getSlide().getKomandaManager().dodajKomandu(komanda);
 
         view.getSlide().notifySubscribers(view.getSlide());
     }
