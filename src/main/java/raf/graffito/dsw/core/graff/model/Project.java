@@ -16,12 +16,12 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-@NoArgsConstructor
 
 public class Project extends GraffNodeComposite implements Publisher {
     private String author;
 
     @JsonIgnore
+    @Getter
     private List<Subscriber> subscribers = new ArrayList<>();
 
     @JsonIgnore
@@ -34,6 +34,11 @@ public class Project extends GraffNodeComposite implements Publisher {
     public Project(String name, GraffNode parent, String author) {
         super(parent, name);
         this.author = author;
+    }
+
+    public Project() {
+        super();
+        this.subscribers = new ArrayList<>();
     }
 
     @JsonIgnore

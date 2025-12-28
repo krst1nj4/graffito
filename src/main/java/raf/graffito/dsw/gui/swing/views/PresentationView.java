@@ -126,4 +126,11 @@ public class PresentationView extends JPanel implements Subscriber {
     public void update(Object notification) {
         loadSlides();
     }
+
+    public Slide getCurrentSlide(){
+        if(slideView != null){
+            return slideView.getSlide();
+        }
+        return null;
+    }
 }
